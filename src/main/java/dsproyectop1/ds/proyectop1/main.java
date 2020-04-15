@@ -45,7 +45,7 @@ import javax.swing.Timer;
  */
 public class main {
            
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         
         //*************** Concetar con la base de datos*********************
         String base = "VfmPbt0NKi";
