@@ -14,6 +14,17 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  * @author coque
  */
 public class BasuraIntermedioOrganico extends Basura{
+
+    @Override
+    public String mostrarDescripcionNivel() {
+        return "Nivel Intermedio";
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+        return "Tipo de basura: Organico";
+    }
+
     public BasuraIntermedioOrganico() {
         Database db = DatabaseConnection.getConnection();
         String sql = "SELECT idIntermedio,nombre FROM basura WHERE idIntermedio = 1";

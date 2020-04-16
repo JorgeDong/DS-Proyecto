@@ -28,4 +28,14 @@ public class BasuraAvanzadoMetal extends Basura{
         return this.status;
     }
     
+    @Override
+    public String mostrarDescripcionNivel() {
+        return "Nivel Avanzado";
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+        return "Tipo de basura: Metal";
+    }
+    
 }
