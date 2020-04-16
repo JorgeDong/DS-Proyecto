@@ -9,35 +9,53 @@ import dsproyectop1.ds.proyectop1.factory.Basura;
 import dsproyectop1.ds.proyectop1.singleton.Database;
 import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
 
-/**
- *
- * @author coque
- */
+/***
+ * Esta clase define metodos que cada clase que herede debe implementar.
+ * @author: JorgeDong y Luis
+ * @version: 21/02/2020
+*/
 public class BasuraAvanzadoOrganico extends Basura {
-        String status;
-        
-        public BasuraAvanzadoOrganico() {
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    private String status;
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    public BasuraAvanzadoOrganico() {
         Database db = DatabaseConnection.getConnection();
         String sql = "SELECT idAvanzado,nombre "
                 + "FROM basura "
                 + "WHERE idAvanzado = 1";
-        nombresBasura = db.query(sql,"avanzado");
+        setNombresBasura(db.query(sql, "avanzado"));
         status = "funciona BasuraAvanzadoOrganico";
-        
     }
-    
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
     public String getStatus() {
         return this.status;
     }
-    
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
     @Override
     public String mostrarDescripcionNivel() {
         return "Nivel Avanzado";
     }
-
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
     @Override
     public String mostrarTipoBasura() {
         return "Tipo de basura: Organico";
     }
-        
 }
