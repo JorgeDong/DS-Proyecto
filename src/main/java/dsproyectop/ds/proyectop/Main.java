@@ -15,7 +15,13 @@ import dsproyectop.ds.proyectop.factory.niveles.NivelIntermedio;
  *
  * @author coque
  */
-public class Main {
+public final class Main {
+    /**
+     *Construcotr never call.
+     */
+    private Main() {
+        //not called.
+     }
     /**
      *
      * @param args

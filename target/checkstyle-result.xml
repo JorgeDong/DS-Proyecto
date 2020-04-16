@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.19">
-<file name="C:\Users\coque\Desktop\DS\proyecto\ds-proyectop1\src\main\java\dsproyectop\ds\proyectop\factory\Nivel.java">
-<error line="20" column="25" severity="error" message="La variable &apos;nombresBasuraTotal&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="25" column="25" severity="error" message="La variable &apos;nombresBasuraSeparado&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="30" column="25" severity="error" message="La variable &apos;idBasuraTotal&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="35" column="25" severity="error" message="La variable &apos;resultados&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="44" column="19" severity="error" message="La variable &apos;correctos&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
-<error line="55" column="49" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="61" column="47" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="67" column="44" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<checkstyle version="8.29">
+<file name="C:\Users\stomp\Documents\GitHub\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\factory\Nivel.java">
+<error line="20" column="25" severity="error" message="Variable &apos;nombresBasuraTotal&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="25" column="25" severity="error" message="Variable &apos;nombresBasuraSeparado&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="30" column="25" severity="error" message="Variable &apos;idBasuraTotal&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="35" column="25" severity="error" message="Variable &apos;resultados&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="44" column="19" severity="error" message="Variable &apos;correctos&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 </file>
-<file name="C:\Users\coque\Desktop\DS\proyecto\ds-proyectop1\src\main\java\dsproyectop\ds\proyectop\Main.java">
-<error line="18" column="1" severity="error" message="Clases de servicios públicos no deben tener un constructor público o por defecto." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
-<error line="23" column="44" severity="error" message="Se esperaba la etiqueta @param para &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<file name="C:\Users\stomp\Documents\GitHub\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\Main.java">
 </file>
 </checkstyle>
