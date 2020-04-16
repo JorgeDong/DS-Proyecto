@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: basuras.BasuraAvanzadoOrganicoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.007 s <<< FAILURE! - in basuras.BasuraAvanzadoOrganicoTest
-testNam(basuras.BasuraAvanzadoOrganicoTest)  Time elapsed: 0.991 s  <<< ERROR!
-java.lang.NullPointerException
-	at basuras.BasuraAvanzadoOrganicoTest.testNam(BasuraAvanzadoOrganicoTest.java:26)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 s - in basuras.BasuraAvanzadoOrganicoTest

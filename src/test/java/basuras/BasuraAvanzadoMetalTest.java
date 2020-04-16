@@ -32,7 +32,7 @@ public class BasuraAvanzadoMetalTest {
     
    @Test
     public void testNameMkyong() {
-        assertEquals(5, basuraAvanzadoMetal.prueba());
+        assertEquals("funciona BasuraAvanzadoMetal", basuraAvanzadoMetal.getStatus());
     }
     
 }

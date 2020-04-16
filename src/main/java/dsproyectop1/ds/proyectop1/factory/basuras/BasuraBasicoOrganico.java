@@ -14,13 +14,18 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  * @author coque
  */
 public class BasuraBasicoOrganico extends Basura{
-    
+    String status;
     public BasuraBasicoOrganico(){
         Database db = DatabaseConnection.getConnection();
         String sql = "SELECT idBasico,nombre FROM basura WHERE idBasico = 1";
         nombresBasura = db.query(sql,"basico");
+        status = "funciona BasuraBasicoOrganico";
        // DatabaseConnection.clearConnection(); 
         
+    }
+    
+    public String getStatus(){
+        return this.status;
     }
 
 }

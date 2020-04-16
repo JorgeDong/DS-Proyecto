@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Nivel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop1.ds.proyectop1.factory</a> &gt; <span class="el_source">Nivel.java</span></div><h1>Nivel.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop1.ds.proyectop1.factory;
+
+import dsproyectop1.ds.proyectop1.facade.PaneMaker;
+import java.util.ArrayList;
+import java.util.Collections;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author coque
+ */
+<span class="fc" id="L17">public abstract class Nivel {</span>
+
+<span class="fc" id="L19">    public ArrayList nombresBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L20">    public ArrayList nombresBasuraSeparado = new ArrayList();</span>
+<span class="fc" id="L21">    public ArrayList idBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L22">     public ArrayList resultados = new ArrayList();</span>
+    public int cantidadObjetos;
+<span class="fc" id="L24">    public int correctos = 0;</span>
+    
+    public abstract String mostrarDescripcionNivel();
+    
+    public void ejecutarNivel(int objetos){
+<span class="nc" id="L29">        createBasuras(objetos);</span>
+<span class="nc" id="L30">        mostrarDescripcionNivel();</span>
+<span class="nc" id="L31">        System.out.println(&quot;entro&quot;);</span>
+        
+//        for(int i = 1; i &lt; nombresBasuraTotal.size(); i++){
+//            System.out.println(nombresBasuraTotal.get(i));
+//        }
+
+<span class="nc" id="L37">        separarId();</span>
+        
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if(objetos == 0){</span>
+<span class="nc" id="L40">            this.cantidadObjetos = 20;</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">        }else if (objetos == 1){</span>
+<span class="nc" id="L42">            this.cantidadObjetos = 35;</span>
+        }else{
+<span class="nc" id="L44">            this.cantidadObjetos = 50;</span>
+        }
+<span class="nc" id="L46">        mostrarOpciones(this.cantidadObjetos);</span>
+        
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        for(int i = 1; i &lt; resultados.size(); i++){</span>
+<span class="nc" id="L49">            System.out.println(resultados.get(i));</span>
+        }
+        
+<span class="nc" id="L52">        mostrarResultados();</span>
+        
+<span class="nc" id="L54">    }</span>
+    
+    public abstract void mostrarOpciones(int objetos);
+    
+    protected abstract void createBasuras(int objetos);
+    
+    public void separarId(){
+<span class="nc bnc" id="L61" title="All 2 branches missed.">        for(int i = 1; i &lt; nombresBasuraTotal.size(); i++){</span>
+<span class="nc" id="L62">            System.out.println(nombresBasuraTotal.get(i));            </span>
+<span class="nc" id="L63">            String str = nombresBasuraTotal.get(i).toString();</span>
+<span class="nc" id="L64">            System.out.println(str);</span>
+            
+<span class="nc" id="L66">            String kept = str.substring( 0, str.indexOf(&quot;,&quot;));</span>
+<span class="nc" id="L67">             System.out.println(kept);</span>
+<span class="nc" id="L68">            idBasuraTotal.add(kept);</span>
+<span class="nc" id="L69">            System.out.println(str);</span>
+            
+<span class="nc" id="L71">            String remainder = str.substring(str.indexOf(&quot;,&quot;)+1, str.length());</span>
+<span class="nc" id="L72">            System.out.println(remainder);</span>
+<span class="nc" id="L73">            nombresBasuraSeparado.add(remainder);</span>
+            
+        }
+<span class="nc" id="L76">    }</span>
+    
+    public void mostrarResultados(){
+<span class="nc" id="L79">        PaneMaker paneMaker = new PaneMaker();</span>
+        
+        //paneMaker.paneConfirm(resultados.toString());
+<span class="nc" id="L82">        String mensaje = &quot;&lt;html&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Resultados correctos: &quot;+ correctos+ &quot;/&quot;+ cantidadObjetos + &quot;&lt;/th&gt;&lt;/tr&gt;&quot;;</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">        for(int i = 1; i &lt; resultados.size(); i++){</span>
+<span class="nc" id="L84">            System.out.println(resultados.get(i));</span>
+<span class="nc" id="L85">            mensaje+=&quot;&lt;tr&gt;&lt;td&gt;&quot;+resultados.get(i)+&quot;&lt;/td&gt;&lt;/tr&gt;&quot;;</span>
+        }
+<span class="nc" id="L87">        mensaje+=&quot;&lt;/table&gt;&lt;/html&gt;&quot;;</span>
+<span class="nc" id="L88">        paneMaker.paneConfirm(mensaje);</span>
+               
+<span class="nc" id="L90">    }</span>
+    
+   
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

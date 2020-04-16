@@ -18,12 +18,12 @@ public class BasuraAvanzadoOrganicoTest {
     BasuraAvanzadoOrganico basuraAvanzadoOrganico;
     @Before
     public void setUp(){
-        BasuraAvanzadoOrganico basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();
+        basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();
     }
     
     @Test
     public void testNam() {
-        assertEquals(5, basuraAvanzadoOrganico.prueba());
+        assertEquals("funciona BasuraAvanzadoOrganico", basuraAvanzadoOrganico.getStatus());
     }
     
     

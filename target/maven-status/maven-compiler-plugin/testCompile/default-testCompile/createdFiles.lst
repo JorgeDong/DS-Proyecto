@@ -1,5 +1,12 @@
+basuras\BasuraAvanzadoTecnologicaTest.class
+basuras\BasuraAvanzadoTextilesTest.class
+basuras\BasuraBasicoOrganicoTest.class
 basuras\BasuraAvanzadoMetalTest.class
 basuras\BasuraAvanzadoOrganicoTest.class
+basuras\BasuraBasicoInorganicoTest.class
+basuras\BasuraAvanzadoVidrioTest.class
 niveles\NivelIntermedioTest.class
+basuras\BasuraAvanzadoPapelTest.class
+basuras\BasuraAvanzadoPlasticoTest.class
 niveles\NivelBasicoTest.class
 niveles\NivelAvanzadoTest.class
