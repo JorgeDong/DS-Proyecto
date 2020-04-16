@@ -25,4 +25,14 @@ public class BasuraAvanzadoPapelTest {
     public void testNam() {
         assertEquals("funciona BasuraAvanzadoPapel", basuraAvanzadoPapel.getStatus());
     }
+    
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Avanzado", basuraAvanzadoPapel.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Papel", basuraAvanzadoPapel.mostrarTipoBasura());
+    }
 }

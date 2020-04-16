@@ -26,13 +26,22 @@ public class BasuraAvanzadoMetalTest {
     
     @Before
     public void setUp(){
-        basuraAvanzadoMetal = new BasuraAvanzadoMetal();
-       
+        basuraAvanzadoMetal = new BasuraAvanzadoMetal();       
     }
     
    @Test
     public void testNameMkyong() {
         assertEquals("funciona BasuraAvanzadoMetal", basuraAvanzadoMetal.getStatus());
+    }
+    
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Avanzado", basuraAvanzadoMetal.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Metal", basuraAvanzadoMetal.mostrarTipoBasura());
     }
     
 }

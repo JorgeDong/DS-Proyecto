@@ -13,19 +13,31 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  *
  * @author coque
  */
-public class BasuraAvanzadoMetal extends Basura{
+public class BasuraAvanzadoMetal extends Basura {
     String status;
     
-<span class="fc" id="L19">    public BasuraAvanzadoMetal(){</span>
+<span class="fc" id="L19">    public BasuraAvanzadoMetal() {</span>
 <span class="fc" id="L20">        Database db = DatabaseConnection.getConnection();</span>
-<span class="fc" id="L21">        String sql = &quot;SELECT idAvanzado,nombre FROM basura WHERE idAvanzado = 4&quot;;</span>
-<span class="fc" id="L22">        nombresBasura = db.query(sql,&quot;avanzado&quot;);</span>
-<span class="fc" id="L23">        status = &quot;funciona BasuraAvanzadoMetal&quot;;</span>
+<span class="fc" id="L21">        String sql = &quot;SELECT idAvanzado,nombre &quot;</span>
+                + &quot;FROM basura &quot;
+                + &quot;WHERE idAvanzado = 4&quot;;
+<span class="fc" id="L24">        nombresBasura = db.query(sql,&quot;avanzado&quot;);</span>
+<span class="fc" id="L25">        status = &quot;funciona BasuraAvanzadoMetal&quot;;</span>
         //DatabaseConnection.clearConnection();
-<span class="fc" id="L25">    }</span>
+<span class="fc" id="L27">    }</span>
     
-    public String getStatus(){
-<span class="fc" id="L28">        return this.status;</span>
+    public String getStatus() {
+<span class="fc" id="L30">        return this.status;</span>
+    }
+    
+    @Override
+    public String mostrarDescripcionNivel() {
+<span class="fc" id="L35">        return &quot;Nivel Avanzado&quot;;</span>
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+<span class="fc" id="L40">        return &quot;Tipo de basura: Metal&quot;;</span>
     }
     
 }

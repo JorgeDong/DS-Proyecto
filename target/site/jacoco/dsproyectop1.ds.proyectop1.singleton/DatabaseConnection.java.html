@@ -23,31 +23,27 @@ public class DatabaseConnection extends Database {
 <span class="fc" id="L23">            System.out.println(&quot;Conexion exitosa&quot;);</span>
 <span class="nc" id="L24">        } catch (SQLException ex) {</span>
 <span class="nc" id="L25">            System.out.println(&quot;SQLException: &quot; + ex.getMessage());</span>
-<span class="nc" id="L26">            System.out.println(&quot;SQLState: &quot; + ex.getSQLState());</span>
-<span class="nc" id="L27">            System.out.println(&quot;VendorError: &quot; + ex.getErrorCode());</span>
-<span class="fc" id="L28">        }</span>
-<span class="fc" id="L29">    }</span>
+<span class="fc" id="L26">        }</span>
+<span class="fc" id="L27">    }</span>
     
     public static Database getConnection(){
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if(uniqueInstance== null){</span>
-<span class="fc" id="L33">            uniqueInstance = new DatabaseConnection();</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if(uniqueInstance== null){</span>
+<span class="fc" id="L31">            uniqueInstance = new DatabaseConnection();</span>
         }
-<span class="fc" id="L35">        return uniqueInstance;</span>
+<span class="fc" id="L33">        return uniqueInstance;</span>
     }
 
     public static void clearConnection(){
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (connection != null) {</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (connection != null) {</span>
             try {
-<span class="nc" id="L41">                connection.close();</span>
-<span class="nc" id="L42">                System.out.println(&quot;Conexion cerrada&quot;);</span>
-<span class="nc" id="L43">            } catch (SQLException ex) {</span>
-<span class="nc" id="L44">                System.out.println(&quot;SQLException: &quot; + ex.getMessage());</span>
-<span class="nc" id="L45">                System.out.println(&quot;SQLState: &quot; + ex.getSQLState());</span>
-<span class="nc" id="L46">                System.out.println(&quot;VendorError: &quot; + ex.getErrorCode());</span>
-<span class="nc" id="L47">            }</span>
+<span class="fc" id="L39">                connection.close();</span>
+<span class="fc" id="L40">                System.out.println(&quot;Conexion cerrada&quot;);</span>
+<span class="nc" id="L41">            } catch (SQLException ex) {</span>
+<span class="nc" id="L42">                System.out.println(&quot;SQLException: &quot; + ex.getMessage());</span>
+<span class="fc" id="L43">            }</span>
         }
-<span class="nc" id="L49">        uniqueInstance = null;</span>
-<span class="nc" id="L50">    }</span>
+<span class="fc" id="L45">        uniqueInstance = null;</span>
+<span class="fc" id="L46">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

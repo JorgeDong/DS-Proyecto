@@ -13,19 +13,31 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  *
  * @author coque
  */
-public class BasuraAvanzadoOrganico extends Basura{
+public class BasuraAvanzadoOrganico extends Basura {
         String status;
         
-        public BasuraAvanzadoOrganico(){
+        public BasuraAvanzadoOrganico() {
         Database db = DatabaseConnection.getConnection();
-        String sql = "SELECT idAvanzado,nombre FROM basura WHERE idAvanzado = 1";
+        String sql = "SELECT idAvanzado,nombre "
+                + "FROM basura "
+                + "WHERE idAvanzado = 1";
         nombresBasura = db.query(sql,"avanzado");
         status = "funciona BasuraAvanzadoOrganico";
         
     }
     
-    public String getStatus(){
+    public String getStatus() {
         return this.status;
+    }
+    
+    @Override
+    public String mostrarDescripcionNivel() {
+        return "Nivel Avanzado";
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+        return "Tipo de basura: Organico";
     }
         
 }

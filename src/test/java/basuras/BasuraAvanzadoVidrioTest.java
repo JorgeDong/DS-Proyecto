@@ -25,4 +25,14 @@ public class BasuraAvanzadoVidrioTest {
     public void testNam() {
         assertEquals("funciona BasuraAvanzadoVidrio", basuraAvanzadoVidrio.getStatus());
     }
+    
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Avanzado", basuraAvanzadoVidrio.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Vidrio", basuraAvanzadoVidrio.mostrarTipoBasura());
+    }
 }

@@ -24,6 +24,16 @@ public class BasuraAvanzadoPlastico extends Basura{
     }
     public String getStatus(){
         return this.status;
-    }    
+    }
+    
+    @Override
+    public String mostrarDescripcionNivel() {
+        return "Nivel Avanzado";
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+        return "Tipo de basura: Plastico";
+    }
     
 }

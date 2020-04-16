@@ -27,5 +27,15 @@ public class BasuraBasicoOrganico extends Basura{
     public String getStatus(){
         return this.status;
     }
+    
+        @Override
+    public String mostrarDescripcionNivel() {
+        return "Nivel Basico";
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+        return "Tipo de basura: Organico";
+    }
 
 }

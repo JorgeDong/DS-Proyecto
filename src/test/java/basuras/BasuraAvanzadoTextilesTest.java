@@ -25,4 +25,13 @@ public class BasuraAvanzadoTextilesTest {
     public void testNam() {
         assertEquals("funciona BasuraAvanzadoTextiles", basuraAvanzadoTextiles.getStatus());
     }
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Avanzado", basuraAvanzadoTextiles.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Textiles", basuraAvanzadoTextiles.mostrarTipoBasura());
+    }
 }
