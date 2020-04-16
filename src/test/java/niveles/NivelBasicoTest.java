@@ -29,4 +29,18 @@ public class NivelBasicoTest {
         assertEquals("Nivel Basico", nivelBasico.mostrarDescripcionNivel());
     }
 
+    @Test
+    public void testCreateBasuras() {
+        when(nivel.createBasuras(0)).thenReturn(0);
+        assertEquals((Integer) 0, nivelBasico.createBasuras(0));
+    }
+
+
+    @Test
+    public void testMostrarOpciones() {
+        when(nivel.mostrarOpciones(20)).thenReturn(20);
+        assertEquals((Integer) 20, nivelBasico.mostrarOpciones(20));
+    }
+
+
 }

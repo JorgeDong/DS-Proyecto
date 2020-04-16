@@ -14,6 +14,7 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  * @author coque
  */
 public class BasuraIntermedioReciclable extends Basura{
+    String status;
 
     @Override
     public String mostrarDescripcionNivel() {
@@ -29,6 +30,12 @@ public class BasuraIntermedioReciclable extends Basura{
         Database db = DatabaseConnection.getConnection();
         String sql = "SELECT idIntermedio,nombre FROM basura WHERE idIntermedio = 3";
         nombresBasura = db.query(sql,"intermedio"); 
+        status = "funciona BasuraIntermedioReciclable";
         //DatabaseConnection.clearConnection();     
     }
+
+    public String getStatus(){
+        return this.status;
+    }
 }
+

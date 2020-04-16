@@ -23,7 +23,6 @@ public abstract class Basura {
     public ArrayList getNombresBasura(){
         return this.nombresBasura;
     }
-    
-    
+      
     
 }

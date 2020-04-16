@@ -29,4 +29,18 @@ public class NivelIntermedioTest {
         assertEquals("Nivel Intermedio", nivelIntermedio.mostrarDescripcionNivel());
     }
 
+    @Test
+    public void testCreateBasuras() {
+        when(nivel.createBasuras(1)).thenReturn(1);
+        assertEquals((Integer) 1, nivelIntermedio.createBasuras(1));
+    }
+
+
+    @Test
+    public void testMostrarOpciones() {
+        when(nivel.mostrarOpciones(35)).thenReturn(35);
+        assertEquals((Integer) 35, nivelIntermedio.mostrarOpciones(35));
+    }
+
+
 }

@@ -21,7 +21,7 @@ public class NivelBasico extends Nivel{
     private static final int TIEMPO = 10000;
     
     @Override
-    protected void createBasuras(int objetos) { 
+	public Integer createBasuras(int objetos) { 
         Basura basuraBasicoOrganica = new BasuraBasicoOrganico();
         Basura basuraBasicoInorganica = new BasuraBasicoInorganico();
     // En este metodo mezclamos para que quede el arreglo final a mostrar de basuras dependiedo del tama
@@ -56,7 +56,8 @@ public class NivelBasico extends Nivel{
             default : 
                 System.exit(0);
         }
-    
+        
+        return objetos;
 
     }
 
@@ -70,7 +71,7 @@ public class NivelBasico extends Nivel{
     }
     
     @Override
-    public void mostrarOpciones(int objetos){
+    public Integer mostrarOpciones(int objetos){
         
         PaneMaker paneMaker = new PaneMaker();
    
@@ -100,7 +101,7 @@ public class NivelBasico extends Nivel{
                     break;
                 }
             }
- 
+        return objetos;    
     }
    
     

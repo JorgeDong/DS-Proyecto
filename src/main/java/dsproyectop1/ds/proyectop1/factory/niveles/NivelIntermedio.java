@@ -29,8 +29,8 @@ public class NivelIntermedio extends Nivel{
         return "Nivel Intermedio";
     }
 
-@Override
-    protected void createBasuras(int objetos) { 
+    @Override
+    public Integer createBasuras(int objetos) { 
         Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();
         Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();
         Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();
@@ -75,12 +75,13 @@ public class NivelIntermedio extends Nivel{
             default : 
                 System.exit(0);
         }
-    
+        
+        return objetos;  
 
     }
     
     @Override
-    public void mostrarOpciones(int objetos){
+    public Integer mostrarOpciones(int objetos){
         PaneMaker paneMaker = new PaneMaker();
    
         long startTime = System.currentTimeMillis();
@@ -108,7 +109,7 @@ public class NivelIntermedio extends Nivel{
                     break;
                 }
             }
-
+        return objetos;  
     }
     
 }

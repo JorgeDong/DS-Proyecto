@@ -30,7 +30,7 @@ public class NivelAvanzado extends Nivel{
     }
 
     @Override
-    protected void createBasuras(int objetos) { 
+    public Integer createBasuras(int objetos) { 
         Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();
         Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();
         Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();
@@ -93,12 +93,11 @@ public class NivelAvanzado extends Nivel{
             default : 
                 System.exit(0);
         }
-    
-
+        return objetos;  
     }
     
         @Override
-    public void mostrarOpciones(int objetos){
+    public Integer mostrarOpciones(int objetos){
         PaneMaker paneMaker = new PaneMaker();
    
         long startTime = System.currentTimeMillis();
@@ -129,7 +128,7 @@ public class NivelAvanzado extends Nivel{
                     break;
                 }
             }
-
+        return objetos;  
     }
     
 }
