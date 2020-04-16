@@ -26,5 +26,14 @@ public class BasuraAvanzadoOrganicoTest {
         assertEquals("funciona BasuraAvanzadoOrganico", basuraAvanzadoOrganico.getStatus());
     }
     
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Avanzado", basuraAvanzadoOrganico.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Organico", basuraAvanzadoOrganico.mostrarTipoBasura());
+    }
     
 }

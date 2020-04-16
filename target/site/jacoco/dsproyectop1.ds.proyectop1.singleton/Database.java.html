@@ -25,14 +25,14 @@ import java.util.ArrayList;
     
     public void probarDriverMySQL() {
         try {
-<span class="nc" id="L28">            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span>
+<span class="fc" id="L28">            Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span>
         }
 <span class="nc" id="L30">        catch(ClassNotFoundException cnfex) {</span>
 <span class="nc" id="L31">            System.out.println(&quot;Problem in&quot;</span>
                     + &quot; loading MySQL JDBC driver&quot;);
 <span class="nc" id="L33">            cnfex.printStackTrace();</span>
-<span class="nc" id="L34">        }</span>
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L34">        }</span>
+<span class="fc" id="L35">    }</span>
     
     
     public ArrayList query(String sql,String nivel){
@@ -46,8 +46,8 @@ import java.util.ArrayList;
 <span class="fc" id="L46">                String id = &quot;&quot;;</span>
 <span class="fc bfc" id="L47" title="All 2 branches covered.">                if(nivel == &quot;basico&quot;){</span>
 <span class="fc" id="L48">                    id = rs.getString(&quot;idBasico&quot;);</span>
-<span class="pc bpc" id="L49" title="1 of 2 branches missed.">                }else if(nivel == &quot;intermedio&quot;){</span>
-<span class="nc" id="L50">                    id = rs.getString(&quot;idIntermedio&quot;);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                }else if(nivel == &quot;intermedio&quot;){</span>
+<span class="fc" id="L50">                    id = rs.getString(&quot;idIntermedio&quot;);</span>
 <span class="pc bpc" id="L51" title="1 of 2 branches missed.">                }else if(nivel == &quot;avanzado&quot;){</span>
 <span class="fc" id="L52">                    id = rs.getString(&quot;idAvanzado&quot;);</span>
                 }

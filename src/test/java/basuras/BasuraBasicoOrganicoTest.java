@@ -25,4 +25,14 @@ public class BasuraBasicoOrganicoTest {
     public void testNam() {
         assertEquals("funciona BasuraBasicoOrganico", basuraBasicoOrganico.getStatus());
     } 
+    
+    @Test
+    public void testMostrarDescripcionNivel() {
+        assertEquals("Nivel Basico", basuraBasicoOrganico.mostrarDescripcionNivel());
+    }
+
+    @Test
+    public void testMostrarTipoBasura() {
+        assertEquals("Tipo de basura: Organico", basuraBasicoOrganico.mostrarTipoBasura());
+    }
 }

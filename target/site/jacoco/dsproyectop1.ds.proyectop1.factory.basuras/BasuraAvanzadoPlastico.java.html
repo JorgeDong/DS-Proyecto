@@ -24,7 +24,17 @@ public class BasuraAvanzadoPlastico extends Basura{
 <span class="fc" id="L24">    }</span>
     public String getStatus(){
 <span class="fc" id="L26">        return this.status;</span>
-    }    
+    }
+    
+    @Override
+    public String mostrarDescripcionNivel() {
+<span class="fc" id="L31">        return &quot;Nivel Avanzado&quot;;</span>
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+<span class="fc" id="L36">        return &quot;Tipo de basura: Plastico&quot;;</span>
+    }
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

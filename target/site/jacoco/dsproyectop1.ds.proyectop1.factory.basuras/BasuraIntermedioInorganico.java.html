@@ -14,12 +14,23 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  * @author coque
  */
 public class BasuraIntermedioInorganico extends Basura{
+
+    @Override
+    public String mostrarDescripcionNivel() {
+<span class="fc" id="L20">        return &quot;Nivel Intermedio&quot;;</span>
+    }
+
+    @Override
+    public String mostrarTipoBasura() {
+<span class="fc" id="L25">        return &quot;Tipo de basura: Inorganico&quot;;</span>
+    }
+
     
-<span class="nc" id="L18">    public BasuraIntermedioInorganico() {</span>
-<span class="nc" id="L19">        Database db = DatabaseConnection.getConnection();</span>
-<span class="nc" id="L20">        String sql = &quot;SELECT idIntermedio,nombre FROM basura WHERE idIntermedio = 2&quot;;</span>
-<span class="nc" id="L21">        nombresBasura = db.query(sql,&quot;intermedio&quot;); </span>
+<span class="fc" id="L29">    public BasuraIntermedioInorganico() {</span>
+<span class="fc" id="L30">        Database db = DatabaseConnection.getConnection();</span>
+<span class="fc" id="L31">        String sql = &quot;SELECT idIntermedio,nombre FROM basura WHERE idIntermedio = 2&quot;;</span>
+<span class="fc" id="L32">        nombresBasura = db.query(sql,&quot;intermedio&quot;); </span>
         //DatabaseConnection.clearConnection();     
-<span class="nc" id="L23">    }</span>
+<span class="fc" id="L34">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
