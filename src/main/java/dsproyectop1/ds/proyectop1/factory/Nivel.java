@@ -29,7 +29,7 @@ public abstract class Nivel {
     
     public abstract Integer createBasuras(int objetos);
     
-    public void ejecutarNivel(int objetos){
+    public Boolean ejecutarNivel(int objetos){
         createBasuras(objetos);
         mostrarDescripcionNivel();
         System.out.println("entro");
@@ -54,10 +54,12 @@ public abstract class Nivel {
         }
         
         mostrarResultados();
+
+        return true;
         
     }
     
-    public void separarId(){
+    public Boolean separarId(){
         for(int i = 1; i < nombresBasuraTotal.size(); i++){
             System.out.println(nombresBasuraTotal.get(i));            
             String str = nombresBasuraTotal.get(i).toString();
@@ -73,9 +75,10 @@ public abstract class Nivel {
             nombresBasuraSeparado.add(remainder);
             
         }
+        return true;
     }
     
-    public void mostrarResultados(){
+    public Boolean mostrarResultados(){
         PaneMaker paneMaker = new PaneMaker();
         
         //paneMaker.paneConfirm(resultados.toString());
@@ -86,8 +89,7 @@ public abstract class Nivel {
         }
         mensaje+="</table></html>";
         paneMaker.paneConfirm(mensaje);
-               
+        
+        return true;
     }
-    
-   
 }

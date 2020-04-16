@@ -15,11 +15,11 @@ import javax.swing.JOptionPane;
 <span class="fc" id="L15">    private String titulo = &quot;Juego Clasificar Basura&quot;;</span>
     
     public int paneOptions(String[] options, String message){
-<span class="nc" id="L18">        int seleccion = JOptionPane.showOptionDialog(null, </span>
+<span class="fc" id="L18">        int seleccion = JOptionPane.showOptionDialog(null, </span>
                 message,this.titulo, 
                 JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
                 null, options, options[0]);
-<span class="nc" id="L22">        return seleccion;</span>
+<span class="fc" id="L22">        return seleccion;</span>
     }
     
     public String paneInput(String message){

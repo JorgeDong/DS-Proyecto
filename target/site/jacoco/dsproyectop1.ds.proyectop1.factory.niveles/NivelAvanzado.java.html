@@ -105,26 +105,26 @@ import java.util.Collections;
 <span class="fc" id="L105">            String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Papel&quot;,</span>
                  &quot;Vidrio&quot;,&quot;Metal&quot;,&quot;Plástico&quot;,&quot;Textiles&quot;,&quot;Basura tecnológica&quot;};
             //int i;
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">            for(int i = 1; i &lt; nombresBasuraSeparado.size(); i++){</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">            for(int i = 1; i &lt; nombresBasuraSeparado.size(); i++){</span>
                 //System.out.println(nombresBasuraTotal.get(i));
-<span class="nc" id="L110">                int basuraMostrar = paneMaker.paneOptions(</span>
-<span class="nc" id="L111">                        basuraMenu,nombresBasuraSeparado.get(i).toString()+ &quot; (&quot; + i + &quot;/&quot; +objetos+ &quot;)&quot;);</span>
-<span class="nc" id="L112">                System.out.println(basuraMostrar);</span>
+<span class="fc" id="L110">                int basuraMostrar = paneMaker.paneOptions(</span>
+<span class="fc" id="L111">                        basuraMenu,nombresBasuraSeparado.get(i).toString()+ &quot; (&quot; + i + &quot;/&quot; +objetos+ &quot;)&quot;);</span>
+<span class="fc" id="L112">                System.out.println(basuraMostrar);</span>
                 
-<span class="nc" id="L114">                int n = Integer.parseInt(idBasuraTotal.get(i).toString());</span>
+<span class="fc" id="L114">                int n = Integer.parseInt(idBasuraTotal.get(i).toString());</span>
                 String resultado;
-<span class="nc bnc" id="L116" title="All 2 branches missed.">                if(basuraMostrar == n-1){</span>
-<span class="nc" id="L117">                    System.out.println(&quot;correcto&quot;);</span>
-<span class="nc" id="L118">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;correcto&quot;;</span>
-<span class="nc" id="L119">                    correctos++;</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">                if(basuraMostrar == n-1){</span>
+<span class="fc" id="L117">                    System.out.println(&quot;correcto&quot;);</span>
+<span class="fc" id="L118">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;correcto&quot;;</span>
+<span class="fc" id="L119">                    correctos++;</span>
                 }else{
-<span class="nc" id="L121">                    System.out.println(&quot;incorrecto&quot;);</span>
-<span class="nc" id="L122">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;inccorrecto&quot;;</span>
+<span class="fc" id="L121">                    System.out.println(&quot;incorrecto&quot;);</span>
+<span class="fc" id="L122">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;inccorrecto&quot;;</span>
                 }
-<span class="nc" id="L124">                resultados.add(resultado);</span>
+<span class="fc" id="L124">                resultados.add(resultado);</span>
                 
-<span class="nc" id="L126">                long elapsed = System.currentTimeMillis() - startTime;</span>
-<span class="nc bnc" id="L127" title="All 2 branches missed.">                if (elapsed &gt;= this.TIEMPO) {</span>
+<span class="fc" id="L126">                long elapsed = System.currentTimeMillis() - startTime;</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">                if (elapsed &gt;= this.TIEMPO) {</span>
 <span class="nc" id="L128">                    break;</span>
                 }
             }

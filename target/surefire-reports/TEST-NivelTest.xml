@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="basuras.BasuraAvanzadoTextilesTest" time="0.526" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="NivelTest" time="57.773" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="13"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -55,7 +55,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="57.0"/>
   </properties>
-  <testcase name="testMostrarTipoBasura" classname="basuras.BasuraAvanzadoTextilesTest" time="0.124"/>
-  <testcase name="testMostrarDescripcionNivel" classname="basuras.BasuraAvanzadoTextilesTest" time="0.188"/>
-  <testcase name="testNam" classname="basuras.BasuraAvanzadoTextilesTest" time="0.21"/>
+  <testcase name="testSepararId" classname="NivelTest" time="0"/>
+  <testcase name="testEjecutarNivel" classname="NivelTest" time="57.771"/>
+  <testcase name="testMostrarResultados" classname="NivelTest" time="0"/>
 </testsuite>
