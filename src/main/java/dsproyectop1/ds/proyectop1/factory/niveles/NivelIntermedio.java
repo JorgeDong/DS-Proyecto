@@ -21,11 +21,12 @@ public class NivelIntermedio extends Nivel{
     private static final int TIEMPO = 5000;
     
     @Override
-    public void mostrarDescripcionNivel() {
+    public String mostrarDescripcionNivel() {
         PaneMaker paneMaker = new PaneMaker();
         String mensaje = "<html>Nivel Intermedio:"
             + "<br>Debes clasificar entre Orgánico, Inorgánico y Reciclable.</html>";
         paneMaker.paneConfirm(mensaje);
+        return "Nivel Intermedio";
     }
 
 @Override

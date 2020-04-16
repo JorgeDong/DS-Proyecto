@@ -1,1 +1,5 @@
-BasuraAvanzadoMetalTest.class
+basuras\BasuraAvanzadoMetalTest.class
+basuras\BasuraAvanzadoOrganicoTest.class
+niveles\NivelIntermedioTest.class
+niveles\NivelBasicoTest.class
+niveles\NivelAvanzadoTest.class

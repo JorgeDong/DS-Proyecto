@@ -23,7 +23,7 @@ public abstract class Nivel {
     public int cantidadObjetos;
     public int correctos = 0;
     
-    public abstract void mostrarDescripcionNivel();
+    public abstract String mostrarDescripcionNivel();
     
     public void ejecutarNivel(int objetos){
         createBasuras(objetos);

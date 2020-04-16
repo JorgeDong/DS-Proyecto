@@ -20,12 +20,13 @@ public class NivelAvanzado extends Nivel{
     private static final int TIEMPO = 50000;
     
     @Override
-    public void mostrarDescripcionNivel() {
+    public String mostrarDescripcionNivel() {
         PaneMaker paneMaker = new PaneMaker();
         String mensaje = "<html>Nivel Avanzado:"
             + "<br>Debes clasificar entre Orgánico, Papel, Vidrio, Metal,"
                 + "Plástico, Textiles y Basura tecnológica.</html>";
         paneMaker.paneConfirm(mensaje);
+        return "Nivel Avanzado";
     }
 
     @Override
