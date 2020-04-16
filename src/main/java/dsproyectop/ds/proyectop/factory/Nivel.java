@@ -7,89 +7,120 @@ package dsproyectop.ds.proyectop.factory;
 
 import dsproyectop.ds.proyectop.facade.PaneMaker;
 import java.util.ArrayList;
-import java.util.Collections;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author coque
  */
 public abstract class Nivel {
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+    protected ArrayList nombresBasuraTotal = new ArrayList();
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+    protected ArrayList nombresBasuraSeparado = new ArrayList();
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+    protected ArrayList idBasuraTotal = new ArrayList();
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+    protected ArrayList resultados = new ArrayList();
 
-    public ArrayList nombresBasuraTotal = new ArrayList();
-    public ArrayList nombresBasuraSeparado = new ArrayList();
-    public ArrayList idBasuraTotal = new ArrayList();
-     public ArrayList resultados = new ArrayList();
-    public int cantidadObjetos;
-    public int correctos = 0;
-    
+    /**
+     * Variable cantidadObjetos.
+     */
+    private int cantidadObjetos;
+    /**
+     * Variable correctos.
+     */
+    protected int correctos = 0;
+    /**
+     * It return the actual level of the game.
+     * @return A String.
+     */
     public abstract String mostrarDescripcionNivel();
-
+    /**
+     * It return the actual level of the game.
+     * @param objetos
+     * @return An integer.
+     */
     public abstract Integer mostrarOpciones(int objetos);
-    
+    /**
+     * It return the actual level of the game.
+     * @param objetos
+     * @return An integer.
+     */
     public abstract Integer createBasuras(int objetos);
-    
-    public Boolean ejecutarNivel(int objetos){
+    /**
+     * It return the actual level of the game.
+     * @param objetos
+     * @return A boolean.
+     */
+    public Boolean ejecutarNivel(final int objetos) {
+        final int veinte = 6;
+        final int treintaycinco = 7;
+        final int ciencuenta = 11;
         createBasuras(objetos);
         mostrarDescripcionNivel();
         System.out.println("entro");
-        
-//        for(int i = 1; i < nombresBasuraTotal.size(); i++){
-//            System.out.println(nombresBasuraTotal.get(i));
-//        }
-
         separarId();
-        
-        if(objetos == 0){
-            this.cantidadObjetos = 20;
-        }else if (objetos == 1){
-            this.cantidadObjetos = 35;
-        }else{
-            this.cantidadObjetos = 50;
+        if (objetos == 0) {
+            this.cantidadObjetos = veinte;
+        } else if (objetos == 1) {
+            this.cantidadObjetos = treintaycinco;
+        } else {
+            this.cantidadObjetos = ciencuenta;
         }
         mostrarOpciones(this.cantidadObjetos);
-        
-        for(int i = 1; i < resultados.size(); i++){
+        for (int i = 1; i < resultados.size(); i++) {
             System.out.println(resultados.get(i));
         }
-        
         mostrarResultados();
-
         return true;
-        
     }
-    
-    public Boolean separarId(){
-        for(int i = 1; i < nombresBasuraTotal.size(); i++){
-            System.out.println(nombresBasuraTotal.get(i));            
+    /**
+     * It return the actual level of the game.
+     * @return A boolean.
+     */
+    public Boolean separarId() {
+        for (int i = 1; i < nombresBasuraTotal.size(); i++) {
+            System.out.println(nombresBasuraTotal.get(i));
             String str = nombresBasuraTotal.get(i).toString();
             System.out.println(str);
-            
-            String kept = str.substring( 0, str.indexOf(","));
+            String kept = str.substring(0, str.indexOf(","));
              System.out.println(kept);
             idBasuraTotal.add(kept);
             System.out.println(str);
-            
-            String remainder = str.substring(str.indexOf(",")+1, str.length());
+            String remainder = str.substring(
+                str.indexOf(",") + 1, str.length());
             System.out.println(remainder);
             nombresBasuraSeparado.add(remainder);
-            
         }
         return true;
     }
-    
-    public Boolean mostrarResultados(){
+    /**
+     * It return the actual level of the game.
+     * @return A boolean.
+     */
+    public Boolean mostrarResultados() {
         PaneMaker paneMaker = new PaneMaker();
-        
         //paneMaker.paneConfirm(resultados.toString());
-        String mensaje = "<html><table><tr><th>Resultados correctos: "+ correctos+ "/"+ cantidadObjetos + "</th></tr>";
-        for(int i = 1; i < resultados.size(); i++){
+        String mensaje = "<html><table><tr><th>Resultados correctos: "
+        + correctos + "/" + cantidadObjetos + "</th></tr>";
+        for (int i = 1; i < resultados.size(); i++) {
             System.out.println(resultados.get(i));
-            mensaje+="<tr><td>"+resultados.get(i)+"</td></tr>";
+            mensaje += "<tr><td>" + resultados.get(i) + "</td></tr>";
         }
-        mensaje+="</table></html>";
+        mensaje += "</table></html>";
         paneMaker.paneConfirm(mensaje);
-        
         return true;
     }
 }
