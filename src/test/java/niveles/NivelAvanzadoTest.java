@@ -29,4 +29,16 @@ public class NivelAvanzadoTest {
         assertEquals("Nivel Avanzado", nivelAvanzado.mostrarDescripcionNivel());
     }
 
+    @Test
+    public void testCreateBasuras() {
+        when(nivel.createBasuras(2)).thenReturn(2);
+        assertEquals((Integer) 2, nivelAvanzado.createBasuras(2));
+    }
+
+    @Test
+    public void testMostrarOpciones() {
+        when(nivel.mostrarOpciones(50)).thenReturn(50);
+        assertEquals((Integer) 50, nivelAvanzado.mostrarOpciones(50));
+    }
+
 }

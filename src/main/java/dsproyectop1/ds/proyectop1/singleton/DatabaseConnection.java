@@ -23,8 +23,6 @@ public class DatabaseConnection extends Database {
             System.out.println("Conexion exitosa");
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
         }
     }
     
@@ -42,8 +40,6 @@ public class DatabaseConnection extends Database {
                 System.out.println("Conexion cerrada");
             } catch (SQLException ex) {
                 System.out.println("SQLException: " + ex.getMessage());
-                System.out.println("SQLState: " + ex.getSQLState());
-                System.out.println("VendorError: " + ex.getErrorCode());
             }
         }
         uniqueInstance = null;

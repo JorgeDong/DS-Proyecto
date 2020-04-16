@@ -24,6 +24,10 @@ public abstract class Nivel {
     public int correctos = 0;
     
     public abstract String mostrarDescripcionNivel();
+
+    public abstract Integer mostrarOpciones(int objetos);
+    
+    public abstract Integer createBasuras(int objetos);
     
     public void ejecutarNivel(int objetos){
         createBasuras(objetos);
@@ -52,10 +56,6 @@ public abstract class Nivel {
         mostrarResultados();
         
     }
-    
-    public abstract void mostrarOpciones(int objetos);
-    
-    protected abstract void createBasuras(int objetos);
     
     public void separarId(){
         for(int i = 1; i < nombresBasuraTotal.size(); i++){

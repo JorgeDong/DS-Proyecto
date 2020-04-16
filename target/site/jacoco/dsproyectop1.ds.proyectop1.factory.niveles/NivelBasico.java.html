@@ -21,23 +21,23 @@ import java.util.Collections;
     private static final int TIEMPO = 10000;
     
     @Override
-    protected void createBasuras(int objetos) { 
-<span class="nc" id="L25">        Basura basuraBasicoOrganica = new BasuraBasicoOrganico();</span>
-<span class="nc" id="L26">        Basura basuraBasicoInorganica = new BasuraBasicoInorganico();</span>
+	public Integer createBasuras(int objetos) { 
+<span class="fc" id="L25">        Basura basuraBasicoOrganica = new BasuraBasicoOrganico();</span>
+<span class="fc" id="L26">        Basura basuraBasicoInorganica = new BasuraBasicoInorganico();</span>
     // En este metodo mezclamos para que quede el arreglo final a mostrar de basuras dependiedo del tama
-<span class="nc" id="L28">        Collections.shuffle(basuraBasicoOrganica.getNombresBasura());</span>
-<span class="nc" id="L29">        Collections.shuffle(basuraBasicoInorganica.getNombresBasura()); </span>
+<span class="fc" id="L28">        Collections.shuffle(basuraBasicoOrganica.getNombresBasura());</span>
+<span class="fc" id="L29">        Collections.shuffle(basuraBasicoInorganica.getNombresBasura()); </span>
         
-<span class="nc bnc" id="L31" title="All 4 branches missed.">        switch (objetos){</span>
+<span class="pc bpc" id="L31" title="3 of 4 branches missed.">        switch (objetos){</span>
             case 0:
                 //20
                 //Tamaño para margen
-<span class="nc bnc" id="L35" title="All 2 branches missed.">                for (int i=0; i&lt;10; i++) {</span>
-<span class="nc" id="L36">                    nombresBasuraTotal.add(basuraBasicoOrganica.getNombresBasura().get(i));</span>
-<span class="nc" id="L37">                    nombresBasuraTotal.add(basuraBasicoInorganica.getNombresBasura().get(i));</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">                for (int i=0; i&lt;10; i++) {</span>
+<span class="fc" id="L36">                    nombresBasuraTotal.add(basuraBasicoOrganica.getNombresBasura().get(i));</span>
+<span class="fc" id="L37">                    nombresBasuraTotal.add(basuraBasicoInorganica.getNombresBasura().get(i));</span>
                 }
-<span class="nc" id="L39">                System.out.println(nombresBasuraTotal.size());</span>
-<span class="nc" id="L40">                break; // break es opcional</span>
+<span class="fc" id="L39">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="fc" id="L40">                break; // break es opcional</span>
             case 1:
 <span class="nc bnc" id="L42" title="All 2 branches missed.">                for (int i=0; i&lt;17; i++) {</span>
 <span class="nc" id="L43">                    nombresBasuraTotal.add(basuraBasicoOrganica.getNombresBasura().get(i));</span>
@@ -56,52 +56,53 @@ import java.util.Collections;
             default : 
 <span class="nc" id="L57">                System.exit(0);</span>
         }
-    
+        
+<span class="fc" id="L60">        return objetos;</span>
 
-<span class="nc" id="L61">    }</span>
+    }
 
     @Override
     public String mostrarDescripcionNivel() {
-<span class="fc" id="L65">        PaneMaker paneMaker = new PaneMaker();</span>
-<span class="fc" id="L66">        String mensaje = &quot;&lt;html&gt;Nivel Basico:&quot;</span>
+<span class="fc" id="L66">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L67">        String mensaje = &quot;&lt;html&gt;Nivel Basico:&quot;</span>
             + &quot;&lt;br&gt;Debes clasificar la basura entre Orgánico e Inorgánico.&lt;/html&gt;&quot;;
-<span class="fc" id="L68">        paneMaker.paneConfirm(mensaje);</span>
-<span class="fc" id="L69">        return &quot;Nivel Basico&quot;;</span>
+<span class="fc" id="L69">        paneMaker.paneConfirm(mensaje);</span>
+<span class="fc" id="L70">        return &quot;Nivel Basico&quot;;</span>
     }
     
     @Override
-    public void mostrarOpciones(int objetos){
+    public Integer mostrarOpciones(int objetos){
         
-<span class="nc" id="L75">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L76">        PaneMaker paneMaker = new PaneMaker();</span>
    
-<span class="nc" id="L77">            long startTime = System.currentTimeMillis();</span>
-<span class="nc" id="L78">            String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};</span>
+<span class="fc" id="L78">            long startTime = System.currentTimeMillis();</span>
+<span class="fc" id="L79">            String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};</span>
             int i;
-<span class="nc bnc" id="L80" title="All 2 branches missed.">            for(i = 1 ; i &lt; nombresBasuraSeparado.size(); i++){</span>
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">            for(i = 1 ; i &lt; nombresBasuraSeparado.size(); i++){</span>
                 //System.out.println(nombresBasuraTotal.get(i));
-<span class="nc" id="L82">                int basuraMostrar = paneMaker.paneOptions(</span>
-<span class="nc" id="L83">                        basuraMenu,nombresBasuraSeparado.get(i).toString()+ &quot; (&quot; + i + &quot;/&quot; +objetos+ &quot;)&quot;);</span>
-<span class="nc" id="L84">                System.out.println(basuraMostrar);</span>
+<span class="nc" id="L83">                int basuraMostrar = paneMaker.paneOptions(</span>
+<span class="nc" id="L84">                        basuraMenu,nombresBasuraSeparado.get(i).toString()+ &quot; (&quot; + i + &quot;/&quot; +objetos+ &quot;)&quot;);</span>
+<span class="nc" id="L85">                System.out.println(basuraMostrar);</span>
                 
-<span class="nc" id="L86">                int n = Integer.parseInt(idBasuraTotal.get(i).toString());</span>
+<span class="nc" id="L87">                int n = Integer.parseInt(idBasuraTotal.get(i).toString());</span>
                 String resultado;
-<span class="nc bnc" id="L88" title="All 2 branches missed.">                if(basuraMostrar == n-1){</span>
-<span class="nc" id="L89">                    System.out.println(&quot;correcto&quot;);</span>
-<span class="nc" id="L90">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;correcto&quot;;</span>
-<span class="nc" id="L91">                    correctos++;</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">                if(basuraMostrar == n-1){</span>
+<span class="nc" id="L90">                    System.out.println(&quot;correcto&quot;);</span>
+<span class="nc" id="L91">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;correcto&quot;;</span>
+<span class="nc" id="L92">                    correctos++;</span>
                 }else{
-<span class="nc" id="L93">                    System.out.println(&quot;incorrecto&quot;);</span>
-<span class="nc" id="L94">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;inccorrecto&quot;;</span>
+<span class="nc" id="L94">                    System.out.println(&quot;incorrecto&quot;);</span>
+<span class="nc" id="L95">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;inccorrecto&quot;;</span>
                 }
-<span class="nc" id="L96">                resultados.add(resultado);</span>
+<span class="nc" id="L97">                resultados.add(resultado);</span>
                          
-<span class="nc" id="L98">                long elapsed = System.currentTimeMillis() - startTime;</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">                if (elapsed &gt;= this.TIEMPO) {</span>
-<span class="nc" id="L100">                    break;</span>
+<span class="nc" id="L99">                long elapsed = System.currentTimeMillis() - startTime;</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">                if (elapsed &gt;= this.TIEMPO) {</span>
+<span class="nc" id="L101">                    break;</span>
                 }
             }
- 
-<span class="nc" id="L104">    }</span>
+<span class="fc" id="L104">        return objetos;    </span>
+    }
    
     
 }

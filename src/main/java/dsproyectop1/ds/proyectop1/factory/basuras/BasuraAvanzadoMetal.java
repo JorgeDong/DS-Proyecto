@@ -13,18 +13,20 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  *
  * @author coque
  */
-public class BasuraAvanzadoMetal extends Basura{
+public class BasuraAvanzadoMetal extends Basura {
     String status;
     
-    public BasuraAvanzadoMetal(){
+    public BasuraAvanzadoMetal() {
         Database db = DatabaseConnection.getConnection();
-        String sql = "SELECT idAvanzado,nombre FROM basura WHERE idAvanzado = 4";
+        String sql = "SELECT idAvanzado,nombre "
+                + "FROM basura "
+                + "WHERE idAvanzado = 4";
         nombresBasura = db.query(sql,"avanzado");
         status = "funciona BasuraAvanzadoMetal";
         //DatabaseConnection.clearConnection();
     }
     
-    public String getStatus(){
+    public String getStatus() {
         return this.status;
     }
     

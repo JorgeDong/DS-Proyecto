@@ -24,38 +24,38 @@ import javax.swing.JOptionPane;
 <span class="fc" id="L24">    public int correctos = 0;</span>
     
     public abstract String mostrarDescripcionNivel();
+
+    public abstract Integer mostrarOpciones(int objetos);
+    
+    public abstract Integer createBasuras(int objetos);
     
     public void ejecutarNivel(int objetos){
-<span class="nc" id="L29">        createBasuras(objetos);</span>
-<span class="nc" id="L30">        mostrarDescripcionNivel();</span>
-<span class="nc" id="L31">        System.out.println(&quot;entro&quot;);</span>
+<span class="nc" id="L33">        createBasuras(objetos);</span>
+<span class="nc" id="L34">        mostrarDescripcionNivel();</span>
+<span class="nc" id="L35">        System.out.println(&quot;entro&quot;);</span>
         
 //        for(int i = 1; i &lt; nombresBasuraTotal.size(); i++){
 //            System.out.println(nombresBasuraTotal.get(i));
 //        }
 
-<span class="nc" id="L37">        separarId();</span>
+<span class="nc" id="L41">        separarId();</span>
         
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        if(objetos == 0){</span>
-<span class="nc" id="L40">            this.cantidadObjetos = 20;</span>
-<span class="nc bnc" id="L41" title="All 2 branches missed.">        }else if (objetos == 1){</span>
-<span class="nc" id="L42">            this.cantidadObjetos = 35;</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        if(objetos == 0){</span>
+<span class="nc" id="L44">            this.cantidadObjetos = 20;</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        }else if (objetos == 1){</span>
+<span class="nc" id="L46">            this.cantidadObjetos = 35;</span>
         }else{
-<span class="nc" id="L44">            this.cantidadObjetos = 50;</span>
+<span class="nc" id="L48">            this.cantidadObjetos = 50;</span>
         }
-<span class="nc" id="L46">        mostrarOpciones(this.cantidadObjetos);</span>
+<span class="nc" id="L50">        mostrarOpciones(this.cantidadObjetos);</span>
         
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        for(int i = 1; i &lt; resultados.size(); i++){</span>
-<span class="nc" id="L49">            System.out.println(resultados.get(i));</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        for(int i = 1; i &lt; resultados.size(); i++){</span>
+<span class="nc" id="L53">            System.out.println(resultados.get(i));</span>
         }
         
-<span class="nc" id="L52">        mostrarResultados();</span>
+<span class="nc" id="L56">        mostrarResultados();</span>
         
-<span class="nc" id="L54">    }</span>
-    
-    public abstract void mostrarOpciones(int objetos);
-    
-    protected abstract void createBasuras(int objetos);
+<span class="nc" id="L58">    }</span>
     
     public void separarId(){
 <span class="nc bnc" id="L61" title="All 2 branches missed.">        for(int i = 1; i &lt; nombresBasuraTotal.size(); i++){</span>

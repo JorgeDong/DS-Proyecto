@@ -34,4 +34,9 @@ public class BasuraIntermedioReciclableTest {
         assertEquals("Tipo de basura: Reciclable", basuraIntermedioReciclable.mostrarTipoBasura());
     }
 
+    @Test
+    public void testgetStatus() {
+        assertEquals("funciona BasuraIntermedioReciclable",  basuraIntermedioReciclable.getStatus());
+    }
+
 }

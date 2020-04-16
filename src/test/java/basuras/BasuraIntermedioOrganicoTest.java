@@ -34,4 +34,9 @@ public class BasuraIntermedioOrganicoTest {
         assertEquals("Tipo de basura: Organico", basuraIntermedioOrganico.mostrarTipoBasura());
     }
 
+    @Test
+    public void testgetStatus() {
+        assertEquals("funciona BasuraIntermedioOrganico",  basuraIntermedioOrganico.getStatus());
+    }
+
 }
