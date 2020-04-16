@@ -46,9 +46,9 @@ public abstract class Basura {
     /**
     * Método que devuelve el número de ítems (números aleatorios) existentes en
     * la serie.
-    * @param nombresBasuraParam El número de ítems (números aleatorios) de que consta la serie
+    * @param nombresBasuraParam El número de ítems (números aleatorios)
     */
-    public void setNombresBasura(ArrayList nombresBasuraParam) {
+    public void setNombresBasura(final ArrayList nombresBasuraParam) {
         this.nombresBasura = nombresBasuraParam;
     }
     /**
@@ -62,9 +62,9 @@ public abstract class Basura {
     /**
     * Método que devuelve el número de ítems (números aleatorios) existentes en
     * la serie.
-    * @param idBasuraParam El número de ítems (números aleatorios) de que consta la serie
+    * @param idBasuraParam El número de ítems (números aleatorios) de que
     */
-    public void setidBasuraBasura(ArrayList idBasuraParam) {
+    public void setidBasuraBasura(final ArrayList idBasuraParam) {
         this.nombresBasura = idBasura;
     }
 }

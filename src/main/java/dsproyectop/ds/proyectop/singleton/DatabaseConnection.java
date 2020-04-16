@@ -6,43 +6,50 @@
 package dsproyectop.ds.proyectop.singleton;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-/**
- *
- * @author coque
- */
-public class DatabaseConnection extends Database {
+/***
+ * Esta clase define metodos que cada clase que herede debe implementar.
+ * @author: JorgeDong y Luis
+ * @version: 21/02/2020
+*/
+public final class DatabaseConnection extends Database {
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
     private static Database uniqueInstance;
-
-    private DatabaseConnection(){
-        try {   
-            connection = (Connection) DriverManager.getConnection(URL,USER,PASSWORD);
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    private DatabaseConnection() {
+        try {
+             setConnection((Connection) DriverManager.getConnection(URL,
+                USER, PASSWORD));
             System.out.println("Conexion exitosa");
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
         }
     }
-    
-    public static Database getConnection(){
-        if(uniqueInstance== null){
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public static Database getConnection() {
+        if (uniqueInstance == null) {
             uniqueInstance = new DatabaseConnection();
         }
         return uniqueInstance;
     }
-
-    public static void clearConnection(){
-        if (connection != null) {
-            try {
-                connection.close();
-                System.out.println("Conexion cerrada");
-            } catch (SQLException ex) {
-                System.out.println("SQLException: " + ex.getMessage());
-            }
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    public static void clearConnection() {
+        if (uniqueInstance != null) {
+            uniqueInstance = null;
         }
-        uniqueInstance = null;
     }
-    
 }

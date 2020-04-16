@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2020</copyright>
     <item>
-      <title>File: 8,
-             Errors: 193,
+      <title>File: 3,
+             Errors: 128,
              Warnings: 0,
              Infos: 0
       </title>
@@ -44,62 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.facade.package-info.java">dsproyectop/ds/proyectop/facade/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoMetal.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoMetal.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.singleton.DatabaseConnection.java">dsproyectop/ds/proyectop/singleton/DatabaseConnection.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.Basura.java">dsproyectop/ds/proyectop/factory/Basura.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  5
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.Nivel.java">dsproyectop/ds/proyectop/factory/Nivel.java</a>
@@ -125,21 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  45
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.singleton.Database.java">dsproyectop/ds/proyectop/singleton/Database.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  39
+                  44
                 </td>
               </tr>
                           <tr>
