@@ -9,32 +9,53 @@ import dsproyectop1.ds.proyectop1.factory.Basura;
 import dsproyectop1.ds.proyectop1.singleton.Database;
 import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
 
-/**
- *
- * @author coque
- */
-public class BasuraIntermedioInorganico extends Basura{
-    String status;
-
+/***
+ * Esta clase define metodos que cada clase que herede debe implementar.
+ * @author: JorgeDong y Luis
+ * @version: 21/02/2020
+*/
+public class BasuraIntermedioInorganico extends Basura {
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    private String status;
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
     @Override
     public String mostrarDescripcionNivel() {
         return "Nivel Intermedio";
     }
-
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
     @Override
     public String mostrarTipoBasura() {
         return "Tipo de basura: Inorganico";
     }
-    
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
     public BasuraIntermedioInorganico() {
         Database db = DatabaseConnection.getConnection();
-        String sql = "SELECT idIntermedio,nombre FROM basura WHERE idIntermedio = 2";
-        nombresBasura = db.query(sql,"intermedio"); 
+        String sql = "SELECT idIntermedio,nombre "
+                + "FROM basura WHERE idIntermedio = 2";
+        setNombresBasura(db.query(sql, "intermedio"));
         status = "funciona BasuraIntermedioInorganico";
-        //DatabaseConnection.clearConnection();     
+        //DatabaseConnection.clearConnection();
     }
-
-    public String getStatus(){
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public String getStatus() {
         return this.status;
     }
 }
