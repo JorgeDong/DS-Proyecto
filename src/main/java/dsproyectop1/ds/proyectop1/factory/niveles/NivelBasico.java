@@ -61,11 +61,12 @@ public class NivelBasico extends Nivel{
     }
 
     @Override
-    public void mostrarDescripcionNivel() {
+    public String mostrarDescripcionNivel() {
         PaneMaker paneMaker = new PaneMaker();
         String mensaje = "<html>Nivel Basico:"
             + "<br>Debes clasificar la basura entre Orgánico e Inorgánico.</html>";
         paneMaker.paneConfirm(mensaje);
+        return "Nivel Basico";
     }
     
     @Override
