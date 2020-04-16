@@ -20,4 +20,8 @@ public class BasuraAvanzadoMetal extends Basura{
         nombresBasura = db.query(sql,"avanzado");
         //DatabaseConnection.clearConnection();
     }
+    
+    public int prueba(){
+        return 5;
+    }
 }

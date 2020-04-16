@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PaneMaker.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop1.ds.proyectop1.facade</a> &gt; <span class="el_source">PaneMaker.java</span></div><h1>PaneMaker.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop1.ds.proyectop1.facade;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author coque
+ */
+<span class="nc" id="L14">public class PaneMaker {</span>
+<span class="nc" id="L15">    private String titulo = &quot;Juego Clasificar Basura&quot;;</span>
+    
+    public int paneOptions(String[] options, String message){
+<span class="nc" id="L18">        int seleccion = JOptionPane.showOptionDialog(null, </span>
+                message,this.titulo, 
+                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, options, options[0]);
+<span class="nc" id="L22">        return seleccion;</span>
+    }
+    
+    public String paneInput(String message){
+<span class="nc" id="L26">        String respuesta = JOptionPane.showInputDialog(null, </span>
+                message,this.titulo, 
+            JOptionPane.QUESTION_MESSAGE);
+<span class="nc" id="L29">        return respuesta;</span>
+    }
+    
+    public int paneConfirm(String message){
+<span class="nc" id="L33">        int input = JOptionPane.showConfirmDialog(null, </span>
+            message, this.titulo, JOptionPane.DEFAULT_OPTION);  
+<span class="nc" id="L35">        return input;</span>
+    }
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

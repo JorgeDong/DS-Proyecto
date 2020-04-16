@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NivelIntermedio.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop1.ds.proyectop1.factory.niveles</a> &gt; <span class="el_source">NivelIntermedio.java</span></div><h1>NivelIntermedio.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop1.ds.proyectop1.factory.niveles;
+
+import dsproyectop1.ds.proyectop1.facade.PaneMaker;
+import dsproyectop1.ds.proyectop1.factory.Basura;
+import dsproyectop1.ds.proyectop1.factory.Nivel;
+import dsproyectop1.ds.proyectop1.factory.basuras.*;
+import dsproyectop1.ds.proyectop1.factory.basuras.BasuraIntermedioOrganico;
+import java.util.Collections;
+
+/**
+ *
+ * @author coque
+ */
+<span class="nc" id="L19">public class NivelIntermedio extends Nivel{</span>
+    
+    private static final int TIEMPO = 5000;
+    
+    @Override
+    public void mostrarDescripcionNivel() {
+<span class="nc" id="L25">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="nc" id="L26">        String mensaje = &quot;&lt;html&gt;Nivel Intermedio:&quot;</span>
+            + &quot;&lt;br&gt;Debes clasificar entre Orgánico, Inorgánico y Reciclable.&lt;/html&gt;&quot;;
+<span class="nc" id="L28">        paneMaker.paneConfirm(mensaje);</span>
+<span class="nc" id="L29">    }</span>
+
+@Override
+    protected void createBasuras(int objetos) { 
+<span class="nc" id="L33">        Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();</span>
+<span class="nc" id="L34">        Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();</span>
+<span class="nc" id="L35">        Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();</span>
+    // En este metodo mezclamos para que quede el arreglo final a mostrar de basuras dependiedo del tama
+<span class="nc" id="L37">        Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());</span>
+<span class="nc" id="L38">        Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());</span>
+<span class="nc" id="L39">        Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());</span>
+        
+<span class="nc bnc" id="L41" title="All 4 branches missed.">        switch (objetos){</span>
+            case 0:
+                //20
+                //Tamaño para margen
+<span class="nc bnc" id="L45" title="All 2 branches missed.">                for (int i=0; i&lt;6; i++) {</span>
+<span class="nc" id="L46">                    nombresBasuraTotal.add(basuraIntermedioOrganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L47">                    nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L48">                    nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(i));</span>
+                }
+<span class="nc" id="L50">                nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(7));</span>
+<span class="nc" id="L51">                nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(7));</span>
+<span class="nc" id="L52">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="nc" id="L53">                break; // break es opcional</span>
+            case 1:
+<span class="nc bnc" id="L55" title="All 2 branches missed.">                for (int i=0; i&lt;11; i++) {</span>
+<span class="nc" id="L56">                    nombresBasuraTotal.add(basuraIntermedioOrganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L57">                    nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L58">                    nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(i));</span>
+                }
+<span class="nc" id="L60">                nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(12));</span>
+<span class="nc" id="L61">                nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(12));</span>
+                
+<span class="nc" id="L63">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="nc" id="L64">                break; // break es opcional</span>
+            case 2:
+<span class="nc bnc" id="L66" title="All 2 branches missed.">                for (int i=0; i&lt;16; i++) {</span>
+<span class="nc" id="L67">                    nombresBasuraTotal.add(basuraIntermedioOrganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L68">                    nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L69">                    nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(i));</span>
+                }
+<span class="nc" id="L71">                nombresBasuraTotal.add(basuraIntermedioInorganica.getNombresBasura().get(17));</span>
+<span class="nc" id="L72">                nombresBasuraTotal.add(basuraIntermedioReciclable.getNombresBasura().get(17));</span>
+<span class="nc" id="L73">                break; // break es opcional</span>
+            default : 
+<span class="nc" id="L75">                System.exit(0);</span>
+        }
+    
+
+<span class="nc" id="L79">    }</span>
+    
+    @Override
+    public void mostrarOpciones(int objetos){
+<span class="nc" id="L83">        PaneMaker paneMaker = new PaneMaker();</span>
+   
+<span class="nc" id="L85">        long startTime = System.currentTimeMillis();</span>
+<span class="nc" id="L86">            String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;,&quot;Reciclable&quot;};</span>
+            int i;
+<span class="nc bnc" id="L88" title="All 2 branches missed.">            for(i = 1; i &lt; nombresBasuraSeparado.size(); i++){</span>
+                //System.out.println(nombresBasuraTotal.get(i));
+<span class="nc" id="L90">                int basuraMostrar = paneMaker.paneOptions(</span>
+<span class="nc" id="L91">                        basuraMenu,nombresBasuraSeparado.get(i).toString()+ &quot; (&quot; + i + &quot;/&quot; +objetos+ &quot;)&quot;);</span>
+<span class="nc" id="L92">                System.out.println(basuraMostrar);</span>
+                
+<span class="nc" id="L94">                int n = Integer.parseInt(idBasuraTotal.get(i).toString());</span>
+                String resultado;
+<span class="nc bnc" id="L96" title="All 2 branches missed.">                if(basuraMostrar == n-1){</span>
+<span class="nc" id="L97">                    System.out.println(&quot;correcto&quot;);</span>
+<span class="nc" id="L98">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;correcto&quot;;</span>
+<span class="nc" id="L99">                    correctos++;</span>
+                }else{
+<span class="nc" id="L101">                    System.out.println(&quot;incorrecto&quot;);</span>
+<span class="nc" id="L102">                    resultado = nombresBasuraSeparado.get(i).toString()+ &quot; -&gt;inccorrecto&quot;;</span>
+                }
+<span class="nc" id="L104">                resultados.add(resultado);</span>
+<span class="nc" id="L105">                            long elapsed = System.currentTimeMillis() - startTime;</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">                if (elapsed &gt;= this.TIEMPO) {</span>
+<span class="nc" id="L107">                    break;</span>
+                }
+            }
+
+<span class="nc" id="L111">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

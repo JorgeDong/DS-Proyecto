@@ -17,7 +17,7 @@ import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
  *
  * @author coque
  */
-public class main3 {
+public class Main {
     
     public static void main(String[] args) {
         //Database db;
