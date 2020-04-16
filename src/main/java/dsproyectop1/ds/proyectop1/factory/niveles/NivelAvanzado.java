@@ -16,7 +16,7 @@ import java.util.Collections;
 /**
  *
  * @author MrS.
- */
+ */s
 public class NivelAvanzado extends Nivel {
     /**
      * Variable tiempo.
