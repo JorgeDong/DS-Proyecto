@@ -2,8 +2,8 @@ package basuras;
 
 import org.junit.Test;
 
-import dsproyectop1.ds.proyectop1.factory.Basura;
-import dsproyectop1.ds.proyectop1.factory.basuras.BasuraIntermedioOrganico;
+import dsproyectop.ds.proyectop.factory.Basura;
+import dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioOrganico;
 
 import org.junit.Before;
 import static org.junit.Assert.*;

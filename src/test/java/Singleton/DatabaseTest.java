@@ -5,10 +5,10 @@
  */
 package Singleton;
 
-import dsproyectop1.ds.proyectop1.singleton.Database;
-import dsproyectop1.ds.proyectop1.factory.Basura;
-import dsproyectop1.ds.proyectop1.singleton.Database;
-import dsproyectop1.ds.proyectop1.singleton.DatabaseConnection;
+import dsproyectop.ds.proyectop.singleton.Database;
+import dsproyectop.ds.proyectop.factory.Basura;
+import dsproyectop.ds.proyectop.singleton.Database;
+import dsproyectop.ds.proyectop.singleton.DatabaseConnection;
 import org.junit.Before;
 import org.junit.Test;
 

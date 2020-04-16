@@ -1,7 +1,7 @@
 package basuras;
 
 
-import dsproyectop1.ds.proyectop1.factory.basuras.BasuraAvanzadoMetal;
+import dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoMetal;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Before;

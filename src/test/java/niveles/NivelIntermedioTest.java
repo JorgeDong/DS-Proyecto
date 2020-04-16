@@ -2,9 +2,9 @@ package niveles;
 
 import org.junit.Test;
 
-import dsproyectop1.ds.proyectop1.factory.Basura;
-import dsproyectop1.ds.proyectop1.factory.Nivel;
-import dsproyectop1.ds.proyectop1.factory.niveles.NivelIntermedio;
+import dsproyectop.ds.proyectop.factory.Basura;
+import dsproyectop.ds.proyectop.factory.Nivel;
+import dsproyectop.ds.proyectop.factory.niveles.NivelIntermedio;
 
 import org.junit.Before;
 import static org.junit.Assert.*;

@@ -5,7 +5,7 @@
  */
 package basuras;
 
-import dsproyectop1.ds.proyectop1.factory.basuras.*;
+import dsproyectop.ds.proyectop.factory.basuras.*;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
