@@ -16,7 +16,10 @@ public abstract class Basura {
     public ArrayList nombresBasura = new ArrayList();
     public ArrayList idBasura = new ArrayList();
     
-    
+    public abstract String mostrarDescripcionNivel();
+
+    public abstract String mostrarTipoBasura();
+
     public ArrayList getNombresBasura(){
         return this.nombresBasura;
     }
