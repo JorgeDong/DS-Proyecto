@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 #Thu Apr 16 00:33:33 CDT 2020
 configuration*?=BDBF1EA46028A0B1D292215502E3009D337B91CA
+=======
+#Wed Apr 15 23:23:29 CDT 2020
+configuration*?=E138B69EF2F63AE7329C129391D647633462EAB9
+module-resource*?\:checkstyle-xpath-suppressions.xml=60B7841CDEB78F76F895501309E0C87E9641F425
+module-resource*?\:checkstyle-suppressions.xml=8485815239DA769AA08968D65116C5914AA3D910
+>>>>>>> faa1b9da56623f80e379fe1a34e723fe4ab21ca0

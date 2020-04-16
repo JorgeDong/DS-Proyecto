@@ -1,0 +1,5 @@
+/target/checkstyle-result.xml
+/target/checkstyle-cachefile
+/target/site/checkstyle.rss
+/target/site/checkstyle.html
+/target/checkstyle-checker.xml
