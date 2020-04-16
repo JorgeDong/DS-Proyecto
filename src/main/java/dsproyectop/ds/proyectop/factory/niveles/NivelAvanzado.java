@@ -42,7 +42,7 @@ public class NivelAvanzado extends Nivel {
      * @return The number of the option.
      */
     @Override
-    public Integer createBasuras(final int objetos) { 
+    public Integer createBasuras(final int objetos) {
         final int tres = 3;
         final int cuatro = 4;
         final int cinco = 5;
@@ -64,7 +64,7 @@ public class NivelAvanzado extends Nivel {
     Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());
     Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());
     Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());
-        switch (objetos){
+        switch (objetos) {
             case 0:
                 //20
                 for (int i = 0; i < tres; i++) {
@@ -123,7 +123,8 @@ public class NivelAvanzado extends Nivel {
                     nombresBasuraTotal.add(
                         basuraAvanzadoVidrio.getNombresBasura().get(i));
                 }
-                nombresBasuraTotal.add(basuraAvanzadoVidrio.getNombresBasura().get(ocho));
+                nombresBasuraTotal.add(basuraAvanzadoVidrio
+                .getNombresBasura().get(ocho));
                 System.out.println(nombresBasuraTotal.size());
                 break; // break es opcional
             default :
@@ -141,12 +142,13 @@ public class NivelAvanzado extends Nivel {
         PaneMaker paneMaker = new PaneMaker();
         long startTime = System.currentTimeMillis();
             String[] basuraMenu = {"Orgánico", "Papel",
-                 "Vidrio", "Metal", "Plástico", "Textiles", "Basura tecnológica"};
+                 "Vidrio", "Metal", "Plástico", "Textiles",
+                 "Basura tecnológica"};
             //int i;
-            for (int i = 1; i < nombresBasuraSeparado.size(); i++){
+            for (int i = 1; i < nombresBasuraSeparado.size(); i++) {
                 //System.out.println(nombresBasuraTotal.get(i));
                 int basuraMostrar = paneMaker.paneOptions(
-                        basuraMenu,nombresBasuraSeparado.get(i)
+                        basuraMenu, nombresBasuraSeparado.get(i)
                         .toString() + " (" + i + "/" + objetos + ")");
                 System.out.println(basuraMostrar);
                 int n = Integer.parseInt(idBasuraTotal
@@ -169,7 +171,6 @@ public class NivelAvanzado extends Nivel {
                     break;
                 }
             }
-        return objetos;  
+        return objetos;
     }
-    
 }
