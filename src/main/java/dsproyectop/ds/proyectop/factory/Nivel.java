@@ -92,7 +92,6 @@ public abstract class Nivel {
         final int treintaycinco = 7;
         final int ciencuenta = 11;
         createBasuras(objetos);
-        //mostrarDescripcionNivel();
         System.out.println("entro");
         separarId();
         if (objetos == 0) {
@@ -116,6 +115,7 @@ public abstract class Nivel {
             System.out.println(resultados.get(i));
         }
         mostrarResultados();
+        System.out.println('AQUI TERMINA ESTO');
         return true;
     }
     /**
