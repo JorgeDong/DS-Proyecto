@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: niveles.NivelBasicoTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.734 s - in niveles.NivelBasicoTest
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.141 s <<< FAILURE! - in niveles.NivelBasicoTest
+testCreateBasuras(niveles.NivelBasicoTest)  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.NullPointerException
+	at niveles.NivelBasicoTest.testCreateBasuras(NivelBasicoTest.java:41)
+

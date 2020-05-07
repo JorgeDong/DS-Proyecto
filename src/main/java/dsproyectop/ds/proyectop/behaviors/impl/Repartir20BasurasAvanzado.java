@@ -41,7 +41,7 @@ public class Repartir20BasurasAvanzado implements Repartir20Basuras {
         
     @Override
     public ArrayList repartir() {
-         Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());
+    Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());
     Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());
     Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());
     Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());

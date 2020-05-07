@@ -120,7 +120,7 @@ public abstract class Nivel {
             System.out.println(resultados.get(i));
         }
         mostrarResultados();
-        System.out.println('a');
+        //System.out.println('a');
         return true;
     }
     /**
