@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Basura.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop.ds.proyectop.factory</a> &gt; <span class="el_source">Basura.java</span></div><h1>Basura.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop.ds.proyectop.factory;
+
+import java.util.ArrayList;
+
+/***
+ * Esta clase define metodos que cada clase que herede debe implementar.
+ * @author: JorgeDong y Luis
+ * @version: 21/02/2020
+*/
+<span class="fc" id="L15">public abstract class Basura {</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+<span class="fc" id="L20">    private ArrayList nombresBasura = new ArrayList();</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+<span class="fc" id="L25">    private ArrayList idBasura = new ArrayList();</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public abstract String mostrarDescripcionNivel();
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public abstract String mostrarTipoBasura();
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public ArrayList getNombresBasura() {
+<span class="fc" id="L44">        return this.nombresBasura;</span>
+    }
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @param nombresBasuraParam El número de ítems (números aleatorios)
+    */
+    public void setNombresBasura(final ArrayList nombresBasuraParam) {
+<span class="fc" id="L52">        this.nombresBasura = nombresBasuraParam;</span>
+<span class="fc" id="L53">    }</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public ArrayList getidBasura() {
+<span class="nc" id="L60">        return this.nombresBasura;</span>
+    }
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @param idBasuraParam El número de ítems (números aleatorios) de que
+    */
+    public void setidBasuraBasura(final ArrayList idBasuraParam) {
+<span class="nc" id="L68">        this.nombresBasura = idBasura;</span>
+<span class="nc" id="L69">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

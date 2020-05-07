@@ -31,8 +31,11 @@ public class DatabaseTest {
         db.probarDriverMySQL();
     }
     
-    @Test
+    /*@Test
     public void clearConnectionTest(){
         DatabaseConnection.clearConnection(connection);
     }
+        DatabaseConnection.clearConnection();
+    }*/
+
 }

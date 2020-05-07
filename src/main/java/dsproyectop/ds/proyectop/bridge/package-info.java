@@ -8,5 +8,5 @@
 * @author somebody
 * @version 1.0
 */
-package dsproyectop.ds.proyectop.facade;
+package dsproyectop.ds.proyectop.bridge;
 

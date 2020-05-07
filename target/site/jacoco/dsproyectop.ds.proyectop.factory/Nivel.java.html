@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Nivel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop.ds.proyectop.factory</a> &gt; <span class="el_source">Nivel.java</span></div><h1>Nivel.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop.ds.proyectop.factory;
+
+import dsproyectop.ds.proyectop.bridge.PaneMaker;
+import java.util.ArrayList;
+import java.util.Collections;
+
+/**
+ *
+ * @author coque
+ */
+<span class="fc" id="L16">public abstract class Nivel {</span>
+    /**
+     * Variable tiempo.
+     */
+    private static final int V20 = 20;
+    /**
+     * Variable tiempo.
+     */
+    private static final int V35 = 35;
+    /**
+     * Variable tiempo.
+     */
+    private static final int V50 = 50;
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+<span class="fc" id="L33">    private ArrayList nombresBasuraTotal = new ArrayList();</span>
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+<span class="fc" id="L38">    protected ArrayList nombresBasuraSeparado = new ArrayList();</span>
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+<span class="fc" id="L43">    protected ArrayList idBasuraTotal = new ArrayList();</span>
+    /**
+     * It return the actual level of the game.
+     * @return An arrayList.
+     */
+<span class="fc" id="L48">    protected ArrayList resultados = new ArrayList();</span>
+
+    /**
+     * Variable cantidadObjetos.
+     */
+    private int cantidadObjetos;
+    /**
+     * Variable cantidadObjetos.
+     */
+    private int objetosReal;
+    /**
+     * Variable correctos.
+     */
+<span class="fc" id="L61">    protected int correctos = 0;</span>
+    String[] basuraMenu;
+    int tiempo;
+    
+    /**
+     * It return the actual level of the game.
+     * @return A String.
+     */
+    public abstract String mostrarDescripcionNivel(int tiempoDescripcion);
+    /**
+     * It return the actual level of the game.
+     * @param objetosO
+     * @return An integer.
+     */
+    //public abstract Integer mostrarOpciones(int objetosO);
+    /**
+     * It return the actual level of the game.
+     * @param objetosB
+     * @return An integer.
+     */
+    public abstract Integer createBasuras(int objetosB);
+    /**
+     * It return the actual level of the game.
+     * @param objetos
+     * @return A boolean.
+     */
+    public Boolean ejecutarNivel(final int objetos, String[] basuraMenuParam,
+    int tiempoParam) {
+<span class="fc" id="L89">        this.basuraMenu = basuraMenuParam;</span>
+        
+<span class="fc" id="L91">        final int veinte = 6;</span>
+<span class="fc" id="L92">        final int treintaycinco = 7;</span>
+<span class="fc" id="L93">        final int ciencuenta = 11;</span>
+<span class="nc" id="L94">        createBasuras(objetos);</span>
+        //mostrarDescripcionNivel();
+<span class="nc" id="L96">        System.out.println(&quot;entro&quot;);</span>
+<span class="nc" id="L97">        separarId();</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">        if (objetos == 0) {</span>
+<span class="nc" id="L99">            this.cantidadObjetos = veinte;</span>
+<span class="nc" id="L100">            this.objetosReal = V20;</span>
+<span class="nc" id="L101">            this.tiempo = tiempoParam * V20;</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        } else if (objetos == 1) {</span>
+<span class="nc" id="L103">            this.cantidadObjetos = treintaycinco;</span>
+<span class="nc" id="L104">            this.objetosReal = V35;</span>
+<span class="nc" id="L105">            this.tiempo = tiempoParam * V35;</span>
+        } else {
+<span class="nc" id="L107">            this.cantidadObjetos = ciencuenta;</span>
+<span class="nc" id="L108">            this.objetosReal = V50;</span>
+<span class="nc" id="L109">            this.tiempo = tiempoParam * V50;</span>
+        }
+        
+<span class="nc" id="L112">        mostrarDescripcionNivel(this.tiempo);</span>
+        //mostrarOpciones(this.cantidadObjetos);
+<span class="nc" id="L114">        mostrarOpciones(this.objetosReal);</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
+<span class="nc" id="L116">            System.out.println(resultados.get(i));</span>
+        }
+<span class="nc" id="L118">        mostrarResultados();</span>
+<span class="nc" id="L119">        return true;</span>
+    }
+    /**
+     * It return the actual level of the game.
+     * @return A boolean.
+     */
+    public Boolean separarId() {
+        
+<span class="fc" id="L127">        Collections.shuffle(nombresBasuraTotal);</span>
+        
+<span class="pc bpc" id="L129" title="1 of 2 branches missed.">        for (int i = 1; i &lt; nombresBasuraTotal.size(); i++) {</span>
+<span class="nc" id="L130">            System.out.println(nombresBasuraTotal.get(i));</span>
+<span class="nc" id="L131">            String str = nombresBasuraTotal.get(i).toString();</span>
+<span class="nc" id="L132">            System.out.println(str);</span>
+<span class="nc" id="L133">            String kept = str.substring(0, str.indexOf(&quot;,&quot;));</span>
+<span class="nc" id="L134">             System.out.println(kept);</span>
+<span class="nc" id="L135">            idBasuraTotal.add(kept);</span>
+<span class="nc" id="L136">            System.out.println(str);</span>
+<span class="nc" id="L137">            String remainder = str.substring(</span>
+<span class="nc" id="L138">                str.indexOf(&quot;,&quot;) + 1, str.length());</span>
+<span class="nc" id="L139">            System.out.println(remainder);</span>
+<span class="nc" id="L140">            nombresBasuraSeparado.add(remainder);</span>
+        }
+<span class="fc" id="L142">        return true;</span>
+    }
+    /**
+     * It return the actual level of the game.
+     * @return A boolean.
+     */
+    public Boolean mostrarResultados() {
+<span class="fc" id="L149">        PaneMaker paneMaker = new PaneMaker();</span>
+        //paneMaker.paneConfirm(resultados.toString());
+<span class="fc" id="L151">        String mensaje = &quot;&lt;html&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Resultados correctos: &quot;</span>
+        + correctos + &quot;/&quot; + this.objetosReal + &quot;&lt;/th&gt;&lt;/tr&gt;&quot;;
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
+<span class="nc" id="L154">            System.out.println(resultados.get(i));</span>
+<span class="nc" id="L155">            mensaje += &quot;&lt;tr&gt;&lt;td&gt;&quot; + resultados.get(i) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;</span>
+        }
+<span class="fc" id="L157">        mensaje += &quot;&lt;/table&gt;&lt;/html&gt;&quot;;</span>
+<span class="fc" id="L158">        paneMaker.paneConfirm(mensaje);</span>
+<span class="fc" id="L159">        return true;</span>
+    }
+    
+    public Integer mostrarOpciones(final int objetos) {
+<span class="fc" id="L163">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L164">            long startTime = System.currentTimeMillis();</span>
+            //String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};
+            int i;
+<span class="pc bpc" id="L167" title="1 of 2 branches missed.">            for (i = 1; i &lt; nombresBasuraSeparado.size(); i++) {</span>
+                //System.out.println(nombresBasuraTotal.get(i));
+<span class="nc" id="L169">                int basuraMostrar = paneMaker.paneOptions(</span>
+<span class="nc" id="L170">                        this.basuraMenu, nombresBasuraSeparado.get(i)</span>
+<span class="nc" id="L171">                        .toString() + &quot; (&quot; + i + &quot;/&quot; + objetos + &quot;)&quot;);</span>
+<span class="nc" id="L172">                System.out.println(basuraMostrar);</span>
+<span class="nc" id="L173">                int n = Integer.parseInt(idBasuraTotal</span>
+<span class="nc" id="L174">                .get(i).toString());</span>
+                String resultado;
+                
+<span class="nc bnc" id="L177" title="All 2 branches missed.">                if(basuraMostrar == -1){</span>
+<span class="nc" id="L178">                    System.exit(0);</span>
+                }
+<span class="nc bnc" id="L180" title="All 2 branches missed.">                if (basuraMostrar == n - 1) {</span>
+<span class="nc" id="L181">                    System.out.println(&quot;correcto&quot;);</span>
+<span class="nc" id="L182">                    resultado = nombresBasuraSeparado</span>
+<span class="nc" id="L183">                    .get(i).toString() + &quot; -&gt;correcto&quot;;</span>
+<span class="nc" id="L184">                    correctos++;</span>
+                } else {
+<span class="nc" id="L186">                    System.out.println(&quot;incorrecto&quot;);</span>
+<span class="nc" id="L187">                    resultado = nombresBasuraSeparado</span>
+<span class="nc" id="L188">                    .get(i).toString() + &quot; -&gt;incorrecto&quot;;</span>
+                }
+<span class="nc" id="L190">                resultados.add(resultado);</span>
+                long elapsed = System
+<span class="nc" id="L192">                .currentTimeMillis() - startTime;</span>
+<span class="nc bnc" id="L193" title="All 2 branches missed.">                if (elapsed &gt;= this.tiempo) {</span>
+<span class="nc" id="L194">                    break;</span>
+                }
+            }
+<span class="fc" id="L197">        return objetos;</span>
+    }
+    
+    public ArrayList getnombresBasuraTotal() {
+<span class="nc" id="L201">        return this.nombresBasuraTotal;</span>
+    }
+    
+    public void setnombresBasuraTotal(ArrayList nombresBasuraTotalParam){
+<span class="fc" id="L205">        this.nombresBasuraTotal = nombresBasuraTotalParam;</span>
+<span class="fc" id="L206">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

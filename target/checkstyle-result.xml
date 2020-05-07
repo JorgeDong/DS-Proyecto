@@ -302,9 +302,8 @@
 <error line="69" column="56" severity="error" message="Se esperaba la etiqueta @param para &apos;tiempoDescripcion&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="81" column="47" severity="error" message="Se esperaba la etiqueta @param para &apos;objetosB&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="87" column="44" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="87" column="51" severity="error" message="&apos;,&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
-<error line="87" column="52" severity="error" message="El parámetro basuraMenuParam debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="87" column="61" severity="error" message="Se esperaba la etiqueta @param para &apos;basuraMenuParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="87" column="53" severity="error" message="El parámetro basuraMenuParam debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="87" column="62" severity="error" message="Se esperaba la etiqueta @param para &apos;basuraMenuParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="88" column="5" severity="error" message="El parámetro tiempoParam debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="88" column="9" severity="error" message="Se esperaba la etiqueta @param para &apos;tiempoParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="90" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
@@ -315,7 +314,7 @@
 <error line="162" column="5" severity="error" message="Clase &apos;Nivel&apos; se parece a diseñada para la extensión (puede ser una subclase), pero el método &apos;mostrarOpciones&apos; no tiene javadoc que explica cómo hacerlo de forma segura. Si la clase no está diseñado para la extensión de considerar la posibilidad de la clase &apos;Nivel&apos; final o haciendo el método &apos;mostrarOpciones&apos; anotación  static/final/abstract/empty, o la adición permitido para el método." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
 <error line="162" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="176" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
-<error line="177" column="17" severity="error" message="&apos;if&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="177" column="17" severity="error" message="&apos;if&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
 <error line="177" column="40" severity="error" message="&apos;{&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 <error line="199" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="200" column="5" severity="error" message="Clase &apos;Nivel&apos; se parece a diseñada para la extensión (puede ser una subclase), pero el método &apos;getnombresBasuraTotal&apos; no tiene javadoc que explica cómo hacerlo de forma segura. Si la clase no está diseñado para la extensión de considerar la posibilidad de la clase &apos;Nivel&apos; final o haciendo el método &apos;getnombresBasuraTotal&apos; anotación  static/final/abstract/empty, o la adición permitido para el método." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
@@ -373,10 +372,10 @@
 <error line="20" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="20" column="23" severity="error" message="La variable &apos;repartir50BasurasIntermedio&apos; debe ser privada y tener métodos de acceso." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 <error line="26" column="43" severity="error" message="El parámetro tiempoDescripcion debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="31" severity="error" message="La línea es mayor de 80 caracteres (encontrado 127)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="31" column="40" severity="error" message="&apos;/&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="31" column="40" severity="error" message="&apos;/&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="31" column="41" severity="error" message="&apos;600&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="31" severity="error" message="La línea es mayor de 80 caracteres (encontrado 128)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="31" column="41" severity="error" message="&apos;/&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="31" column="41" severity="error" message="&apos;/&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="31" column="42" severity="error" message="&apos;600&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 <error line="45" severity="error" message="La línea es mayor de 80 caracteres (encontrado 83)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="48" severity="error" message="La línea es mayor de 80 caracteres (encontrado 83)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="51" severity="error" message="La línea es mayor de 80 caracteres (encontrado 83)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>

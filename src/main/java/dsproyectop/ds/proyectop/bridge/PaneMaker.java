@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dsproyectop.ds.proyectop.facade;
+package dsproyectop.ds.proyectop.bridge;
 
 import javax.swing.JOptionPane;
 /***
