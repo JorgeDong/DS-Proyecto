@@ -5,7 +5,7 @@
  */
 package dsproyectop.ds.proyectop.factory;
 
-import dsproyectop.ds.proyectop.facade.PaneMaker;
+import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -84,7 +84,7 @@ public abstract class Nivel {
      * @param objetos
      * @return A boolean.
      */
-    public Boolean ejecutarNivel(final int objetos,String[] basuraMenuParam,
+    public Boolean ejecutarNivel(final int objetos, String[] basuraMenuParam,
     int tiempoParam) {
         this.basuraMenu = basuraMenuParam;
         

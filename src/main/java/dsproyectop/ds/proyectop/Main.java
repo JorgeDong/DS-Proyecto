@@ -5,7 +5,7 @@
  */
 package dsproyectop.ds.proyectop;
 
-import dsproyectop.ds.proyectop.facade.PaneMaker;
+import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import dsproyectop.ds.proyectop.factory.Nivel;
 import dsproyectop.ds.proyectop.factory.niveles.NivelAvanzado;
 import dsproyectop.ds.proyectop.factory.niveles.NivelBasico;

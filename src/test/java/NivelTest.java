@@ -21,7 +21,8 @@ public class NivelTest {
 
     @Test
     public void testEjecutarNivel() {
-        assertEquals(true, nivel.ejecutarNivel(2));
+        String[] basuraMenuBasico = {"Orgánico", "Inorgánico"};
+        assertEquals(true, nivel.ejecutarNivel(10, basuraMenuBasico, 50));
     }
 
     @Test

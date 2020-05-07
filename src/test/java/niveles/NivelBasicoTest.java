@@ -25,8 +25,8 @@ public class NivelBasicoTest {
 
     @Test
     public void testMostrarDescripcionNivel() {
-        when(nivel.mostrarDescripcionNivel()).thenReturn("Nivel Basico");
-        assertEquals("Nivel Basico", nivelBasico.mostrarDescripcionNivel());
+        when(nivel.mostrarDescripcionNivel(10)).thenReturn("Nivel Basico");
+        assertEquals("Nivel Basico", nivelBasico.mostrarDescripcionNivel(10));
     }
 
     @Test
