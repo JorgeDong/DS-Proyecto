@@ -6,7 +6,7 @@ import dsproyectop.ds.proyectop.behaviors.Repartir50Basuras;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasAvanzado;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasAvanzado;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasAvanzado;
-import dsproyectop.ds.proyectop.facade.PaneMaker;
+import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import dsproyectop.ds.proyectop.factory.Nivel;
 
 

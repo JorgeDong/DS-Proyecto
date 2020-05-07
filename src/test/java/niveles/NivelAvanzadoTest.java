@@ -25,8 +25,8 @@ public class NivelAvanzadoTest {
 
     @Test
     public void testMostrarDescripcionNivel() {
-        when(nivel.mostrarDescripcionNivel()).thenReturn("Nivel Avanzado");
-        assertEquals("Nivel Avanzado", nivelAvanzado.mostrarDescripcionNivel());
+        when(nivel.mostrarDescripcionNivel(10)).thenReturn("Nivel Avanzado");
+        assertEquals("Nivel Avanzado", nivelAvanzado.mostrarDescripcionNivel(10));
     }
 
     @Test

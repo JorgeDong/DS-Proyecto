@@ -84,7 +84,7 @@ public abstract class Nivel {
      * @param objetos
      * @return A boolean.
      */
-    public Boolean ejecutarNivel(final int objetos,String[] basuraMenuParam,
+    public Boolean ejecutarNivel(final int objetos, String[] basuraMenuParam,
     int tiempoParam) {
         this.basuraMenu = basuraMenuParam;
         
