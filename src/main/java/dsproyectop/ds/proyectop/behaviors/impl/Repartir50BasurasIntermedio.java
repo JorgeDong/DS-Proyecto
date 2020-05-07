@@ -18,26 +18,51 @@ import java.util.Collections;
  * @author coque
  */
 public class Repartir50BasurasIntermedio implements Repartir50Basuras {
-    final int seis = 6;
-        final int siete = 7;
-        final int once = 11;
-        final int doce = 12;
-        final int diesiciete = 17;
-        Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();
-        Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();
-        Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();
-        
-         protected ArrayList nombresBasuraTotal = new ArrayList();
-         protected ArrayList iteracionesTotal = new ArrayList();
-          protected ArrayList combinacionesTotal = new ArrayList();
-
+    /**
+     * Variable de descicion.
+     */
+    private final int cincuenta = 50;
+    /**
+     * Variable de descicion.
+     */
+    private final int seis = 6;
+    /**
+     * Variable de descicion.
+     */
+    private final int diesiciete = 17;
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();
+    /**
+     * Variable de descicion.
+     */
+   private Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();
+    /**
+     * Variable de descicion.
+     */
+   private Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList nombresBasuraTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList iteracionesTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList combinacionesTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList repartir50() {
-        
         Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());
         Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());
         Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());
-        
          for (int i = 0; i < seis; i++) {
                     nombresBasuraTotal.add(
                         basuraIntermedioOrganica.getNombresBasura().get(i));
@@ -54,13 +79,16 @@ public class Repartir50BasurasIntermedio implements Repartir50Basuras {
                     .get(diesiciete));
              return this.nombresBasuraTotal;
     }
-
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList iteraryCombinar50Basuras() {
-for (int i = 0; i < 50; i++) {
-            combinacionesTotal.add("id"+i);
-        }  
-        for (int i = 0; i < 50; i++) {
+for (int i = 0; i < cincuenta; i++) {
+            combinacionesTotal.add("id" + i);
+        }
+        for (int i = 0; i < cincuenta; i++) {
             this.iteracionesTotal.add(
             this.combinacionesTotal.get(i));
             this.iteracionesTotal.add(
@@ -68,7 +96,5 @@ for (int i = 0; i < 50; i++) {
         }
              return this.iteracionesTotal;
     }
-         
-         
 }
 

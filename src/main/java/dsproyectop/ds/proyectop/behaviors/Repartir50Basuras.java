@@ -12,6 +12,16 @@ import java.util.ArrayList;
  * @author coque
  */
 public interface Repartir50Basuras {
+    /**
+    * Método que devuelve iteraciones.
+    * @return The number of the option.
+    * la serie.
+    */
     ArrayList repartir50();
+    /**
+    * Método que devuelve iteraciones.
+     * @return The number of the option.
+    * la serie.
+    */
     ArrayList iteraryCombinar50Basuras();
 }

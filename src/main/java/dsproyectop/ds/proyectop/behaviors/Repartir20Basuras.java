@@ -12,6 +12,16 @@ import java.util.ArrayList;
  * @author coque
  */
 public interface Repartir20Basuras {
-    ArrayList repartir20(); 
-     ArrayList iteraryCombinar20Basuras();
+    /**
+    * Método que devuelve basuras.
+    * @return The number of the option.
+    * la serie.
+    */
+    ArrayList repartir20();
+    /**
+    * Método que devuelve iteraciones.
+    * @return The number of the option.
+    * la serie.
+    */
+    ArrayList iteraryCombinar20Basuras();
 }
