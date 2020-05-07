@@ -26,9 +26,11 @@ public class Repartir50BasurasBasico implements Repartir50Basuras {
     /* En este metodo mezclamos para que quede el arreglo
     final a mostrar de basuras dependiedo del tama*/
         protected ArrayList nombresBasuraTotal = new ArrayList();
+         protected ArrayList iteracionesTotal = new ArrayList();
+          protected ArrayList combinacionesTotal = new ArrayList();
         
     @Override
-    public ArrayList repartir() {
+    public ArrayList repartir50() {
                 Collections.shuffle(this.basuraBasicoOrganica.getNombresBasura());
         Collections.shuffle(this.basuraBasicoInorganica.getNombresBasura());
         
@@ -40,5 +42,20 @@ public class Repartir50BasurasBasico implements Repartir50Basuras {
                 }
                 System.out.println(this.nombresBasuraTotal.size());
         return this.nombresBasuraTotal;
+    }
+    
+    @Override
+    public ArrayList iteraryCombinar50Basuras() {
+ for (int i = 0; i < 50; i++) {
+            combinacionesTotal.add("id"+i);
+        }  
+        for (int i = 0; i < 50; i++) {
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+        }
+
+             return this.iteracionesTotal;
     }
 }

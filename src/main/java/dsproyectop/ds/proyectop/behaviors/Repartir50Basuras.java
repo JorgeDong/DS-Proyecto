@@ -12,5 +12,6 @@ import java.util.ArrayList;
  * @author coque
  */
 public interface Repartir50Basuras {
-    ArrayList repartir(); 
+    ArrayList repartir50();
+    ArrayList iteraryCombinar50Basuras();
 }

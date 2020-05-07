@@ -53,15 +53,19 @@ public class NivelBasico extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetosCB) {
+        setUp(); 
         switch (objetosCB) {
             case 0:
-                setnombresBasuraTotal(this.repartir20BasurasBasico.repartir());
+                setelementosIterados(this.repartir20BasurasBasico.iteraryCombinar20Basuras());
+                setnombresBasuraTotal(this.repartir20BasurasBasico.repartir20());
                 break; // break es opcional
             case 1:
-                setnombresBasuraTotal(this.repartir35BasurasBasico.repartir());
+                setelementosIterados(this.repartir35BasurasBasico.iteraryCombinar35Basuras());
+                setnombresBasuraTotal(this.repartir35BasurasBasico.repartir35());
                 break; // break es opcional
             case 2:
-                setnombresBasuraTotal(this.repartir50BasurasBasico.repartir());
+                setelementosIterados(this.repartir50BasurasBasico.iteraryCombinar50Basuras());
+                setnombresBasuraTotal(this.repartir50BasurasBasico.repartir50());
                 break; // break es opcional
             default :
             System.exit(0);

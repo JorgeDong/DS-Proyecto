@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: niveles.NivelIntermedioTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.996 s <<< FAILURE! - in niveles.NivelIntermedioTest
-testCreateBasuras(niveles.NivelIntermedioTest)  Time elapsed: 0 s  <<< ERROR!
-java.lang.NullPointerException
-	at niveles.NivelIntermedioTest.testCreateBasuras(NivelIntermedioTest.java:41)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.432 s - in niveles.NivelIntermedioTest

@@ -46,6 +46,8 @@ import java.util.Collections;
      * @return An arrayList.
      */
 <span class="fc" id="L48">    protected ArrayList resultados = new ArrayList();</span>
+    
+<span class="fc" id="L50">    private ArrayList elementosIterados = new ArrayList();</span>
 
     /**
      * Variable cantidadObjetos.
@@ -58,10 +60,15 @@ import java.util.Collections;
     /**
      * Variable correctos.
      */
-<span class="fc" id="L61">    protected int correctos = 0;</span>
+<span class="fc" id="L63">    protected int correctos = 0;</span>
     String[] basuraMenu;
     int tiempo;
-    
+
+    /**
+     * It return the actual level of the game.
+     * @return A String.
+     */
+    public abstract Boolean setUp();
     /**
      * It return the actual level of the game.
      * @return A String.
@@ -86,37 +93,36 @@ import java.util.Collections;
      */
     public Boolean ejecutarNivel(final int objetos, String[] basuraMenuParam,
     int tiempoParam) {
-<span class="fc" id="L89">        this.basuraMenu = basuraMenuParam;</span>
+<span class="fc" id="L96">        this.basuraMenu = basuraMenuParam;</span>
         
-<span class="fc" id="L91">        final int veinte = 6;</span>
-<span class="fc" id="L92">        final int treintaycinco = 7;</span>
-<span class="fc" id="L93">        final int ciencuenta = 11;</span>
-<span class="nc" id="L94">        createBasuras(objetos);</span>
-        //mostrarDescripcionNivel();
-<span class="nc" id="L96">        System.out.println(&quot;entro&quot;);</span>
-<span class="nc" id="L97">        separarId();</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">        if (objetos == 0) {</span>
-<span class="nc" id="L99">            this.cantidadObjetos = veinte;</span>
-<span class="nc" id="L100">            this.objetosReal = V20;</span>
-<span class="nc" id="L101">            this.tiempo = tiempoParam * V20;</span>
-<span class="nc bnc" id="L102" title="All 2 branches missed.">        } else if (objetos == 1) {</span>
-<span class="nc" id="L103">            this.cantidadObjetos = treintaycinco;</span>
-<span class="nc" id="L104">            this.objetosReal = V35;</span>
-<span class="nc" id="L105">            this.tiempo = tiempoParam * V35;</span>
+<span class="fc" id="L98">        final int veinte = 6;</span>
+<span class="fc" id="L99">        final int treintaycinco = 7;</span>
+<span class="fc" id="L100">        final int ciencuenta = 11;</span>
+<span class="fc" id="L101">        createBasuras(objetos);</span>
+<span class="fc" id="L102">        System.out.println(&quot;entro&quot;);</span>
+<span class="fc" id="L103">        separarId();</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">        if (objetos == 0) {</span>
+<span class="nc" id="L105">            this.cantidadObjetos = veinte;</span>
+<span class="nc" id="L106">            this.objetosReal = V20;</span>
+<span class="nc" id="L107">            this.tiempo = tiempoParam * V20;</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">        } else if (objetos == 1) {</span>
+<span class="fc" id="L109">            this.cantidadObjetos = treintaycinco;</span>
+<span class="fc" id="L110">            this.objetosReal = V35;</span>
+<span class="fc" id="L111">            this.tiempo = tiempoParam * V35;</span>
         } else {
-<span class="nc" id="L107">            this.cantidadObjetos = ciencuenta;</span>
-<span class="nc" id="L108">            this.objetosReal = V50;</span>
-<span class="nc" id="L109">            this.tiempo = tiempoParam * V50;</span>
+<span class="nc" id="L113">            this.cantidadObjetos = ciencuenta;</span>
+<span class="nc" id="L114">            this.objetosReal = V50;</span>
+<span class="nc" id="L115">            this.tiempo = tiempoParam * V50;</span>
         }
         
-<span class="nc" id="L112">        mostrarDescripcionNivel(this.tiempo);</span>
+<span class="fc" id="L118">        mostrarDescripcionNivel(this.tiempo);</span>
         //mostrarOpciones(this.cantidadObjetos);
-<span class="nc" id="L114">        mostrarOpciones(this.objetosReal);</span>
-<span class="nc bnc" id="L115" title="All 2 branches missed.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
-<span class="nc" id="L116">            System.out.println(resultados.get(i));</span>
+<span class="fc" id="L120">        mostrarOpciones(this.objetosReal);</span>
+<span class="fc bfc" id="L121" title="All 2 branches covered.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
+<span class="fc" id="L122">            System.out.println(resultados.get(i));</span>
         }
-<span class="nc" id="L118">        mostrarResultados();</span>
-<span class="nc" id="L119">        return true;</span>
+<span class="fc" id="L124">        mostrarResultados();</span>
+<span class="fc" id="L125">        return true;</span>
     }
     /**
      * It return the actual level of the game.
@@ -124,87 +130,94 @@ import java.util.Collections;
      */
     public Boolean separarId() {
         
-<span class="fc" id="L127">        Collections.shuffle(nombresBasuraTotal);</span>
+<span class="fc" id="L133">        Collections.shuffle(nombresBasuraTotal);</span>
         
-<span class="pc bpc" id="L129" title="1 of 2 branches missed.">        for (int i = 1; i &lt; nombresBasuraTotal.size(); i++) {</span>
-<span class="nc" id="L130">            System.out.println(nombresBasuraTotal.get(i));</span>
-<span class="nc" id="L131">            String str = nombresBasuraTotal.get(i).toString();</span>
-<span class="nc" id="L132">            System.out.println(str);</span>
-<span class="nc" id="L133">            String kept = str.substring(0, str.indexOf(&quot;,&quot;));</span>
-<span class="nc" id="L134">             System.out.println(kept);</span>
-<span class="nc" id="L135">            idBasuraTotal.add(kept);</span>
-<span class="nc" id="L136">            System.out.println(str);</span>
-<span class="nc" id="L137">            String remainder = str.substring(</span>
-<span class="nc" id="L138">                str.indexOf(&quot;,&quot;) + 1, str.length());</span>
-<span class="nc" id="L139">            System.out.println(remainder);</span>
-<span class="nc" id="L140">            nombresBasuraSeparado.add(remainder);</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">        for (int i = 1; i &lt; nombresBasuraTotal.size(); i++) {</span>
+<span class="fc" id="L136">            System.out.println(nombresBasuraTotal.get(i));</span>
+<span class="fc" id="L137">            String str = nombresBasuraTotal.get(i).toString();</span>
+<span class="fc" id="L138">            System.out.println(str);</span>
+<span class="fc" id="L139">            String kept = str.substring(0, str.indexOf(&quot;,&quot;));</span>
+<span class="fc" id="L140">             System.out.println(kept);</span>
+<span class="fc" id="L141">            idBasuraTotal.add(kept);</span>
+<span class="fc" id="L142">            System.out.println(str);</span>
+<span class="fc" id="L143">            String remainder = str.substring(</span>
+<span class="fc" id="L144">                str.indexOf(&quot;,&quot;) + 1, str.length());</span>
+<span class="fc" id="L145">            System.out.println(remainder);</span>
+<span class="fc" id="L146">            nombresBasuraSeparado.add(remainder);</span>
         }
-<span class="fc" id="L142">        return true;</span>
+<span class="fc" id="L148">        return true;</span>
     }
     /**
      * It return the actual level of the game.
      * @return A boolean.
      */
     public Boolean mostrarResultados() {
-<span class="fc" id="L149">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L155">        PaneMaker paneMaker = new PaneMaker();</span>
         //paneMaker.paneConfirm(resultados.toString());
-<span class="fc" id="L151">        String mensaje = &quot;&lt;html&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Resultados correctos: &quot;</span>
+<span class="fc" id="L157">        String mensaje = &quot;&lt;html&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Resultados correctos: &quot;</span>
         + correctos + &quot;/&quot; + this.objetosReal + &quot;&lt;/th&gt;&lt;/tr&gt;&quot;;
-<span class="pc bpc" id="L153" title="1 of 2 branches missed.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
-<span class="nc" id="L154">            System.out.println(resultados.get(i));</span>
-<span class="nc" id="L155">            mensaje += &quot;&lt;tr&gt;&lt;td&gt;&quot; + resultados.get(i) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">        for (int i = 1; i &lt; resultados.size(); i++) {</span>
+<span class="fc" id="L160">            System.out.println(resultados.get(i));</span>
+<span class="fc" id="L161">            mensaje += &quot;&lt;tr&gt;&lt;td&gt;&quot; + resultados.get(i) + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;</span>
         }
-<span class="fc" id="L157">        mensaje += &quot;&lt;/table&gt;&lt;/html&gt;&quot;;</span>
-<span class="fc" id="L158">        paneMaker.paneConfirm(mensaje);</span>
-<span class="fc" id="L159">        return true;</span>
+<span class="fc" id="L163">        mensaje += &quot;&lt;/table&gt;&lt;/html&gt;&quot;;</span>
+<span class="fc" id="L164">        paneMaker.paneConfirm(mensaje);</span>
+<span class="fc" id="L165">        return true;</span>
     }
     
     public Integer mostrarOpciones(final int objetos) {
-<span class="fc" id="L163">        PaneMaker paneMaker = new PaneMaker();</span>
-<span class="fc" id="L164">            long startTime = System.currentTimeMillis();</span>
+<span class="fc" id="L169">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L170">            long startTime = System.currentTimeMillis();</span>
             //String[] basuraMenu = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};
             int i;
-<span class="pc bpc" id="L167" title="1 of 2 branches missed.">            for (i = 1; i &lt; nombresBasuraSeparado.size(); i++) {</span>
+<span class="fc bfc" id="L173" title="All 2 branches covered.">            for (i = 1; i &lt; nombresBasuraSeparado.size(); i++) {</span>
                 //System.out.println(nombresBasuraTotal.get(i));
-<span class="nc" id="L169">                int basuraMostrar = paneMaker.paneOptions(</span>
-<span class="nc" id="L170">                        this.basuraMenu, nombresBasuraSeparado.get(i)</span>
-<span class="nc" id="L171">                        .toString() + &quot; (&quot; + i + &quot;/&quot; + objetos + &quot;)&quot;);</span>
-<span class="nc" id="L172">                System.out.println(basuraMostrar);</span>
-<span class="nc" id="L173">                int n = Integer.parseInt(idBasuraTotal</span>
-<span class="nc" id="L174">                .get(i).toString());</span>
+<span class="fc" id="L175">                int basuraMostrar = paneMaker.paneOptions(</span>
+<span class="fc" id="L176">                        this.basuraMenu, nombresBasuraSeparado.get(i)</span>
+<span class="fc" id="L177">                        .toString() + &quot; (&quot; + i + &quot;/&quot; + objetos + &quot;)&quot;);</span>
+<span class="fc" id="L178">                System.out.println(basuraMostrar);</span>
+<span class="fc" id="L179">                int n = Integer.parseInt(idBasuraTotal</span>
+<span class="fc" id="L180">                .get(i).toString());</span>
                 String resultado;
                 
-<span class="nc bnc" id="L177" title="All 2 branches missed.">                if(basuraMostrar == -1){</span>
-<span class="nc" id="L178">                    System.exit(0);</span>
+<span class="pc bpc" id="L183" title="1 of 2 branches missed.">                if(basuraMostrar == -1){</span>
+<span class="nc" id="L184">                    System.exit(0);</span>
                 }
-<span class="nc bnc" id="L180" title="All 2 branches missed.">                if (basuraMostrar == n - 1) {</span>
-<span class="nc" id="L181">                    System.out.println(&quot;correcto&quot;);</span>
-<span class="nc" id="L182">                    resultado = nombresBasuraSeparado</span>
-<span class="nc" id="L183">                    .get(i).toString() + &quot; -&gt;correcto&quot;;</span>
-<span class="nc" id="L184">                    correctos++;</span>
+<span class="fc bfc" id="L186" title="All 2 branches covered.">                if (basuraMostrar == n - 1) {</span>
+<span class="fc" id="L187">                    System.out.println(&quot;correcto&quot;);</span>
+<span class="fc" id="L188">                    resultado = nombresBasuraSeparado</span>
+<span class="fc" id="L189">                    .get(i).toString() + &quot; -&gt;correcto&quot;;</span>
+<span class="fc" id="L190">                    correctos++;</span>
                 } else {
-<span class="nc" id="L186">                    System.out.println(&quot;incorrecto&quot;);</span>
-<span class="nc" id="L187">                    resultado = nombresBasuraSeparado</span>
-<span class="nc" id="L188">                    .get(i).toString() + &quot; -&gt;incorrecto&quot;;</span>
+<span class="fc" id="L192">                    System.out.println(&quot;incorrecto&quot;);</span>
+<span class="fc" id="L193">                    resultado = nombresBasuraSeparado</span>
+<span class="fc" id="L194">                    .get(i).toString() + &quot; -&gt;incorrecto&quot;;</span>
                 }
-<span class="nc" id="L190">                resultados.add(resultado);</span>
+<span class="fc" id="L196">                resultados.add(resultado);</span>
                 long elapsed = System
-<span class="nc" id="L192">                .currentTimeMillis() - startTime;</span>
-<span class="nc bnc" id="L193" title="All 2 branches missed.">                if (elapsed &gt;= this.tiempo) {</span>
-<span class="nc" id="L194">                    break;</span>
+<span class="fc" id="L198">                .currentTimeMillis() - startTime;</span>
+<span class="pc bpc" id="L199" title="1 of 2 branches missed.">                if (elapsed &gt;= this.tiempo) {</span>
+<span class="nc" id="L200">                    break;</span>
                 }
             }
-<span class="fc" id="L197">        return objetos;</span>
+<span class="fc" id="L203">        return objetos;</span>
     }
     
     public ArrayList getnombresBasuraTotal() {
-<span class="nc" id="L201">        return this.nombresBasuraTotal;</span>
+<span class="nc" id="L207">        return this.nombresBasuraTotal;</span>
     }
     
     public void setnombresBasuraTotal(ArrayList nombresBasuraTotalParam){
-<span class="fc" id="L205">        this.nombresBasuraTotal = nombresBasuraTotalParam;</span>
-<span class="fc" id="L206">    }</span>
+<span class="fc" id="L211">        this.nombresBasuraTotal = nombresBasuraTotalParam;</span>
+<span class="fc" id="L212">    }</span>
     
+    public ArrayList getelementosIterados() {
+<span class="nc" id="L215">        return this.elementosIterados;</span>
+    }
+    
+    public void setelementosIterados(ArrayList elementosIteradosParam){
+<span class="fc" id="L219">        this.elementosIterados = elementosIteradosParam;</span>
+<span class="fc" id="L220">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

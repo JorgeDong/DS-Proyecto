@@ -63,13 +63,16 @@ public class NivelAvanzado extends Nivel {
         setUp();   
         switch (objetos) {
             case 0:
-                 setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir());
+                setelementosIterados(this.repartir20BasurasAvanzado.iteraryCombinar20Basuras());
+                setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir20());
                 break; // break es opcional
             case 1:
-                setnombresBasuraTotal(repartir35BasurasAvanzado.repartir());
+                setelementosIterados(this.repartir35BasurasAvanzado.iteraryCombinar35Basuras());
+                setnombresBasuraTotal(repartir35BasurasAvanzado.repartir35());
                 break; // break es opcional
             case 2:
-                setnombresBasuraTotal(repartir50BasurasAvanzado.repartir());      
+                setelementosIterados(this.repartir50BasurasAvanzado.iteraryCombinar50Basuras());
+                setnombresBasuraTotal(repartir50BasurasAvanzado.repartir50());      
                 break; // break es opcional
             default :
             System.exit(0);

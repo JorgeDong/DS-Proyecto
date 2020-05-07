@@ -46,6 +46,8 @@ public abstract class Nivel {
      * @return An arrayList.
      */
     protected ArrayList resultados = new ArrayList();
+    
+    private ArrayList elementosIterados = new ArrayList();
 
     /**
      * Variable cantidadObjetos.
@@ -120,7 +122,6 @@ public abstract class Nivel {
             System.out.println(resultados.get(i));
         }
         mostrarResultados();
-        //System.out.println('a');
         return true;
     }
     /**
@@ -210,5 +211,12 @@ public abstract class Nivel {
         this.nombresBasuraTotal = nombresBasuraTotalParam;
     }
     
+    public ArrayList getelementosIterados() {
+        return this.elementosIterados;
+    }
+    
+    public void setelementosIterados(ArrayList elementosIteradosParam){
+        this.elementosIterados = elementosIteradosParam;
+    }
     
 }

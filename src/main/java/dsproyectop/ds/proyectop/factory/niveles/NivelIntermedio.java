@@ -54,15 +54,19 @@ public class NivelIntermedio extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetos) {
+        setUp(); 
         switch (objetos) {
             case 0:
-                setnombresBasuraTotal(this.repartir20BasurasIntermedio.repartir());
+                setelementosIterados(this.repartir20BasurasIntermedio.iteraryCombinar20Basuras());
+                setnombresBasuraTotal(this.repartir20BasurasIntermedio.repartir20());
                 break; // break es opcional
             case 1:
-                setnombresBasuraTotal(this.repartir35BasurasIntermedio.repartir());
+                setelementosIterados(this.repartir35BasurasIntermedio.iteraryCombinar35Basuras());
+                setnombresBasuraTotal(this.repartir35BasurasIntermedio.repartir35());
                 break; // break es opcional
             case 2:
-                setnombresBasuraTotal(this.repartir50BasurasIntermedio.repartir());
+                setelementosIterados(this.repartir50BasurasIntermedio.iteraryCombinar50Basuras());
+                setnombresBasuraTotal(this.repartir50BasurasIntermedio.repartir50());
                 break; // break es opcional
             default :
             System.exit(0);

@@ -31,33 +31,49 @@ import java.util.Collections;
 <span class="fc" id="L31">        Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();</span>
 <span class="fc" id="L32">        Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();</span>
 <span class="fc" id="L33">        Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();</span>
-<span class="fc" id="L34">         protected ArrayList nombresBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L34">        protected ArrayList nombresBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L35">        protected ArrayList iteracionesTotal = new ArrayList();</span>
+<span class="fc" id="L36">        protected ArrayList combinacionesTotal = new ArrayList();</span>
                
     @Override
-    public ArrayList repartir() {
+    public ArrayList repartir20() {
             /*En este metodo mezclamos para que quede el arreglo
     final a mostrar de basuras dependiedo del tama*/
-<span class="nc" id="L40">        Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());</span>
-<span class="nc" id="L41">        Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());</span>
-<span class="nc" id="L42">        Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());</span>
+<span class="nc" id="L42">        Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());</span>
+<span class="nc" id="L43">        Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());</span>
+<span class="nc" id="L44">        Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());</span>
         
         //20
                 //Tamaño para margen
-<span class="nc bnc" id="L46" title="All 2 branches missed.">                for (int i = 0; i &lt; seis; i++) {</span>
-<span class="nc" id="L47">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L48">                        basuraIntermedioOrganica.getNombresBasura().get(i));</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                for (int i = 0; i &lt; seis; i++) {</span>
 <span class="nc" id="L49">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L50">                        basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L50">                        basuraIntermedioOrganica.getNombresBasura().get(i));</span>
 <span class="nc" id="L51">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L52">                        basuraIntermedioReciclable.getNombresBasura().get(i));</span>
+<span class="nc" id="L52">                        basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="nc" id="L53">                    nombresBasuraTotal.add(</span>
+<span class="nc" id="L54">                        basuraIntermedioReciclable.getNombresBasura().get(i));</span>
                 }
-<span class="nc" id="L54">                nombresBasuraTotal.add(</span>
-<span class="nc" id="L55">                    basuraIntermedioInorganica.getNombresBasura().get(siete));</span>
 <span class="nc" id="L56">                nombresBasuraTotal.add(</span>
-<span class="nc" id="L57">                    basuraIntermedioReciclable.getNombresBasura().get(siete));</span>
-<span class="nc" id="L58">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="nc" id="L57">                    basuraIntermedioInorganica.getNombresBasura().get(siete));</span>
+<span class="nc" id="L58">                nombresBasuraTotal.add(</span>
+<span class="nc" id="L59">                    basuraIntermedioReciclable.getNombresBasura().get(siete));</span>
+<span class="nc" id="L60">                System.out.println(nombresBasuraTotal.size());</span>
                 
-<span class="nc" id="L60">           return this.nombresBasuraTotal;     </span>
+<span class="nc" id="L62">           return this.nombresBasuraTotal;     </span>
+    }
+    
+    @Override
+    public ArrayList iteraryCombinar20Basuras() {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        for (int i = 0; i &lt; 20; i++) {</span>
+<span class="nc" id="L68">            combinacionesTotal.add(&quot;id&quot;+i);</span>
+        }  
+<span class="nc bnc" id="L70" title="All 2 branches missed.">        for (int i = 0; i &lt; 20; i++) {</span>
+<span class="nc" id="L71">            this.iteracionesTotal.add(</span>
+<span class="nc" id="L72">            this.combinacionesTotal.get(i));</span>
+<span class="nc" id="L73">            this.iteracionesTotal.add(</span>
+<span class="nc" id="L74">            this.combinacionesTotal.get(i));</span>
+        }
+<span class="nc" id="L76">        return this.iteracionesTotal;</span>
     }
 
 }

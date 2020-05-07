@@ -37,10 +37,12 @@ public class Repartir20BasurasAvanzado implements Repartir20Basuras {
         Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();
         Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();
         
-         protected ArrayList nombresBasuraTotal = new ArrayList();
+        protected ArrayList nombresBasuraTotal = new ArrayList();
+        protected ArrayList iteracionesTotal = new ArrayList();
+         protected ArrayList combinacionesTotal = new ArrayList();
         
     @Override
-    public ArrayList repartir() {
+    public ArrayList repartir20() {
     Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());
     Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());
     Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());
@@ -69,6 +71,21 @@ public class Repartir20BasurasAvanzado implements Repartir20Basuras {
                     basuraAvanzadoVidrio.getNombresBasura().get(cuatro));
                 System.out.println(nombresBasuraTotal.size());
        return this.nombresBasuraTotal;     
+    }
+    
+    @Override
+    public ArrayList iteraryCombinar20Basuras() {
+    for (int i = 0; i < 20; i++) {
+            combinacionesTotal.add("id"+i);
+        }  
+        for (int i = 0; i < 20; i++) {
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+        }
+
+             return this.iteracionesTotal;
     }
 
 }

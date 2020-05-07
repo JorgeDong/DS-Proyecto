@@ -35,38 +35,55 @@ import java.util.Collections;
 <span class="fc" id="L35">        Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();</span>
 <span class="fc" id="L36">        Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();</span>
         
-<span class="fc" id="L38">         protected ArrayList nombresBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L38">        protected ArrayList nombresBasuraTotal = new ArrayList();</span>
+<span class="fc" id="L39">         protected ArrayList iteracionesTotal = new ArrayList();</span>
+<span class="fc" id="L40">          protected ArrayList combinacionesTotal = new ArrayList();</span>
 
     @Override
-    public ArrayList repartir() {
-<span class="fc" id="L42">        Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
-<span class="fc" id="L43">    Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
-<span class="fc" id="L44">    Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
-<span class="fc" id="L45">    Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
-<span class="fc" id="L46">    Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
-<span class="fc" id="L47">    Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
-<span class="fc" id="L48">    Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
+    public ArrayList repartir50() {
+<span class="fc" id="L44">        Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
+<span class="fc" id="L45">    Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
+<span class="fc" id="L46">    Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
+<span class="fc" id="L47">    Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
+<span class="fc" id="L48">    Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
+<span class="fc" id="L49">    Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
+<span class="fc" id="L50">    Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
     
-<span class="fc bfc" id="L50" title="All 2 branches covered.">    for (int i = 0; i &lt; siete; i++) {</span>
-<span class="fc" id="L51">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L52">                        basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    for (int i = 0; i &lt; siete; i++) {</span>
 <span class="fc" id="L53">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L54">                        basuraAvanzadoMetal.getNombresBasura().get(i));</span>
+<span class="fc" id="L54">                        basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
 <span class="fc" id="L55">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L56">                        basuraAvanzadoPapel.getNombresBasura().get(i));</span>
+<span class="fc" id="L56">                        basuraAvanzadoMetal.getNombresBasura().get(i));</span>
 <span class="fc" id="L57">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L58">                        basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
+<span class="fc" id="L58">                        basuraAvanzadoPapel.getNombresBasura().get(i));</span>
 <span class="fc" id="L59">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L60">                        basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
+<span class="fc" id="L60">                        basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
 <span class="fc" id="L61">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L62">                        basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
+<span class="fc" id="L62">                        basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
 <span class="fc" id="L63">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L64">                        basuraAvanzadoVidrio.getNombresBasura().get(i));</span>
+<span class="fc" id="L64">                        basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
+<span class="fc" id="L65">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L66">                        basuraAvanzadoVidrio.getNombresBasura().get(i));</span>
                 }
-<span class="fc" id="L66">                nombresBasuraTotal.add(basuraAvanzadoVidrio</span>
-<span class="fc" id="L67">                .getNombresBasura().get(ocho));</span>
-<span class="fc" id="L68">                System.out.println(nombresBasuraTotal.size());</span>
-<span class="fc" id="L69">        return this.nombresBasuraTotal;</span>
+<span class="fc" id="L68">                nombresBasuraTotal.add(basuraAvanzadoVidrio</span>
+<span class="fc" id="L69">                .getNombresBasura().get(ocho));</span>
+<span class="fc" id="L70">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="fc" id="L71">        return this.nombresBasuraTotal;</span>
+    }
+    
+    @Override
+    public ArrayList iteraryCombinar50Basuras() {
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        for (int i = 0; i &lt; 50; i++) {</span>
+<span class="fc" id="L77">            combinacionesTotal.add(&quot;id&quot;+i);</span>
+        }  
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        for (int i = 0; i &lt; 50; i++) {</span>
+<span class="fc" id="L80">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L81">            this.combinacionesTotal.get(i));</span>
+<span class="fc" id="L82">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L83">            this.combinacionesTotal.get(i));</span>
+        }
+
+<span class="fc" id="L86">             return this.iteracionesTotal;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

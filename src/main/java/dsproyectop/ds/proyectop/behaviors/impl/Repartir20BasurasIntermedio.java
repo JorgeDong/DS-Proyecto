@@ -31,10 +31,12 @@ public class Repartir20BasurasIntermedio implements Repartir20Basuras {
         Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();
         Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();
         Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();
-         protected ArrayList nombresBasuraTotal = new ArrayList();
+        protected ArrayList nombresBasuraTotal = new ArrayList();
+        protected ArrayList iteracionesTotal = new ArrayList();
+        protected ArrayList combinacionesTotal = new ArrayList();
                
     @Override
-    public ArrayList repartir() {
+    public ArrayList repartir20() {
             /*En este metodo mezclamos para que quede el arreglo
     final a mostrar de basuras dependiedo del tama*/
         Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());
@@ -58,6 +60,20 @@ public class Repartir20BasurasIntermedio implements Repartir20Basuras {
                 System.out.println(nombresBasuraTotal.size());
                 
            return this.nombresBasuraTotal;     
+    }
+    
+    @Override
+    public ArrayList iteraryCombinar20Basuras() {
+        for (int i = 0; i < 20; i++) {
+            combinacionesTotal.add("id"+i);
+        }  
+        for (int i = 0; i < 20; i++) {
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+            this.iteracionesTotal.add(
+            this.combinacionesTotal.get(i));
+        }
+        return this.iteracionesTotal;
     }
 
 }

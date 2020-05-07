@@ -10,33 +10,47 @@ import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import dsproyectop.ds.proyectop.factory.Nivel;
 
 
-
-
 /**
  *
  * @author MrS.
  */
-<span class="fc" id="L19">public class NivelAvanzado extends Nivel {</span>
-<span class="fc" id="L20">    Repartir20Basuras repartir20BasurasAvanzado = new Repartir20BasurasAvanzado();</span>
-<span class="fc" id="L21">    Repartir35Basuras repartir35BasurasAvanzado = new Repartir35BasurasAvanzado();</span>
-<span class="fc" id="L22">    Repartir50Basuras repartir50BasurasAvanzado = new Repartir50BasurasAvanzado();</span>
+<span class="fc" id="L17">public class NivelAvanzado extends Nivel {</span>
+
     /**
      * Variable tiempo.
      */
     private static final int TIEMPO = 50000;
+
+    Repartir20Basuras repartir20BasurasAvanzado;
+    Repartir35Basuras repartir35BasurasAvanzado;
+    Repartir50Basuras repartir50BasurasAvanzado;
+
+    /**
+     * It set up the values.
+     * @return True.
+     */
+    @Override
+    public Boolean setUp() {
+<span class="fc" id="L34">        repartir20BasurasAvanzado = new Repartir20BasurasAvanzado();</span>
+<span class="fc" id="L35">        repartir35BasurasAvanzado = new Repartir35BasurasAvanzado();</span>
+<span class="fc" id="L36">        repartir50BasurasAvanzado = new Repartir50BasurasAvanzado();</span>
+        
+<span class="fc" id="L38">        return true;</span>
+    }
+    
     /**
      * It return the actual level of the game.
      * @return The level of the game.
      */
     @Override
     public String mostrarDescripcionNivel(int tiempoDescripcion) {
-<span class="fc" id="L33">        PaneMaker paneMaker = new PaneMaker();</span>
-<span class="fc" id="L34">        String mensaje = &quot;&lt;html&gt;Nivel Avanzado:&quot;</span>
+<span class="fc" id="L47">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L48">        String mensaje = &quot;&lt;html&gt;Nivel Avanzado:&quot;</span>
             + &quot;&lt;br&gt;Debes clasificar entre Orgánico, Papel, Vidrio, Metal,&quot;
             + &quot;Plástico, Textiles y Basura tecnológica.&quot;
         + &quot;(Tienes&quot; + tiempoDescripcion/600 + &quot; segundos para clasificar la mayor cantidad de basura que puedas.)&quot; + &quot;&lt;/html&gt;&quot;;
-<span class="fc" id="L38">        paneMaker.paneConfirm(mensaje);</span>
-<span class="fc" id="L39">        return &quot;Nivel Avanzado&quot;;</span>
+<span class="fc" id="L52">        paneMaker.paneConfirm(mensaje);</span>
+<span class="fc" id="L53">        return &quot;Nivel Avanzado&quot;;</span>
     }
 
      /**
@@ -46,21 +60,24 @@ import dsproyectop.ds.proyectop.factory.Nivel;
      */
     @Override
     public Integer createBasuras(final int objetos) {
-           
-<span class="pc bpc" id="L50" title="3 of 4 branches missed.">        switch (objetos) {</span>
+<span class="fc" id="L63">        setUp();   </span>
+<span class="pc bpc" id="L64" title="2 of 4 branches missed.">        switch (objetos) {</span>
             case 0:
-<span class="nc" id="L52">                 setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir());</span>
-<span class="nc" id="L53">                break; // break es opcional</span>
+<span class="nc" id="L66">                setelementosIterados(this.repartir20BasurasAvanzado.iteraryCombinar20Basuras());</span>
+<span class="nc" id="L67">                setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir20());</span>
+<span class="nc" id="L68">                break; // break es opcional</span>
             case 1:
-<span class="nc" id="L55">                setnombresBasuraTotal(repartir35BasurasAvanzado.repartir());</span>
-<span class="nc" id="L56">                break; // break es opcional</span>
+<span class="fc" id="L70">                setelementosIterados(this.repartir35BasurasAvanzado.iteraryCombinar35Basuras());</span>
+<span class="fc" id="L71">                setnombresBasuraTotal(repartir35BasurasAvanzado.repartir35());</span>
+<span class="fc" id="L72">                break; // break es opcional</span>
             case 2:
-<span class="fc" id="L58">                setnombresBasuraTotal(repartir50BasurasAvanzado.repartir());      </span>
-<span class="fc" id="L59">                break; // break es opcional</span>
+<span class="fc" id="L74">                setelementosIterados(this.repartir50BasurasAvanzado.iteraryCombinar50Basuras());</span>
+<span class="fc" id="L75">                setnombresBasuraTotal(repartir50BasurasAvanzado.repartir50());      </span>
+<span class="fc" id="L76">                break; // break es opcional</span>
             default :
-<span class="nc" id="L61">            System.exit(0);</span>
+<span class="nc" id="L78">            System.exit(0);</span>
             }
-<span class="fc" id="L63">        return objetos;</span>
+<span class="fc" id="L80">        return objetos;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
