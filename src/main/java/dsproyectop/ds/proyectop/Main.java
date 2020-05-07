@@ -27,6 +27,9 @@ public final class Main {
      * @param args
      */
     public static void main(final String[] args) {
+        final int tiempoBasico = 1000;
+        final int tiempoIntermedio = 2000;
+        final int tiempoAvanzado = 3000;
         //Database db;
         PaneMaker paneMaker = new PaneMaker();
         String nombreUsuario;
@@ -44,28 +47,29 @@ public final class Main {
         int seleccionMenu = paneMaker.paneOptions(optionsMenu, mensaje);
         String[] optionsObjetos = {"20", "35", "50"};
         mensaje = "Selecciona la cantidad de basura a clasificar.";
-        int cantidadObjetos = paneMaker.paneOptions(optionsObjetos, mensaje);
+        int cantidadObjetos = paneMaker
+        .paneOptions(optionsObjetos, mensaje);
         switch (seleccionMenu) {
             case 0:
                 String[] basuraMenuBasico = {"Orgánico", "Inorgánico"};
-                int tiempoBasico = 1000;
                 Nivel nivelBasico = new NivelBasico();
-                nivelBasico.ejecutarNivel(cantidadObjetos,basuraMenuBasico,tiempoBasico);
+                nivelBasico.ejecutarNivel(cantidadObjetos,
+                basuraMenuBasico, tiempoBasico);
                 break; // break es opcional
             case 1:
-                String[] basuraMenuIntermedio = {"Orgánico", "Inorgánico", "Reciclable"};
-                int tiempoIntermedio = 2000;
+                String[] basuraMenuIntermedio = {"Orgánico", "Inorgánico",
+                "Reciclable"};
                 Nivel nivelIntermedio = new NivelIntermedio();
-                nivelIntermedio.ejecutarNivel(cantidadObjetos,basuraMenuIntermedio,tiempoIntermedio);
+                nivelIntermedio.ejecutarNivel(cantidadObjetos,
+                basuraMenuIntermedio, tiempoIntermedio);
                 break; // break es opcional
             case 2:
                 String[] basuraMenuAvanzado = {"Orgánico", "Papel",
                  "Vidrio", "Metal", "Plástico", "Textiles",
                  "Basura tecnológica"};
-                 int tiempoAvanzado = 3000;
-                 
                 Nivel nivelAvanzado = new NivelAvanzado();
-                nivelAvanzado.ejecutarNivel(cantidadObjetos,basuraMenuAvanzado,tiempoAvanzado);
+                nivelAvanzado.ejecutarNivel(cantidadObjetos,
+                basuraMenuAvanzado, tiempoAvanzado);
                 break; // break es opcional
             default :
             System.exit(0);

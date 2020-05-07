@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2020</copyright>
     <item>
-      <title>File: 39,
-             Errors: 340,
+      <title>File: 13,
+             Errors: 337,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.niveles.package-info.java">dsproyectop/ds/proyectop/factory/niveles/package-info.java</a>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir35Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir35Basuras.java</a>
                 </td>
                 <td>
                   0
@@ -55,21 +55,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoInorganico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraBasicoInorganico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  3
                 </td>
               </tr>
                           <tr>
@@ -83,12 +69,40 @@ under the License.
                   0
                 </td>
                 <td>
-                  18
+                  31
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.package-info.java">dsproyectop/ds/proyectop/factory/package-info.java</a>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir35BasurasBasico.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir20Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir20Basuras.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.Main.java">dsproyectop/ds/proyectop/Main.java</a>
                 </td>
                 <td>
                   0
@@ -111,49 +125,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  34
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.singleton.Database.java">dsproyectop/ds/proyectop/singleton/Database.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  7
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.niveles.NivelAvanzado.java">dsproyectop/ds/proyectop/factory/niveles/NivelAvanzado.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.bridge.PaneMaker.java">dsproyectop/ds/proyectop/bridge/PaneMaker.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  45
                 </td>
               </tr>
                           <tr>
@@ -167,96 +139,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  18
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioReciclable.java">dsproyectop/ds/proyectop/factory/basuras/BasuraIntermedioReciclable.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoTecnologica.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoTecnologica.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.singleton.DatabaseConnection.java">dsproyectop/ds/proyectop/singleton/DatabaseConnection.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoPlastico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoPlastico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  29
                 </td>
               </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasIntermedio.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir35BasurasIntermedio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  24
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.bridge.package-info.java">dsproyectop/ds/proyectop/bridge/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.Nivel.java">dsproyectop/ds/proyectop/factory/Nivel.java</a>
                 </td>
                 <td>
                   0
@@ -279,287 +167,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  32
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasIntermedio.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasIntermedio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  24
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasAvanzado.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasAvanzado.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  29
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.singleton.package-info.java">dsproyectop/ds/proyectop/singleton/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoOrganico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraBasicoOrganico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir35Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir35Basuras.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.niveles.NivelBasico.java">dsproyectop/ds/proyectop/factory/niveles/NivelBasico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  12
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.Basura.java">dsproyectop/ds/proyectop/factory/Basura.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir35BasurasBasico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  19
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir20Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir20Basuras.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioInorganico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraIntermedioInorganico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoOrganico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoOrganico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoTextiles.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoTextiles.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.Main.java">dsproyectop/ds/proyectop/Main.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  15
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoPapel.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoPapel.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.package-info.java">dsproyectop/ds/proyectop/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.niveles.NivelIntermedio.java">dsproyectop/ds/proyectop/factory/niveles/NivelIntermedio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  17
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioOrganico.java">dsproyectop/ds/proyectop/factory/basuras/BasuraIntermedioOrganico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoMetal.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoMetal.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.package-info.java">dsproyectop/ds/proyectop/factory/basuras/package-info.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoVidrio.java">dsproyectop/ds/proyectop/factory/basuras/BasuraAvanzadoVidrio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
+                  43
                 </td>
               </tr>
                           <tr>
@@ -573,7 +181,21 @@ under the License.
                   0
                 </td>
                 <td>
-                  28
+                  39
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasIntermedio.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasIntermedio.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  34
                 </td>
               </tr>
                           <tr>
@@ -588,6 +210,20 @@ under the License.
                 </td>
                 <td>
                   2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasAvanzado.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasAvanzado.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  40
                 </td>
               </tr>
                       </tbody>

@@ -35,20 +35,21 @@ public abstract class Nivel {
      * It return the actual level of the game.
      * @return An arrayList.
      */
-    protected ArrayList nombresBasuraSeparado = new ArrayList();
+    private ArrayList nombresBasuraSeparado = new ArrayList();
     /**
      * It return the actual level of the game.
      * @return An arrayList.
      */
-    protected ArrayList idBasuraTotal = new ArrayList();
+    private ArrayList idBasuraTotal = new ArrayList();
     /**
      * It return the actual level of the game.
      * @return An arrayList.
      */
-    protected ArrayList resultados = new ArrayList();
-    
+    private ArrayList resultados = new ArrayList();
+    /**
+     * Variable correctos.
+     */
     private ArrayList elementosIterados = new ArrayList();
-
     /**
      * Variable cantidadObjetos.
      */
@@ -60,10 +61,15 @@ public abstract class Nivel {
     /**
      * Variable correctos.
      */
-    protected int correctos = 0;
-    String[] basuraMenu;
-    int tiempo;
-
+    private int correctos = 0;
+    /**
+     * Variable basuraMenu.
+     */
+    private String[] basuraMenu;
+    /**
+     * Variable tiempo.
+     */
+    private int tiempo;
     /**
      * It return the actual level of the game.
      * @return A String.
@@ -71,15 +77,10 @@ public abstract class Nivel {
     public abstract Boolean setUp();
     /**
      * It return the actual level of the game.
+     * @param tiempoDescripcion
      * @return A String.
      */
     public abstract String mostrarDescripcionNivel(int tiempoDescripcion);
-    /**
-     * It return the actual level of the game.
-     * @param objetosO
-     * @return An integer.
-     */
-    //public abstract Integer mostrarOpciones(int objetosO);
     /**
      * It return the actual level of the game.
      * @param objetosB
@@ -89,12 +90,14 @@ public abstract class Nivel {
     /**
      * It return the actual level of the game.
      * @param objetos
+     * @param basuraMenuParam
+     * @param tiempoParam
      * @return A boolean.
      */
-    public Boolean ejecutarNivel(final int objetos, String[] basuraMenuParam,
-    int tiempoParam) {
+    public Boolean ejecutarNivel(final int objetos,
+    final String[] basuraMenuParam,
+    final int tiempoParam) {
         this.basuraMenu = basuraMenuParam;
-        
         final int veinte = 6;
         final int treintaycinco = 7;
         final int ciencuenta = 11;
@@ -114,7 +117,6 @@ public abstract class Nivel {
             this.objetosReal = V50;
             this.tiempo = tiempoParam * V50;
         }
-        
         mostrarDescripcionNivel(this.tiempo);
         //mostrarOpciones(this.cantidadObjetos);
         mostrarOpciones(this.objetosReal);
@@ -129,9 +131,7 @@ public abstract class Nivel {
      * @return A boolean.
      */
     public Boolean separarId() {
-        
         Collections.shuffle(nombresBasuraTotal);
-        
         for (int i = 1; i < nombresBasuraTotal.size(); i++) {
             System.out.println(nombresBasuraTotal.get(i));
             String str = nombresBasuraTotal.get(i).toString();
@@ -164,7 +164,11 @@ public abstract class Nivel {
         paneMaker.paneConfirm(mensaje);
         return true;
     }
-    
+    /**
+     * It return the actual level of the game.
+     * @param objetos
+     * @return A boolean.
+     */
     public Integer mostrarOpciones(final int objetos) {
         PaneMaker paneMaker = new PaneMaker();
             long startTime = System.currentTimeMillis();
@@ -179,8 +183,7 @@ public abstract class Nivel {
                 int n = Integer.parseInt(idBasuraTotal
                 .get(i).toString());
                 String resultado;
-                
-                if(basuraMostrar == -1){
+                if (basuraMostrar == -1) {
                     System.exit(0);
                 }
                 if (basuraMostrar == n - 1) {
@@ -202,21 +205,32 @@ public abstract class Nivel {
             }
         return objetos;
     }
-    
+    /**
+     * nombresBasuraTotal.
+     * @return nombresBasuraTotal.
+     */
     public ArrayList getnombresBasuraTotal() {
         return this.nombresBasuraTotal;
     }
-    
-    public void setnombresBasuraTotal(ArrayList nombresBasuraTotalParam){
+    /**
+     * nombresBasuraTotalParam.
+     * @param nombresBasuraTotalParam
+     */
+    public void setnombresBasuraTotal(final ArrayList nombresBasuraTotalParam) {
         this.nombresBasuraTotal = nombresBasuraTotalParam;
     }
-    
+    /**
+     * elementosIterados.
+     * @return elementosIterados.
+     */
     public ArrayList getelementosIterados() {
         return this.elementosIterados;
     }
-    
-    public void setelementosIterados(ArrayList elementosIteradosParam){
+    /**
+     * elementosIteradosParam.
+     * @param elementosIteradosParam
+     */
+    public void setelementosIterados(final ArrayList elementosIteradosParam) {
         this.elementosIterados = elementosIteradosParam;
     }
-    
 }

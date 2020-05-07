@@ -106,11 +106,11 @@ public abstract class Database {
     public Connection getConnections() {
         return this.connection;
     }
-    
-   public void closeConnection(){
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+    public void closeConnection() {
       DatabaseConnection.clearConnection(this.connection);
-   }
-    
-    
-    
+    }
 }

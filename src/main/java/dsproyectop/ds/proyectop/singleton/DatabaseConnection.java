@@ -44,10 +44,11 @@ public final class DatabaseConnection extends Database {
         return uniqueInstance;
     }
     /**
-    * Método que devuelve el número de ítems (números aleatorios) existentes en
-    * la serie.
+    * Método que devuelve el número de ítems (números aleatorios) existentes.
+    * en la serie.
+    * @param connection la conexión
     */
-    public static void clearConnection(Connection connection) {
+    public static void clearConnection(final Connection connection) {
         if (uniqueInstance != null) {
             uniqueInstance = null;
             try {

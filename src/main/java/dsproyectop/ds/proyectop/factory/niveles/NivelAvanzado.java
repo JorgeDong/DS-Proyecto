@@ -17,13 +17,21 @@ import dsproyectop.ds.proyectop.factory.Nivel;
 public class NivelAvanzado extends Nivel {
 
     /**
-     * Variable tiempo.
+     * Variable DIVISION.
      */
-    private static final int TIEMPO = 50000;
-
-    Repartir20Basuras repartir20BasurasAvanzado;
-    Repartir35Basuras repartir35BasurasAvanzado;
-    Repartir50Basuras repartir50BasurasAvanzado;
+    private static final int DIVISION = 600;
+    /**
+     * Variable.
+     */
+    private Repartir20Basuras repartir20BasurasAvanzado;
+    /**
+     * Variable.
+     */
+    private Repartir35Basuras repartir35BasurasAvanzado;
+    /**
+     * Variable.
+     */
+    private Repartir50Basuras repartir50BasurasAvanzado;
 
     /**
      * It set up the values.
@@ -34,25 +42,24 @@ public class NivelAvanzado extends Nivel {
         repartir20BasurasAvanzado = new Repartir20BasurasAvanzado();
         repartir35BasurasAvanzado = new Repartir35BasurasAvanzado();
         repartir50BasurasAvanzado = new Repartir50BasurasAvanzado();
-        
         return true;
     }
-    
     /**
      * It return the actual level of the game.
      * @return The level of the game.
      */
     @Override
-    public String mostrarDescripcionNivel(int tiempoDescripcion) {
+    public String mostrarDescripcionNivel(final int tiempoDescripcion) {
         PaneMaker paneMaker = new PaneMaker();
         String mensaje = "<html>Nivel Avanzado:"
             + "<br>Debes clasificar entre Orgánico, Papel, Vidrio, Metal,"
             + "Plástico, Textiles y Basura tecnológica."
-        + "(Tienes" + tiempoDescripcion/600 + " segundos para clasificar la mayor cantidad de basura que puedas.)" + "</html>";
+        + "(Tienes" + tiempoDescripcion / DIVISION
+        + " segundos para clasificar la mayor cantidad de basura que puedas.)"
+        + "</html>";
         paneMaker.paneConfirm(mensaje);
         return "Nivel Avanzado";
     }
-
      /**
      * It Create the trash for the game.
      * @param objetos it´s an int of the option.
@@ -60,21 +67,27 @@ public class NivelAvanzado extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetos) {
-        setUp();   
+        setUp();
         switch (objetos) {
             case 0:
-                setelementosIterados(this.repartir20BasurasAvanzado.iteraryCombinar20Basuras());
-                setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir20());
+                setelementosIterados(this.repartir20BasurasAvanzado
+                .iteraryCombinar20Basuras());
+                setnombresBasuraTotal(this.repartir20BasurasAvanzado
+                .repartir20());
                 break; // break es opcional
             case 1:
-                setelementosIterados(this.repartir35BasurasAvanzado.iteraryCombinar35Basuras());
-                setnombresBasuraTotal(repartir35BasurasAvanzado.repartir35());
+                setelementosIterados(this.repartir35BasurasAvanzado
+                .iteraryCombinar35Basuras());
+                setnombresBasuraTotal(repartir35BasurasAvanzado
+                .repartir35());
                 break; // break es opcional
             case 2:
-                setelementosIterados(this.repartir50BasurasAvanzado.iteraryCombinar50Basuras());
-                setnombresBasuraTotal(repartir50BasurasAvanzado.repartir50());      
+                setelementosIterados(this.repartir50BasurasAvanzado
+                .iteraryCombinar50Basuras());
+                setnombresBasuraTotal(repartir50BasurasAvanzado
+                .repartir50());
                 break; // break es opcional
-            default :
+                default :
             System.exit(0);
             }
         return objetos;
