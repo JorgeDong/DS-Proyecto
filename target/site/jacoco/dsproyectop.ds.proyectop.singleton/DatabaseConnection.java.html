@@ -44,21 +44,22 @@ public final class DatabaseConnection extends Database {
 <span class="fc" id="L44">        return uniqueInstance;</span>
     }
     /**
-    * Método que devuelve el número de ítems (números aleatorios) existentes en
-    * la serie.
+    * Método que devuelve el número de ítems (números aleatorios) existentes.
+    * en la serie.
+    * @param connection la conexión
     */
-    public static void clearConnection(Connection connection) {
-<span class="nc bnc" id="L51" title="All 2 branches missed.">        if (uniqueInstance != null) {</span>
-<span class="nc" id="L52">            uniqueInstance = null;</span>
+    public static void clearConnection(final Connection connection) {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if (uniqueInstance != null) {</span>
+<span class="nc" id="L53">            uniqueInstance = null;</span>
             try {
-<span class="nc" id="L54">            connection.close();</span>
-<span class="nc" id="L55">             System.out.println(&quot;Conexion cerrada&quot;);</span>
-<span class="nc" id="L56">            } catch (SQLException ex) {</span>
+<span class="nc" id="L55">            connection.close();</span>
+<span class="nc" id="L56">             System.out.println(&quot;Conexion cerrada&quot;);</span>
+<span class="nc" id="L57">            } catch (SQLException ex) {</span>
                 // handle any errors
-<span class="nc" id="L58">                System.out.println(&quot;SQLException: &quot; + ex.getMessage());</span>
-<span class="nc" id="L59">                System.exit(0);</span>
-<span class="nc" id="L60">            }</span>
+<span class="nc" id="L59">                System.out.println(&quot;SQLException: &quot; + ex.getMessage());</span>
+<span class="nc" id="L60">                System.exit(0);</span>
+<span class="nc" id="L61">            }</span>
         }
-<span class="nc" id="L62">    }</span>
+<span class="nc" id="L63">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -14,8 +14,6 @@ import dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoPlastico;
 import dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoTecnologica;
 import dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoTextiles;
 import dsproyectop.ds.proyectop.factory.basuras.BasuraAvanzadoVidrio;
-import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoInorganico;
-import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoOrganico;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -23,69 +21,111 @@ import java.util.Collections;
  *
  * @author coque
  */
-<span class="fc" id="L26">public class Repartir20BasurasAvanzado implements Repartir20Basuras {</span>
-<span class="fc" id="L27">        final int tres = 3;</span>
-<span class="fc" id="L28">        final int cuatro = 4;</span>
-<span class="fc" id="L29">        final int cinco = 5;</span>
-<span class="fc" id="L30">        final int siete = 7;</span>
-<span class="fc" id="L31">        final int ocho = 8;</span>
-<span class="fc" id="L32">        Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();</span>
-<span class="fc" id="L33">        Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();</span>
-<span class="fc" id="L34">        Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();</span>
-<span class="fc" id="L35">        Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();</span>
-<span class="fc" id="L36">        Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();</span>
-<span class="fc" id="L37">        Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();</span>
-<span class="fc" id="L38">        Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();</span>
-        
-<span class="fc" id="L40">        protected ArrayList nombresBasuraTotal = new ArrayList();</span>
-<span class="fc" id="L41">        protected ArrayList iteracionesTotal = new ArrayList();</span>
-<span class="fc" id="L42">         protected ArrayList combinacionesTotal = new ArrayList();</span>
-        
+<span class="fc" id="L24">public class Repartir20BasurasAvanzado implements Repartir20Basuras {</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L28">    private final int tres = 3;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L32">    private final int cuatro = 4;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L36">    private final int veinte = 20;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L40">    private Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();</span>
+        /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L44">    private Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L48">    private Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L52">    private Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L56">    private Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L60">    private Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L64">    private Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L68">    private ArrayList nombresBasuraTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L72">    private ArrayList iteracionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L76">    private ArrayList combinacionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList repartir20() {
-<span class="nc" id="L46">    Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
-<span class="nc" id="L47">    Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
-<span class="nc" id="L48">    Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
-<span class="nc" id="L49">    Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
-<span class="nc" id="L50">    Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
-<span class="nc" id="L51">    Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
-<span class="nc" id="L52">    Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
-    
-<span class="nc bnc" id="L54" title="All 2 branches missed.">    for (int i = 0; i &lt; tres; i++) {</span>
-<span class="nc" id="L55">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L56">                        basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
-<span class="nc" id="L57">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L58">                        basuraAvanzadoMetal.getNombresBasura().get(i));</span>
-<span class="nc" id="L59">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L60">                        basuraAvanzadoPapel.getNombresBasura().get(i));</span>
-<span class="nc" id="L61">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L62">                        basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
-<span class="nc" id="L63">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L64">                        basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
-<span class="nc" id="L65">                    nombresBasuraTotal.add(</span>
-<span class="nc" id="L66">                        basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
-                }
-<span class="nc" id="L68">                nombresBasuraTotal.add(</span>
-<span class="nc" id="L69">                    basuraAvanzadoVidrio.getNombresBasura().get(tres));</span>
-<span class="nc" id="L70">                nombresBasuraTotal.add(</span>
-<span class="nc" id="L71">                    basuraAvanzadoVidrio.getNombresBasura().get(cuatro));</span>
-<span class="nc" id="L72">                System.out.println(nombresBasuraTotal.size());</span>
-<span class="nc" id="L73">       return this.nombresBasuraTotal;     </span>
+<span class="nc" id="L83">        Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
+<span class="nc" id="L84">        Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
+<span class="nc" id="L85">        Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
+<span class="nc" id="L86">        Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
+<span class="nc" id="L87">        Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
+<span class="nc" id="L88">        Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
+<span class="nc" id="L89">        Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
+
+<span class="nc bnc" id="L91" title="All 2 branches missed.">        for (int i = 0; i &lt; tres; i++) {</span>
+<span class="nc" id="L92">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L93">                    basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
+<span class="nc" id="L94">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L95">                    basuraAvanzadoMetal.getNombresBasura().get(i));</span>
+<span class="nc" id="L96">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L97">                    basuraAvanzadoPapel.getNombresBasura().get(i));</span>
+<span class="nc" id="L98">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L99">                    basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
+<span class="nc" id="L100">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L101">                    basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
+<span class="nc" id="L102">            nombresBasuraTotal.add(</span>
+<span class="nc" id="L103">                    basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
+        }
+<span class="nc" id="L105">        nombresBasuraTotal.add(</span>
+<span class="nc" id="L106">                basuraAvanzadoVidrio.getNombresBasura().get(tres));</span>
+<span class="nc" id="L107">        nombresBasuraTotal.add(</span>
+<span class="nc" id="L108">                basuraAvanzadoVidrio.getNombresBasura().get(cuatro));</span>
+<span class="nc" id="L109">        System.out.println(nombresBasuraTotal.size());</span>
+<span class="nc" id="L110">        return this.nombresBasuraTotal;</span>
     }
-    
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList iteraryCombinar20Basuras() {
-<span class="nc bnc" id="L78" title="All 2 branches missed.">    for (int i = 0; i &lt; 20; i++) {</span>
-<span class="nc" id="L79">            combinacionesTotal.add(&quot;id&quot;+i);</span>
-        }  
-<span class="nc bnc" id="L81" title="All 2 branches missed.">        for (int i = 0; i &lt; 20; i++) {</span>
-<span class="nc" id="L82">            this.iteracionesTotal.add(</span>
-<span class="nc" id="L83">            this.combinacionesTotal.get(i));</span>
-<span class="nc" id="L84">            this.iteracionesTotal.add(</span>
-<span class="nc" id="L85">            this.combinacionesTotal.get(i));</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">        for (int i = 0; i &lt; veinte; i++) {</span>
+<span class="nc" id="L119">            combinacionesTotal.add(&quot;id&quot; + i);</span>
+        }
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        for (int i = 0; i &lt; veinte; i++) {</span>
+<span class="nc" id="L122">            this.iteracionesTotal.add(</span>
+<span class="nc" id="L123">                    this.combinacionesTotal.get(i));</span>
+<span class="nc" id="L124">            this.iteracionesTotal.add(</span>
+<span class="nc" id="L125">                    this.combinacionesTotal.get(i));</span>
         }
 
-<span class="nc" id="L88">             return this.iteracionesTotal;</span>
+<span class="nc" id="L128">        return this.iteracionesTotal;</span>
     }
 
 }

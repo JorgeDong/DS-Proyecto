@@ -16,6 +16,7 @@ import static org.mockito.Mockito.*;
 public class NivelBasicoTest {
     NivelBasico nivelBasico;
     Nivel nivel;
+    Basura basura;
 
     @Before
     public void setUp() {
@@ -37,8 +38,9 @@ public class NivelBasicoTest {
 
     @Test
     public void testCreateBasuras() {
-        when(nivel.createBasuras(0)).thenReturn(0);
-        assertEquals((Integer) 0, nivelBasico.createBasuras(0));
+        
+        basura = nivelBasico.createBasuras(0);
+        assertEquals("Nivel Basico", basura.mostrarDescripcionNivel());
     }
 
 

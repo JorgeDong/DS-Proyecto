@@ -22,68 +22,108 @@ import java.util.Collections;
  * @author coque
  */
 <span class="fc" id="L24">public class Repartir50BasurasAvanzado implements Repartir50Basuras {</span>
-<span class="fc" id="L25">    final int tres = 3;</span>
-<span class="fc" id="L26">        final int cuatro = 4;</span>
-<span class="fc" id="L27">        final int cinco = 5;</span>
-<span class="fc" id="L28">        final int siete = 7;</span>
-<span class="fc" id="L29">        final int ocho = 8;</span>
-<span class="fc" id="L30">        Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();</span>
-<span class="fc" id="L31">        Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();</span>
-<span class="fc" id="L32">        Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();</span>
-<span class="fc" id="L33">        Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();</span>
-<span class="fc" id="L34">        Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();</span>
-<span class="fc" id="L35">        Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();</span>
-<span class="fc" id="L36">        Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();</span>
-        
-<span class="fc" id="L38">        protected ArrayList nombresBasuraTotal = new ArrayList();</span>
-<span class="fc" id="L39">         protected ArrayList iteracionesTotal = new ArrayList();</span>
-<span class="fc" id="L40">          protected ArrayList combinacionesTotal = new ArrayList();</span>
-
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L28">    private final int cincuenta = 50;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L32">    private final int siete = 7;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L36">    private final int ocho = 8;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L40">    private Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L44">    private Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L48">    private Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L52">    private Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L56">    private Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L60">    private Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L64">    private Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L68">    private ArrayList nombresBasuraTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L72">    private ArrayList iteracionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L76">    private ArrayList combinacionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList repartir50() {
-<span class="fc" id="L44">        Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
-<span class="fc" id="L45">    Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
-<span class="fc" id="L46">    Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
-<span class="fc" id="L47">    Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
-<span class="fc" id="L48">    Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
-<span class="fc" id="L49">    Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
-<span class="fc" id="L50">    Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
-    
-<span class="fc bfc" id="L52" title="All 2 branches covered.">    for (int i = 0; i &lt; siete; i++) {</span>
-<span class="fc" id="L53">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L54">                        basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
-<span class="fc" id="L55">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L56">                        basuraAvanzadoMetal.getNombresBasura().get(i));</span>
-<span class="fc" id="L57">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L58">                        basuraAvanzadoPapel.getNombresBasura().get(i));</span>
-<span class="fc" id="L59">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L60">                        basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
-<span class="fc" id="L61">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L62">                        basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
-<span class="fc" id="L63">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L64">                        basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
-<span class="fc" id="L65">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L66">                        basuraAvanzadoVidrio.getNombresBasura().get(i));</span>
+<span class="fc" id="L83">        Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());</span>
+<span class="fc" id="L84">    Collections.shuffle(basuraAvanzadoMetal.getNombresBasura());</span>
+<span class="fc" id="L85">    Collections.shuffle(basuraAvanzadoPapel.getNombresBasura());</span>
+<span class="fc" id="L86">    Collections.shuffle(basuraAvanzadoPlastico.getNombresBasura());</span>
+<span class="fc" id="L87">    Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());</span>
+<span class="fc" id="L88">    Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());</span>
+<span class="fc" id="L89">    Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">    for (int i = 0; i &lt; siete; i++) {</span>
+<span class="fc" id="L91">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L92">                        basuraAvanzadoOrganico.getNombresBasura().get(i));</span>
+<span class="fc" id="L93">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L94">                        basuraAvanzadoMetal.getNombresBasura().get(i));</span>
+<span class="fc" id="L95">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L96">                        basuraAvanzadoPapel.getNombresBasura().get(i));</span>
+<span class="fc" id="L97">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L98">                        basuraAvanzadoPlastico.getNombresBasura().get(i));</span>
+<span class="fc" id="L99">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L100">                        basuraAvanzadoTecnologica.getNombresBasura().get(i));</span>
+<span class="fc" id="L101">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L102">                        basuraAvanzadoTextiles.getNombresBasura().get(i));</span>
+<span class="fc" id="L103">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L104">                        basuraAvanzadoVidrio.getNombresBasura().get(i));</span>
                 }
-<span class="fc" id="L68">                nombresBasuraTotal.add(basuraAvanzadoVidrio</span>
-<span class="fc" id="L69">                .getNombresBasura().get(ocho));</span>
-<span class="fc" id="L70">                System.out.println(nombresBasuraTotal.size());</span>
-<span class="fc" id="L71">        return this.nombresBasuraTotal;</span>
+<span class="fc" id="L106">                nombresBasuraTotal.add(basuraAvanzadoVidrio</span>
+<span class="fc" id="L107">                .getNombresBasura().get(ocho));</span>
+<span class="fc" id="L108">                System.out.println(nombresBasuraTotal.size());</span>
+<span class="fc" id="L109">        return this.nombresBasuraTotal;</span>
     }
-    
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList iteraryCombinar50Basuras() {
-<span class="fc bfc" id="L76" title="All 2 branches covered.">        for (int i = 0; i &lt; 50; i++) {</span>
-<span class="fc" id="L77">            combinacionesTotal.add(&quot;id&quot;+i);</span>
-        }  
-<span class="fc bfc" id="L79" title="All 2 branches covered.">        for (int i = 0; i &lt; 50; i++) {</span>
-<span class="fc" id="L80">            this.iteracionesTotal.add(</span>
-<span class="fc" id="L81">            this.combinacionesTotal.get(i));</span>
-<span class="fc" id="L82">            this.iteracionesTotal.add(</span>
-<span class="fc" id="L83">            this.combinacionesTotal.get(i));</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">        for (int i = 0; i &lt; cincuenta; i++) {</span>
+<span class="fc" id="L118">            combinacionesTotal.add(&quot;id&quot; + i);</span>
         }
-
-<span class="fc" id="L86">             return this.iteracionesTotal;</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        for (int i = 0; i &lt; cincuenta; i++) {</span>
+<span class="fc" id="L121">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L122">            this.combinacionesTotal.get(i));</span>
+<span class="fc" id="L123">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L124">            this.combinacionesTotal.get(i));</span>
+        }
+<span class="fc" id="L126">             return this.iteracionesTotal;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

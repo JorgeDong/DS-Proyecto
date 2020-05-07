@@ -7,7 +7,9 @@ import dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasBasico;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasBasico;
 import dsproyectop.ds.proyectop.bridge.PaneMaker;
+import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.factory.Nivel;
+import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoOrganico;
 
 /**
  *
@@ -65,7 +67,7 @@ public class NivelBasico extends Nivel {
      * @return The number of the option.
      */
     @Override
-    public Integer createBasuras(final int objetosCB) {
+    public Basura createBasuras(final int objetosCB) {
         setUp();
         switch (objetosCB) {
             case 0:
@@ -89,6 +91,6 @@ public class NivelBasico extends Nivel {
             default :
             System.exit(0);
             }
-            return objetosCB;
+            return new BasuraBasicoOrganico();
         }
 }

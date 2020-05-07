@@ -5,6 +5,9 @@
  */
 package dsproyectop.ds.proyectop.factory;
 
+import dsproyectop.ds.proyectop.behaviors.Repartir20Basuras;
+import dsproyectop.ds.proyectop.behaviors.Repartir35Basuras;
+import dsproyectop.ds.proyectop.behaviors.Repartir50Basuras;
 import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,6 +17,18 @@ import java.util.Collections;
  * @author coque
  */
 public abstract class Nivel {
+    /**
+     * Variable.
+     */
+    private Repartir20Basuras repartir20BasurasAvanzado;
+    /**
+     * Variable.
+     */
+    private Repartir35Basuras repartir35BasurasAvanzado;
+    /**
+     * Variable.
+     */
+    private Repartir50Basuras repartir50BasurasAvanzado;
     /**
      * Variable tiempo.
      */
@@ -86,7 +101,7 @@ public abstract class Nivel {
      * @param objetosB
      * @return An integer.
      */
-    public abstract Integer createBasuras(int objetosB);
+    public abstract Basura createBasuras(int objetosB);
     /**
      * It return the actual level of the game.
      * @param objetos

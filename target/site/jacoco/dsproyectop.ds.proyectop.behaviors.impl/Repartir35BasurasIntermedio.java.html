@@ -18,55 +18,82 @@ import java.util.Collections;
  * @author coque
  */
 <span class="fc" id="L20">public class Repartir35BasurasIntermedio implements Repartir35Basuras {</span>
-<span class="fc" id="L21">    final int seis = 6;</span>
-<span class="fc" id="L22">        final int siete = 7;</span>
-<span class="fc" id="L23">        final int once = 11;</span>
-<span class="fc" id="L24">        final int doce = 12;</span>
-<span class="fc" id="L25">        final int diesiciete = 17;</span>
-<span class="fc" id="L26">        Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();</span>
-<span class="fc" id="L27">        Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();</span>
-<span class="fc" id="L28">        Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();</span>
-        
-<span class="fc" id="L30">         protected ArrayList nombresBasuraTotal = new ArrayList();</span>
-<span class="fc" id="L31">         protected ArrayList iteracionesTotal = new ArrayList();</span>
-<span class="fc" id="L32">          protected ArrayList combinacionesTotal = new ArrayList();</span>
-         
-         
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L24">    private final int treintaycinco = 35;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L28">    private final int once = 11;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L32">    private final int doce = 12;</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L36">    private Basura basuraIntermedioOrganica = new BasuraIntermedioOrganico();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L40">   private Basura basuraIntermedioInorganica = new BasuraIntermedioInorganico();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L44">   private Basura basuraIntermedioReciclable = new BasuraIntermedioReciclable();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L48">    private ArrayList nombresBasuraTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L52">    private ArrayList iteracionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     */
+<span class="fc" id="L56">    private ArrayList combinacionesTotal = new ArrayList();</span>
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList repartir35() {
-<span class="fc" id="L37">         Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());</span>
-<span class="fc" id="L38">        Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());</span>
-<span class="fc" id="L39">        Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());</span>
-        
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        for (int i = 0; i &lt; once; i++) {</span>
-<span class="fc" id="L42">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L43">                        basuraIntermedioOrganica.getNombresBasura().get(i));</span>
-<span class="fc" id="L44">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L45">                        basuraIntermedioInorganica.getNombresBasura().get(i));</span>
-<span class="fc" id="L46">                    nombresBasuraTotal.add(</span>
-<span class="fc" id="L47">                        basuraIntermedioReciclable.getNombresBasura().get(i));</span>
+<span class="fc" id="L63">         Collections.shuffle(basuraIntermedioOrganica.getNombresBasura());</span>
+<span class="fc" id="L64">        Collections.shuffle(basuraIntermedioInorganica.getNombresBasura());</span>
+<span class="fc" id="L65">        Collections.shuffle(basuraIntermedioReciclable.getNombresBasura());</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (int i = 0; i &lt; once; i++) {</span>
+<span class="fc" id="L67">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L68">                        basuraIntermedioOrganica.getNombresBasura().get(i));</span>
+<span class="fc" id="L69">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L70">                        basuraIntermedioInorganica.getNombresBasura().get(i));</span>
+<span class="fc" id="L71">                    nombresBasuraTotal.add(</span>
+<span class="fc" id="L72">                        basuraIntermedioReciclable.getNombresBasura().get(i));</span>
                 }
-<span class="fc" id="L49">                nombresBasuraTotal.add(</span>
-<span class="fc" id="L50">                    basuraIntermedioInorganica.getNombresBasura().get(doce));</span>
-<span class="fc" id="L51">                nombresBasuraTotal.add(</span>
-<span class="fc" id="L52">                    basuraIntermedioReciclable.getNombresBasura().get(doce));</span>
-<span class="fc" id="L53">                    System.out.println(nombresBasuraTotal.size());</span>
-                    
-<span class="fc" id="L55">        return this.nombresBasuraTotal;</span>
+<span class="fc" id="L74">                nombresBasuraTotal.add(</span>
+<span class="fc" id="L75">                    basuraIntermedioInorganica.getNombresBasura().get(doce));</span>
+<span class="fc" id="L76">                nombresBasuraTotal.add(</span>
+<span class="fc" id="L77">                    basuraIntermedioReciclable.getNombresBasura().get(doce));</span>
+<span class="fc" id="L78">                    System.out.println(nombresBasuraTotal.size());</span>
+<span class="fc" id="L79">        return this.nombresBasuraTotal;</span>
     }
-        
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList iteraryCombinar35Basuras() {
-<span class="fc bfc" id="L60" title="All 2 branches covered.">   for (int i = 0; i &lt; 35; i++) {</span>
-<span class="fc" id="L61">            combinacionesTotal.add(&quot;id&quot;+i);</span>
-        }  
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        for (int i = 0; i &lt; 35; i++) {</span>
-<span class="fc" id="L64">            this.iteracionesTotal.add(</span>
-<span class="fc" id="L65">            this.combinacionesTotal.get(i));</span>
-<span class="fc" id="L66">            this.iteracionesTotal.add(</span>
-<span class="fc" id="L67">            this.combinacionesTotal.get(i));</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">   for (int i = 0; i &lt; treintaycinco; i++) {</span>
+<span class="fc" id="L88">            combinacionesTotal.add(&quot;id&quot; + i);</span>
         }
-<span class="fc" id="L69">             return this.iteracionesTotal;</span>
-    }  
+<span class="fc bfc" id="L90" title="All 2 branches covered.">        for (int i = 0; i &lt; treintaycinco; i++) {</span>
+<span class="fc" id="L91">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L92">            this.combinacionesTotal.get(i));</span>
+<span class="fc" id="L93">            this.iteracionesTotal.add(</span>
+<span class="fc" id="L94">            this.combinacionesTotal.get(i));</span>
+        }
+<span class="fc" id="L96">             return this.iteracionesTotal;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

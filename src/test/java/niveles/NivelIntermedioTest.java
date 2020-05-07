@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.factory.Nivel;
+import dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioOrganico;
 import dsproyectop.ds.proyectop.factory.niveles.NivelIntermedio;
 
 import org.junit.Before;
@@ -16,6 +17,7 @@ import static org.mockito.Mockito.*;
 public class NivelIntermedioTest {
     NivelIntermedio nivelIntermedio;
     Nivel nivel;
+    Basura basura;
 
     @Before
     public void setUp() {
@@ -37,8 +39,9 @@ public class NivelIntermedioTest {
 
     @Test
     public void testCreateBasuras() {
-        when(nivel.createBasuras(1)).thenReturn(1);
-        assertEquals((Integer) 1, nivelIntermedio.createBasuras(1));
+        //when(nivel.createBasuras(1)).thenReturn(basura);
+        basura = nivelIntermedio.createBasuras(1);
+        assertEquals("Nivel Intermedio", basura.mostrarDescripcionNivel());
     }
 
 

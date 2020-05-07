@@ -27,49 +27,53 @@ public final class Main {
      * @param args
      */
     public static void main(final String[] args) {
+<span class="nc" id="L30">        final int tiempoBasico = 1000;</span>
+<span class="nc" id="L31">        final int tiempoIntermedio = 2000;</span>
+<span class="nc" id="L32">        final int tiempoAvanzado = 3000;</span>
         //Database db;
-<span class="nc" id="L31">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="nc" id="L34">        PaneMaker paneMaker = new PaneMaker();</span>
         String nombreUsuario;
-<span class="nc" id="L33">        String[] options = {&quot;Iniciar Juego&quot;, &quot;Salir&quot;};</span>
-<span class="nc" id="L34">        String mensaje = &quot;Es necesario que seleccione una opcion&quot;;</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (paneMaker.paneOptions(options, mensaje) == 1) {</span>
-<span class="nc" id="L36">            System.exit(0);</span>
+<span class="nc" id="L36">        String[] options = {&quot;Iniciar Juego&quot;, &quot;Salir&quot;};</span>
+<span class="nc" id="L37">        String mensaje = &quot;Es necesario que seleccione una opcion&quot;;</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        if (paneMaker.paneOptions(options, mensaje) == 1) {</span>
+<span class="nc" id="L39">            System.exit(0);</span>
         }
-<span class="nc" id="L38">        mensaje = &quot;Ingrese nombre de usuario&quot;;</span>
-<span class="nc" id="L39">        nombreUsuario = paneMaker.paneInput(mensaje);</span>
-<span class="nc" id="L40">        String[] optionsMenu = {&quot;Nivel Básico&quot;,</span>
+<span class="nc" id="L41">        mensaje = &quot;Ingrese nombre de usuario&quot;;</span>
+<span class="nc" id="L42">        nombreUsuario = paneMaker.paneInput(mensaje);</span>
+<span class="nc" id="L43">        String[] optionsMenu = {&quot;Nivel Básico&quot;,</span>
         &quot;Nivel Intermedio&quot;, &quot;Nivel Avanzado&quot;};
-<span class="nc" id="L42">        mensaje = &quot;Bienenido &quot; + nombreUsuario</span>
+<span class="nc" id="L45">        mensaje = &quot;Bienenido &quot; + nombreUsuario</span>
         + &quot; Selecciona una opción para iniciar el juego:&quot;;
-<span class="nc" id="L44">        int seleccionMenu = paneMaker.paneOptions(optionsMenu, mensaje);</span>
-<span class="nc" id="L45">        String[] optionsObjetos = {&quot;20&quot;, &quot;35&quot;, &quot;50&quot;};</span>
-<span class="nc" id="L46">        mensaje = &quot;Selecciona la cantidad de basura a clasificar.&quot;;</span>
-<span class="nc" id="L47">        int cantidadObjetos = paneMaker.paneOptions(optionsObjetos, mensaje);</span>
-<span class="nc bnc" id="L48" title="All 4 branches missed.">        switch (seleccionMenu) {</span>
+<span class="nc" id="L47">        int seleccionMenu = paneMaker.paneOptions(optionsMenu, mensaje);</span>
+<span class="nc" id="L48">        String[] optionsObjetos = {&quot;20&quot;, &quot;35&quot;, &quot;50&quot;};</span>
+<span class="nc" id="L49">        mensaje = &quot;Selecciona la cantidad de basura a clasificar.&quot;;</span>
+<span class="nc" id="L50">        int cantidadObjetos = paneMaker</span>
+<span class="nc" id="L51">        .paneOptions(optionsObjetos, mensaje);</span>
+<span class="nc bnc" id="L52" title="All 4 branches missed.">        switch (seleccionMenu) {</span>
             case 0:
-<span class="nc" id="L50">                String[] basuraMenuBasico = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};</span>
-<span class="nc" id="L51">                int tiempoBasico = 1000;</span>
-<span class="nc" id="L52">                Nivel nivelBasico = new NivelBasico();</span>
-<span class="nc" id="L53">                nivelBasico.ejecutarNivel(cantidadObjetos,basuraMenuBasico,tiempoBasico);</span>
-<span class="nc" id="L54">                break; // break es opcional</span>
+<span class="nc" id="L54">                String[] basuraMenuBasico = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;};</span>
+<span class="nc" id="L55">                Nivel nivelBasico = new NivelBasico();</span>
+<span class="nc" id="L56">                nivelBasico.ejecutarNivel(cantidadObjetos,</span>
+                basuraMenuBasico, tiempoBasico);
+<span class="nc" id="L58">                break; // break es opcional</span>
             case 1:
-<span class="nc" id="L56">                String[] basuraMenuIntermedio = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;, &quot;Reciclable&quot;};</span>
-<span class="nc" id="L57">                int tiempoIntermedio = 2000;</span>
-<span class="nc" id="L58">                Nivel nivelIntermedio = new NivelIntermedio();</span>
-<span class="nc" id="L59">                nivelIntermedio.ejecutarNivel(cantidadObjetos,basuraMenuIntermedio,tiempoIntermedio);</span>
-<span class="nc" id="L60">                break; // break es opcional</span>
+<span class="nc" id="L60">                String[] basuraMenuIntermedio = {&quot;Orgánico&quot;, &quot;Inorgánico&quot;,</span>
+                &quot;Reciclable&quot;};
+<span class="nc" id="L62">                Nivel nivelIntermedio = new NivelIntermedio();</span>
+<span class="nc" id="L63">                nivelIntermedio.ejecutarNivel(cantidadObjetos,</span>
+                basuraMenuIntermedio, tiempoIntermedio);
+<span class="nc" id="L65">                break; // break es opcional</span>
             case 2:
-<span class="nc" id="L62">                String[] basuraMenuAvanzado = {&quot;Orgánico&quot;, &quot;Papel&quot;,</span>
+<span class="nc" id="L67">                String[] basuraMenuAvanzado = {&quot;Orgánico&quot;, &quot;Papel&quot;,</span>
                  &quot;Vidrio&quot;, &quot;Metal&quot;, &quot;Plástico&quot;, &quot;Textiles&quot;,
                  &quot;Basura tecnológica&quot;};
-<span class="nc" id="L65">                 int tiempoAvanzado = 3000;</span>
-                 
-<span class="nc" id="L67">                Nivel nivelAvanzado = new NivelAvanzado();</span>
-<span class="nc" id="L68">                nivelAvanzado.ejecutarNivel(cantidadObjetos,basuraMenuAvanzado,tiempoAvanzado);</span>
-<span class="nc" id="L69">                break; // break es opcional</span>
+<span class="nc" id="L70">                Nivel nivelAvanzado = new NivelAvanzado();</span>
+<span class="nc" id="L71">                nivelAvanzado.ejecutarNivel(cantidadObjetos,</span>
+                basuraMenuAvanzado, tiempoAvanzado);
+<span class="nc" id="L73">                break; // break es opcional</span>
             default :
-<span class="nc" id="L71">            System.exit(0);</span>
+<span class="nc" id="L75">            System.exit(0);</span>
         }
-<span class="nc" id="L73">    }</span>
+<span class="nc" id="L77">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

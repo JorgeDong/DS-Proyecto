@@ -16,6 +16,7 @@ import static org.mockito.Mockito.*;
 public class NivelAvanzadoTest {
     NivelAvanzado nivelAvanzado;
     Nivel nivel;
+    Basura basura;
 
     @Before
     public void setUp() {
@@ -37,8 +38,8 @@ public class NivelAvanzadoTest {
 
     @Test
     public void testCreateBasuras() {
-        when(nivel.createBasuras(2)).thenReturn(2);
-        assertEquals((Integer) 2, nivelAvanzado.createBasuras(2));
+        basura = nivelAvanzado.createBasuras(2);
+        assertEquals("Nivel Avanzado", basura.mostrarDescripcionNivel());
     }
 
     @Test

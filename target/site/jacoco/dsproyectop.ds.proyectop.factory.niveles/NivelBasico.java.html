@@ -7,18 +7,32 @@ import dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasBasico;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasBasico;
 import dsproyectop.ds.proyectop.bridge.PaneMaker;
+import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.factory.Nivel;
-
+import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoOrganico;
 
 /**
  *
  * @author MrS.
  */
-<span class="fc" id="L17">public class NivelBasico extends Nivel {</span>
+<span class="fc" id="L18">public class NivelBasico extends Nivel {</span>
 
-    Repartir20Basuras repartir20BasurasBasico;
-    Repartir35Basuras repartir35BasurasBasico;
-    Repartir50Basuras repartir50BasurasBasico;
+    /**
+     * Variable DIVISION.
+     */
+    private static final int DIVISION = 600;
+    /**
+     * Variable.
+     */
+    private Repartir20Basuras repartir20BasurasBasico;
+    /**
+     * Variable.
+     */
+    private Repartir35Basuras repartir35BasurasBasico;
+    /**
+     * Variable.
+     */
+    private Repartir50Basuras repartir50BasurasBasico;
 
     /**
      * It set up the values.
@@ -26,25 +40,26 @@ import dsproyectop.ds.proyectop.factory.Nivel;
      */
     @Override
     public Boolean setUp() {
-<span class="fc" id="L29">        repartir20BasurasBasico = new Repartir20BasurasBasico();</span>
-<span class="fc" id="L30">        repartir35BasurasBasico = new Repartir35BasurasBasico();</span>
-<span class="fc" id="L31">        repartir50BasurasBasico = new Repartir50BasurasBasico();</span>
-        
-<span class="fc" id="L33">        return true;</span>
+<span class="fc" id="L43">        repartir20BasurasBasico = new Repartir20BasurasBasico();</span>
+<span class="fc" id="L44">        repartir35BasurasBasico = new Repartir35BasurasBasico();</span>
+<span class="fc" id="L45">        repartir50BasurasBasico = new Repartir50BasurasBasico();</span>
+<span class="fc" id="L46">        return true;</span>
     }
     /**
      * It return the actual level of the game.
      * @return The level of the game.
      */
     @Override
-    public String mostrarDescripcionNivel(int tiempoDescripcion) {
-<span class="fc" id="L41">        PaneMaker paneMaker = new PaneMaker();</span>
-<span class="fc" id="L42">        String mensaje = &quot;&lt;html&gt;Nivel Basico:&quot;</span>
+    public String mostrarDescripcionNivel(final int tiempoDescripcion) {
+<span class="fc" id="L54">        PaneMaker paneMaker = new PaneMaker();</span>
+<span class="fc" id="L55">        String mensaje = &quot;&lt;html&gt;Nivel Basico:&quot;</span>
             + &quot;&lt;br&gt;Debes clasificar la basura entre&quot;
             + &quot; Orgánico e Inorgánico.&quot;
-        + &quot;(Tienes&quot; + tiempoDescripcion/600 + &quot; segundos para clasificar la mayor cantidad de basura que puedas.)&quot; + &quot;&lt;/html&gt;&quot;;
-<span class="fc" id="L46">        paneMaker.paneConfirm(mensaje);</span>
-<span class="fc" id="L47">        return &quot;Nivel Basico&quot;;</span>
+        + &quot;(Tienes&quot; + tiempoDescripcion / DIVISION
+        + &quot; segundos para clasificar la mayor cantidad de basura que puedas.)&quot;
+        + &quot;&lt;/html&gt;&quot;;
+<span class="fc" id="L61">        paneMaker.paneConfirm(mensaje);</span>
+<span class="fc" id="L62">        return &quot;Nivel Basico&quot;;</span>
     }
      /**
      * It Create the trash for the game.
@@ -52,25 +67,31 @@ import dsproyectop.ds.proyectop.factory.Nivel;
      * @return The number of the option.
      */
     @Override
-    public Integer createBasuras(final int objetosCB) {
-<span class="fc" id="L56">        setUp(); </span>
-<span class="pc bpc" id="L57" title="3 of 4 branches missed.">        switch (objetosCB) {</span>
+    public Basura createBasuras(final int objetosCB) {
+<span class="fc" id="L71">        setUp();</span>
+<span class="pc bpc" id="L72" title="3 of 4 branches missed.">        switch (objetosCB) {</span>
             case 0:
-<span class="fc" id="L59">                setelementosIterados(this.repartir20BasurasBasico.iteraryCombinar20Basuras());</span>
-<span class="fc" id="L60">                setnombresBasuraTotal(this.repartir20BasurasBasico.repartir20());</span>
-<span class="fc" id="L61">                break; // break es opcional</span>
+<span class="fc" id="L74">                setelementosIterados(this.repartir20BasurasBasico</span>
+<span class="fc" id="L75">                .iteraryCombinar20Basuras());</span>
+<span class="fc" id="L76">                setnombresBasuraTotal(this.repartir20BasurasBasico</span>
+<span class="fc" id="L77">                .repartir20());</span>
+<span class="fc" id="L78">                break; // break es opcional</span>
             case 1:
-<span class="nc" id="L63">                setelementosIterados(this.repartir35BasurasBasico.iteraryCombinar35Basuras());</span>
-<span class="nc" id="L64">                setnombresBasuraTotal(this.repartir35BasurasBasico.repartir35());</span>
-<span class="nc" id="L65">                break; // break es opcional</span>
+<span class="nc" id="L80">                setelementosIterados(this.repartir35BasurasBasico</span>
+<span class="nc" id="L81">                .iteraryCombinar35Basuras());</span>
+<span class="nc" id="L82">                setnombresBasuraTotal(this.repartir35BasurasBasico</span>
+<span class="nc" id="L83">                .repartir35());</span>
+<span class="nc" id="L84">                break; // break es opcional</span>
             case 2:
-<span class="nc" id="L67">                setelementosIterados(this.repartir50BasurasBasico.iteraryCombinar50Basuras());</span>
-<span class="nc" id="L68">                setnombresBasuraTotal(this.repartir50BasurasBasico.repartir50());</span>
-<span class="nc" id="L69">                break; // break es opcional</span>
+<span class="nc" id="L86">                setelementosIterados(this.repartir50BasurasBasico</span>
+<span class="nc" id="L87">                .iteraryCombinar50Basuras());</span>
+<span class="nc" id="L88">                setnombresBasuraTotal(this.repartir50BasurasBasico</span>
+<span class="nc" id="L89">                .repartir50());</span>
+<span class="nc" id="L90">                break; // break es opcional</span>
             default :
-<span class="nc" id="L71">            System.exit(0);</span>
+<span class="nc" id="L92">            System.exit(0);</span>
             }
-<span class="fc" id="L73">            return objetosCB;</span>
+<span class="fc" id="L94">            return new BasuraBasicoOrganico();</span>
         }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

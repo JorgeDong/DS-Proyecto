@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.29">
-<file name="C:\Users\stomp\Documents\GitHub\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\behaviors\impl\Repartir35BasurasBasico.java">
+<checkstyle version="8.19">
+<file name="C:\Users\coque\Desktop\DS\proyecto\respaldo\ultimopatron\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\factory\Nivel.java">
+<error line="98" column="56" severity="error" message="Se esperaba la etiqueta @param para &apos;tiempoDescripcion&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="104" column="46" severity="error" message="Se esperaba la etiqueta @param para &apos;objetosB&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="112" column="44" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="113" column="20" severity="error" message="Se esperaba la etiqueta @param para &apos;basuraMenuParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="114" column="15" severity="error" message="Se esperaba la etiqueta @param para &apos;tiempoParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="187" column="46" severity="error" message="Se esperaba la etiqueta @param para &apos;objetos&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="234" column="55" severity="error" message="Se esperaba la etiqueta @param para &apos;nombresBasuraTotalParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="248" column="54" severity="error" message="Se esperaba la etiqueta @param para &apos;elementosIteradosParam&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\stomp\Documents\GitHub\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\behaviors\impl\Repartir35BasurasIntermedio.java">
-</file>
-<file name="C:\Users\stomp\Documents\GitHub\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\behaviors\impl\Repartir50BasurasAvanzado.java">
+<file name="C:\Users\coque\Desktop\DS\proyecto\respaldo\ultimopatron\DS-Proyecto\src\main\java\dsproyectop\ds\proyectop\Main.java">
+<error line="29" column="44" severity="error" message="Se esperaba la etiqueta @param para &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
 </checkstyle>

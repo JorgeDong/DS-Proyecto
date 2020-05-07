@@ -7,7 +7,9 @@ import dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasIntermedio;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasIntermedio;
 import dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasIntermedio;
 import dsproyectop.ds.proyectop.bridge.PaneMaker;
+import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.factory.Nivel;
+import dsproyectop.ds.proyectop.factory.basuras.BasuraIntermedioOrganico;
 
 /**
  *
@@ -63,7 +65,7 @@ public class NivelIntermedio extends Nivel {
      * @return The number of the option.
      */
     @Override
-    public Integer createBasuras(final int objetos) {
+    public Basura createBasuras(final int objetos) {
         setUp();
         switch (objetos) {
             case 0:
@@ -87,6 +89,6 @@ public class NivelIntermedio extends Nivel {
             default :
             System.exit(0);
         }
-        return objetos;
+        return new BasuraIntermedioOrganico();
     }
 }
