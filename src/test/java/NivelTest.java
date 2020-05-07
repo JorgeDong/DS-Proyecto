@@ -21,8 +21,11 @@ public class NivelTest {
 
     @Test
     public void testEjecutarNivel() {
-        String[] basuraMenuBasico = {"Orgánico", "Inorgánico"};
-        assertEquals(true, nivel.ejecutarNivel(10, basuraMenuBasico, 50));
+        String[] basuraMenuAvanzado = {"Orgánico", "Papel",
+        "Vidrio", "Metal", "Plástico", "Textiles",
+        "Basura tecnológica"};
+        int tiempoAvanzado = 3000;
+        assertEquals(true, nivel.ejecutarNivel(1, basuraMenuAvanzado, tiempoAvanzado));
     }
 
     @Test
