@@ -54,6 +54,7 @@ public class NivelIntermedio extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetos) {
+        setUp(); 
         switch (objetos) {
             case 0:
                 setnombresBasuraTotal(this.repartir20BasurasIntermedio.repartir());

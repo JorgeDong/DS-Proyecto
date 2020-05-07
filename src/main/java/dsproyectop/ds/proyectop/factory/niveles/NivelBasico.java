@@ -53,6 +53,7 @@ public class NivelBasico extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetosCB) {
+        setUp(); 
         switch (objetosCB) {
             case 0:
                 setnombresBasuraTotal(this.repartir20BasurasBasico.repartir());
