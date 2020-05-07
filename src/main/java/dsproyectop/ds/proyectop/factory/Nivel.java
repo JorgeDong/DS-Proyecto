@@ -61,7 +61,12 @@ public abstract class Nivel {
     protected int correctos = 0;
     String[] basuraMenu;
     int tiempo;
-    
+
+    /**
+     * It return the actual level of the game.
+     * @return A String.
+     */
+    public abstract Boolean setUp();
     /**
      * It return the actual level of the game.
      * @return A String.
@@ -115,7 +120,7 @@ public abstract class Nivel {
             System.out.println(resultados.get(i));
         }
         mostrarResultados();
-        System.out.println('AQUI TERMINA ESTO');
+        System.out.println('a');
         return true;
     }
     /**

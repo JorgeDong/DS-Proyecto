@@ -24,6 +24,12 @@ public class NivelAvanzadoTest {
     }
 
     @Test
+    public void testSetUp() {
+        when(nivel.setUp()).thenReturn(true);
+        assertEquals(true, nivelAvanzado.setUp());
+    }
+
+    @Test
     public void testMostrarDescripcionNivel() {
         when(nivel.mostrarDescripcionNivel(10)).thenReturn("Nivel Avanzado");
         assertEquals("Nivel Avanzado", nivelAvanzado.mostrarDescripcionNivel(10));

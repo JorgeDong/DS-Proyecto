@@ -10,20 +10,34 @@ import dsproyectop.ds.proyectop.bridge.PaneMaker;
 import dsproyectop.ds.proyectop.factory.Nivel;
 
 
-
-
 /**
  *
  * @author MrS.
  */
 public class NivelAvanzado extends Nivel {
-    Repartir20Basuras repartir20BasurasAvanzado = new Repartir20BasurasAvanzado();
-    Repartir35Basuras repartir35BasurasAvanzado = new Repartir35BasurasAvanzado();
-    Repartir50Basuras repartir50BasurasAvanzado = new Repartir50BasurasAvanzado();
+
     /**
      * Variable tiempo.
      */
     private static final int TIEMPO = 50000;
+
+    Repartir20Basuras repartir20BasurasAvanzado;
+    Repartir35Basuras repartir35BasurasAvanzado;
+    Repartir50Basuras repartir50BasurasAvanzado;
+
+    /**
+     * It set up the values.
+     * @return True.
+     */
+    @Override
+    public Boolean setUp() {
+        repartir20BasurasAvanzado = new Repartir20BasurasAvanzado();
+        repartir35BasurasAvanzado = new Repartir35BasurasAvanzado();
+        repartir50BasurasAvanzado = new Repartir50BasurasAvanzado();
+        
+        return true;
+    }
+    
     /**
      * It return the actual level of the game.
      * @return The level of the game.
@@ -46,7 +60,7 @@ public class NivelAvanzado extends Nivel {
      */
     @Override
     public Integer createBasuras(final int objetos) {
-           
+        setUp();   
         switch (objetos) {
             case 0:
                  setnombresBasuraTotal(this.repartir20BasurasAvanzado.repartir());

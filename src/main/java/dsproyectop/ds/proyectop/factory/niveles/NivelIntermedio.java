@@ -15,9 +15,23 @@ import dsproyectop.ds.proyectop.factory.Nivel;
  * @author MrS.
  */
 public class NivelIntermedio extends Nivel {
-    Repartir20Basuras repartir20BasurasIntermedio = new Repartir20BasurasIntermedio();
-    Repartir35Basuras repartir35BasurasIntermedio = new Repartir35BasurasIntermedio();
-    Repartir50Basuras repartir50BasurasIntermedio = new Repartir50BasurasIntermedio();
+
+    Repartir20Basuras repartir20BasurasIntermedio;
+    Repartir35Basuras repartir35BasurasIntermedio;
+    Repartir50Basuras repartir50BasurasIntermedio;
+
+    /**
+     * It set up the values.
+     * @return True.
+     */
+    @Override
+    public Boolean setUp() {
+        repartir20BasurasIntermedio = new Repartir20BasurasIntermedio();
+        repartir35BasurasIntermedio = new Repartir35BasurasIntermedio();
+        repartir50BasurasIntermedio = new Repartir50BasurasIntermedio();
+        
+        return true;
+    }
     /**
      * It return the actual level of the game.
      * @return The level of the game.

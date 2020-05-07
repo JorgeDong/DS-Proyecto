@@ -24,6 +24,12 @@ public class NivelIntermedioTest {
     }
 
     @Test
+    public void testSetUp() {
+        when(nivel.setUp()).thenReturn(true);
+        assertEquals(true, nivelIntermedio.setUp());
+    }
+
+    @Test
     public void testMostrarDescripcionNivel() {
         when(nivel.mostrarDescripcionNivel(10)).thenReturn("Nivel Intermedio");
         assertEquals("Nivel Intermedio", nivelIntermedio.mostrarDescripcionNivel(10));
