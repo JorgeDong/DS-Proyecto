@@ -22,23 +22,58 @@ import java.util.Collections;
  * @author coque
  */
 public class Repartir35BasurasAvanzado implements Repartir35Basuras {
-    final int tres = 3;
-        final int cuatro = 4;
-        final int cinco = 5;
-        final int siete = 7;
-        final int ocho = 8;
-        Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();
-        Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();
-        Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();
-        Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();
-        Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();
-        Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();
-        Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();
-        
-         protected ArrayList nombresBasuraTotal = new ArrayList();
-       protected ArrayList iteracionesTotal = new ArrayList();
-                 protected ArrayList combinacionesTotal = new ArrayList();
-
+    /**
+     * Variable de descicion.
+     */
+    private final int treintaycinco = 35;
+    /**
+     * Variable de descicion.
+     */
+    private final int cinco = 5;
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoOrganico = new BasuraAvanzadoOrganico();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoMetal = new BasuraAvanzadoMetal();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoPapel = new BasuraAvanzadoPapel();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoPlastico = new BasuraAvanzadoPlastico();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoTecnologica = new BasuraAvanzadoTecnologica();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoTextiles = new BasuraAvanzadoTextiles();
+    /**
+     * Variable de descicion.
+     */
+    private Basura basuraAvanzadoVidrio = new BasuraAvanzadoVidrio();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList nombresBasuraTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList iteracionesTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     */
+    private ArrayList combinacionesTotal = new ArrayList();
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
     @Override
     public ArrayList repartir35() {
         Collections.shuffle(basuraAvanzadoOrganico.getNombresBasura());
@@ -48,7 +83,6 @@ public class Repartir35BasurasAvanzado implements Repartir35Basuras {
     Collections.shuffle(basuraAvanzadoTecnologica.getNombresBasura());
     Collections.shuffle(basuraAvanzadoTextiles.getNombresBasura());
     Collections.shuffle(basuraAvanzadoVidrio.getNombresBasura());
-    
     for (int i = 0; i < cinco; i++) {
                     nombresBasuraTotal.add(
                         basuraAvanzadoOrganico.getNombresBasura().get(i));
@@ -66,24 +100,23 @@ public class Repartir35BasurasAvanzado implements Repartir35Basuras {
                         basuraAvanzadoVidrio.getNombresBasura().get(i));
                 }
                 System.out.println(nombresBasuraTotal.size());
-                
         return this.nombresBasuraTotal;
     }
-    
+    /**
+     * Variable de descicion.
+     * @return reparticion.
+     */
      @Override
     public ArrayList iteraryCombinar35Basuras() {
-        for (int i = 0; i < 35; i++) {
-            combinacionesTotal.add("id"+i);
-        }  
-        for (int i = 0; i < 35; i++) {
+        for (int i = 0; i < treintaycinco; i++) {
+            combinacionesTotal.add("id" + i);
+        }
+        for (int i = 0; i < treintaycinco; i++) {
             this.iteracionesTotal.add(
             this.combinacionesTotal.get(i));
             this.iteracionesTotal.add(
             this.combinacionesTotal.get(i));
         }
-
              return this.iteracionesTotal;
     }
-        
-        
 }
