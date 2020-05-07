@@ -106,4 +106,11 @@ public abstract class Database {
     public Connection getConnections() {
         return this.connection;
     }
+    
+   public void closeConnection(){
+      DatabaseConnection.clearConnection(this.connection);
+   }
+    
+    
+    
 }

@@ -38,7 +38,7 @@ public final class Main {
         mensaje = "Ingrese nombre de usuario";
         nombreUsuario = paneMaker.paneInput(mensaje);
         String[] optionsMenu = {"Nivel Básico",
-        "Nivel Intermedio", "Nivel Avanzado", "Registros"};
+        "Nivel Intermedio", "Nivel Avanzado"};
         mensaje = "Bienenido " + nombreUsuario
         + " Selecciona una opción para iniciar el juego:";
         int seleccionMenu = paneMaker.paneOptions(optionsMenu, mensaje);
@@ -47,16 +47,25 @@ public final class Main {
         int cantidadObjetos = paneMaker.paneOptions(optionsObjetos, mensaje);
         switch (seleccionMenu) {
             case 0:
+                String[] basuraMenuBasico = {"Orgánico", "Inorgánico"};
+                int tiempoBasico = 1000;
                 Nivel nivelBasico = new NivelBasico();
-                nivelBasico.ejecutarNivel(cantidadObjetos);
+                nivelBasico.ejecutarNivel(cantidadObjetos,basuraMenuBasico,tiempoBasico);
                 break; // break es opcional
             case 1:
+                String[] basuraMenuIntermedio = {"Orgánico", "Inorgánico", "Reciclable"};
+                int tiempoIntermedio = 2000;
                 Nivel nivelIntermedio = new NivelIntermedio();
-                nivelIntermedio.ejecutarNivel(cantidadObjetos);
+                nivelIntermedio.ejecutarNivel(cantidadObjetos,basuraMenuIntermedio,tiempoIntermedio);
                 break; // break es opcional
             case 2:
+                String[] basuraMenuAvanzado = {"Orgánico", "Papel",
+                 "Vidrio", "Metal", "Plástico", "Textiles",
+                 "Basura tecnológica"};
+                 int tiempoAvanzado = 3000;
+                 
                 Nivel nivelAvanzado = new NivelAvanzado();
-                nivelAvanzado.ejecutarNivel(cantidadObjetos);
+                nivelAvanzado.ejecutarNivel(cantidadObjetos,basuraMenuAvanzado,tiempoAvanzado);
                 break; // break es opcional
             default :
             System.exit(0);

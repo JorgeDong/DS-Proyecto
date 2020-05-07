@@ -7,6 +7,7 @@ package dsproyectop.ds.proyectop.factory;
 
 import dsproyectop.ds.proyectop.facade.PaneMaker;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -14,10 +15,22 @@ import java.util.ArrayList;
  */
 public abstract class Nivel {
     /**
+     * Variable tiempo.
+     */
+    private static final int V20 = 20;
+    /**
+     * Variable tiempo.
+     */
+    private static final int V35 = 35;
+    /**
+     * Variable tiempo.
+     */
+    private static final int V50 = 50;
+    /**
      * It return the actual level of the game.
      * @return An arrayList.
      */
-    protected ArrayList nombresBasuraTotal = new ArrayList();
+    private ArrayList nombresBasuraTotal = new ArrayList();
     /**
      * It return the actual level of the game.
      * @return An arrayList.
@@ -39,47 +52,66 @@ public abstract class Nivel {
      */
     private int cantidadObjetos;
     /**
+     * Variable cantidadObjetos.
+     */
+    private int objetosReal;
+    /**
      * Variable correctos.
      */
     protected int correctos = 0;
+    String[] basuraMenu;
+    int tiempo;
+    
     /**
      * It return the actual level of the game.
      * @return A String.
      */
-    public abstract String mostrarDescripcionNivel();
+    public abstract String mostrarDescripcionNivel(int tiempoDescripcion);
     /**
      * It return the actual level of the game.
-     * @param objetos
+     * @param objetosO
      * @return An integer.
      */
-    public abstract Integer mostrarOpciones(int objetos);
+    //public abstract Integer mostrarOpciones(int objetosO);
     /**
      * It return the actual level of the game.
-     * @param objetos
+     * @param objetosB
      * @return An integer.
      */
-    public abstract Integer createBasuras(int objetos);
+    public abstract Integer createBasuras(int objetosB);
     /**
      * It return the actual level of the game.
      * @param objetos
      * @return A boolean.
      */
-    public Boolean ejecutarNivel(final int objetos) {
+    public Boolean ejecutarNivel(final int objetos,String[] basuraMenuParam,
+    int tiempoParam) {
+        this.basuraMenu = basuraMenuParam;
+        
         final int veinte = 6;
         final int treintaycinco = 7;
         final int ciencuenta = 11;
         createBasuras(objetos);
-        mostrarDescripcionNivel();
+        //mostrarDescripcionNivel();
         System.out.println("entro");
         separarId();
         if (objetos == 0) {
             this.cantidadObjetos = veinte;
+            this.objetosReal = V20;
+            this.tiempo = tiempoParam * V20;
         } else if (objetos == 1) {
             this.cantidadObjetos = treintaycinco;
+            this.objetosReal = V35;
+            this.tiempo = tiempoParam * V35;
         } else {
             this.cantidadObjetos = ciencuenta;
+            this.objetosReal = V50;
+            this.tiempo = tiempoParam * V50;
         }
-        mostrarOpciones(this.cantidadObjetos);
+        
+        mostrarDescripcionNivel(this.tiempo);
+        //mostrarOpciones(this.cantidadObjetos);
+        mostrarOpciones(this.objetosReal);
         for (int i = 1; i < resultados.size(); i++) {
             System.out.println(resultados.get(i));
         }
@@ -91,6 +123,9 @@ public abstract class Nivel {
      * @return A boolean.
      */
     public Boolean separarId() {
+        
+        Collections.shuffle(nombresBasuraTotal);
+        
         for (int i = 1; i < nombresBasuraTotal.size(); i++) {
             System.out.println(nombresBasuraTotal.get(i));
             String str = nombresBasuraTotal.get(i).toString();
@@ -114,7 +149,7 @@ public abstract class Nivel {
         PaneMaker paneMaker = new PaneMaker();
         //paneMaker.paneConfirm(resultados.toString());
         String mensaje = "<html><table><tr><th>Resultados correctos: "
-        + correctos + "/" + cantidadObjetos + "</th></tr>";
+        + correctos + "/" + this.objetosReal + "</th></tr>";
         for (int i = 1; i < resultados.size(); i++) {
             System.out.println(resultados.get(i));
             mensaje += "<tr><td>" + resultados.get(i) + "</td></tr>";
@@ -123,4 +158,52 @@ public abstract class Nivel {
         paneMaker.paneConfirm(mensaje);
         return true;
     }
+    
+    public Integer mostrarOpciones(final int objetos) {
+        PaneMaker paneMaker = new PaneMaker();
+            long startTime = System.currentTimeMillis();
+            //String[] basuraMenu = {"Orgánico", "Inorgánico"};
+            int i;
+            for (i = 1; i < nombresBasuraSeparado.size(); i++) {
+                //System.out.println(nombresBasuraTotal.get(i));
+                int basuraMostrar = paneMaker.paneOptions(
+                        this.basuraMenu, nombresBasuraSeparado.get(i)
+                        .toString() + " (" + i + "/" + objetos + ")");
+                System.out.println(basuraMostrar);
+                int n = Integer.parseInt(idBasuraTotal
+                .get(i).toString());
+                String resultado;
+                
+                if(basuraMostrar == -1){
+                    System.exit(0);
+                }
+                if (basuraMostrar == n - 1) {
+                    System.out.println("correcto");
+                    resultado = nombresBasuraSeparado
+                    .get(i).toString() + " ->correcto";
+                    correctos++;
+                } else {
+                    System.out.println("incorrecto");
+                    resultado = nombresBasuraSeparado
+                    .get(i).toString() + " ->incorrecto";
+                }
+                resultados.add(resultado);
+                long elapsed = System
+                .currentTimeMillis() - startTime;
+                if (elapsed >= this.tiempo) {
+                    break;
+                }
+            }
+        return objetos;
+    }
+    
+    public ArrayList getnombresBasuraTotal() {
+        return this.nombresBasuraTotal;
+    }
+    
+    public void setnombresBasuraTotal(ArrayList nombresBasuraTotalParam){
+        this.nombresBasuraTotal = nombresBasuraTotalParam;
+    }
+    
+    
 }

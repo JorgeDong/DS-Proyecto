@@ -47,9 +47,17 @@ public final class DatabaseConnection extends Database {
     * Método que devuelve el número de ítems (números aleatorios) existentes en
     * la serie.
     */
-    public static void clearConnection() {
+    public static void clearConnection(Connection connection) {
         if (uniqueInstance != null) {
             uniqueInstance = null;
+            try {
+            connection.close();
+             System.out.println("Conexion cerrada");
+            } catch (SQLException ex) {
+                // handle any errors
+                System.out.println("SQLException: " + ex.getMessage());
+                System.exit(0);
+            }
         }
     }
 }

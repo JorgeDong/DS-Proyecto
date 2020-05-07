@@ -1,125 +1,58 @@
 package dsproyectop.ds.proyectop.factory.niveles;
 
+import dsproyectop.ds.proyectop.behaviors.Repartir20Basuras;
+import dsproyectop.ds.proyectop.behaviors.Repartir35Basuras;
+import dsproyectop.ds.proyectop.behaviors.Repartir50Basuras;
+import dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasBasico;
+import dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico;
+import dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasBasico;
 import dsproyectop.ds.proyectop.facade.PaneMaker;
-import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.factory.Nivel;
-import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoInorganico;
-import dsproyectop.ds.proyectop.factory.basuras.BasuraBasicoOrganico;
-import java.util.Collections;
+
 
 /**
  *
  * @author MrS.
  */
 public class NivelBasico extends Nivel {
-    /**
-     * Variable tiempo.
-     */
-    private static final int TIEMPO = 10000;
+    
+    Repartir20Basuras repartir20BasurasBasico = new Repartir20BasurasBasico();
+    Repartir35Basuras repartir35BasurasBasico = new Repartir35BasurasBasico();
+    Repartir50Basuras repartir50BasurasBasico = new Repartir50BasurasBasico();
     /**
      * It return the actual level of the game.
      * @return The level of the game.
      */
     @Override
-    public String mostrarDescripcionNivel() {
+    public String mostrarDescripcionNivel(int tiempoDescripcion) {
         PaneMaker paneMaker = new PaneMaker();
         String mensaje = "<html>Nivel Basico:"
             + "<br>Debes clasificar la basura entre"
-            + " Orgánico e Inorgánico.</html>";
+            + " Orgánico e Inorgánico."
+        + "(Tienes" + tiempoDescripcion/600 + " segundos para clasificar la mayor cantidad de basura que puedas.)" + "</html>";
         paneMaker.paneConfirm(mensaje);
         return "Nivel Basico";
     }
      /**
      * It Create the trash for the game.
-     * @param objetos it´s an int of the option.
+     * @param objetosCB it´s an int of the option.
      * @return The number of the option.
      */
     @Override
-    public Integer createBasuras(final int objetos) {
-        final int diez = 10;
-        final int diesiciete = 17;
-        final int diesiocho = 18;
-        final int veinticinco = 25;
-        Basura basuraBasicoOrganica = new BasuraBasicoOrganico();
-        Basura basuraBasicoInorganica = new BasuraBasicoInorganico();
-    /* En este metodo mezclamos para que quede el arreglo
-    final a mostrar de basuras dependiedo del tama*/
-        Collections.shuffle(basuraBasicoOrganica.getNombresBasura());
-        Collections.shuffle(basuraBasicoInorganica.getNombresBasura());
-        switch (objetos) {
+    public Integer createBasuras(final int objetosCB) {
+        switch (objetosCB) {
             case 0:
-                //20
-                //Tamaño para margen
-                for (int i = 0; i < diez; i++) {
-                    nombresBasuraTotal.add(
-                        basuraBasicoOrganica.getNombresBasura().get(i));
-                    nombresBasuraTotal.add(
-                        basuraBasicoInorganica.getNombresBasura().get(i));
-                }
-                System.out.println(nombresBasuraTotal.size());
+                setnombresBasuraTotal(this.repartir20BasurasBasico.repartir());
                 break; // break es opcional
             case 1:
-                for (int i = 0; i < diesiciete; i++) {
-                    nombresBasuraTotal.add(
-                        basuraBasicoOrganica.getNombresBasura().get(i));
-                    nombresBasuraTotal.add(
-                        basuraBasicoInorganica.getNombresBasura().get(i));
-                }
-                nombresBasuraTotal.add(
-                    basuraBasicoInorganica.getNombresBasura().get(diesiocho));
-                System.out.println(nombresBasuraTotal.size());
+                setnombresBasuraTotal(this.repartir35BasurasBasico.repartir());
                 break; // break es opcional
             case 2:
-                for (int i = 0; i < veinticinco; i++) {
-                    nombresBasuraTotal.add(
-                        basuraBasicoOrganica.getNombresBasura().get(i));
-                    nombresBasuraTotal.add(
-                        basuraBasicoInorganica.getNombresBasura().get(i));
-                }
-                System.out.println(nombresBasuraTotal.size());
+                setnombresBasuraTotal(this.repartir50BasurasBasico.repartir());
                 break; // break es opcional
             default :
             System.exit(0);
             }
-            return objetos;
+            return objetosCB;
         }
-    /**
-     * It Show the options of the game.
-     * @param objetos it´s an int of the option.
-     * @return The number of the option.
-     */
-    @Override
-    public Integer mostrarOpciones(final int objetos) {
-        PaneMaker paneMaker = new PaneMaker();
-            long startTime = System.currentTimeMillis();
-            String[] basuraMenu = {"Orgánico", "Inorgánico"};
-            int i;
-            for (i = 1; i < nombresBasuraSeparado.size(); i++) {
-                //System.out.println(nombresBasuraTotal.get(i));
-                int basuraMostrar = paneMaker.paneOptions(
-                        basuraMenu, nombresBasuraSeparado.get(i)
-                        .toString() + " (" + i + "/" + objetos + ")");
-                System.out.println(basuraMostrar);
-                int n = Integer.parseInt(idBasuraTotal
-                .get(i).toString());
-                String resultado;
-                if (basuraMostrar == n - 1) {
-                    System.out.println("correcto");
-                    resultado = nombresBasuraSeparado
-                    .get(i).toString() + " ->correcto";
-                    correctos++;
-                } else {
-                    System.out.println("incorrecto");
-                    resultado = nombresBasuraSeparado
-                    .get(i).toString() + " ->inccorrecto";
-                }
-                resultados.add(resultado);
-                long elapsed = System
-                .currentTimeMillis() - startTime;
-                if (elapsed >= this.TIEMPO) {
-                    break;
-                }
-            }
-        return objetos;
-    }
 }
