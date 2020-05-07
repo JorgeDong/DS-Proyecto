@@ -9,6 +9,7 @@ import dsproyectop.ds.proyectop.singleton.Database;
 import dsproyectop.ds.proyectop.factory.Basura;
 import dsproyectop.ds.proyectop.singleton.Database;
 import dsproyectop.ds.proyectop.singleton.DatabaseConnection;
+import java.sql.Connection;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,6 +19,8 @@ import org.junit.Test;
  */
 public class DatabaseTest {
     Database db;
+    Connection connection;
+    
     @Before
     public void setUp(){
         db = DatabaseConnection.getConnection();
@@ -30,6 +33,9 @@ public class DatabaseTest {
     
     /*@Test
     public void clearConnectionTest(){
+        DatabaseConnection.clearConnection(connection);
+    }
         DatabaseConnection.clearConnection();
     }*/
+
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PaneMaker.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ds-proyectop1</a> &gt; <a href="index.source.html" class="el_package">dsproyectop.ds.proyectop.bridge</a> &gt; <span class="el_source">PaneMaker.java</span></div><h1>PaneMaker.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dsproyectop.ds.proyectop.bridge;
+
+import javax.swing.JOptionPane;
+/***
+ * Esta clase define metodos que cada clase que herede debe implementar.
+ * @author: JorgeDong y Luis
+ * @version: 21/02/2020
+*/
+<span class="fc" id="L14">public class PaneMaker {</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    */
+<span class="fc" id="L19">    private String titulo = &quot;Juego Clasificar Basura&quot;;</span>
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @param options El parámetro numeroItems define el número de element
+    * @param message El parámetro numeroItems define el número de element
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    */
+    public int paneOptions(final String[] options, final String message) {
+<span class="nc" id="L28">        int seleccion = JOptionPane.showOptionDialog(null,</span>
+                message, this.titulo,
+                JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
+                null, options, options[0]);
+<span class="nc" id="L32">        return seleccion;</span>
+    }
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    * @param message El parámetro numeroItems define el número de element
+    */
+    public String paneInput(final String message) {
+<span class="nc" id="L41">        String respuesta = JOptionPane.showInputDialog(null,</span>
+                message, this.titulo,
+            JOptionPane.QUESTION_MESSAGE);
+<span class="nc" id="L44">        return respuesta;</span>
+    }
+    /**
+    * Método que devuelve el número de ítems (números aleatorios) existentes en
+    * la serie.
+    * @return El número de ítems (números aleatorios) de que consta la serie
+    * @param message El parámetro numeroItems define el número de element
+    */
+    public int paneConfirm(final String message) {
+<span class="fc" id="L53">        int input = JOptionPane.showConfirmDialog(null,</span>
+            message, this.titulo, JOptionPane.DEFAULT_OPTION);
+<span class="fc" id="L55">        return input;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
