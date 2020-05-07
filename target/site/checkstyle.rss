@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2020</copyright>
     <item>
-      <title>File: 13,
-             Errors: 337,
+      <title>File: 3,
+             Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,34 +46,6 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir35Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir35Basuras.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasBasico.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir20BasurasBasico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  31
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasBasico.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir35BasurasBasico.java</a>
                 </td>
                 <td>
@@ -83,63 +55,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  31
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir20Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir20Basuras.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.Main.java">dsproyectop/ds/proyectop/Main.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasAvanzado.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir20BasurasAvanzado.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  45
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasBasico.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasBasico.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  29
                 </td>
               </tr>
                           <tr>
@@ -153,63 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  36
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir35BasurasAvanzado.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir35BasurasAvanzado.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  43
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir20BasurasIntermedio.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir20BasurasIntermedio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  39
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.impl.Repartir50BasurasIntermedio.java">dsproyectop/ds/proyectop/behaviors/impl/Repartir50BasurasIntermedio.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  34
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#dsproyectop.ds.proyectop.behaviors.Repartir50Basuras.java">dsproyectop/ds/proyectop/behaviors/Repartir50Basuras.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
                 </td>
               </tr>
                           <tr>
@@ -223,7 +83,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  40
+                  0
                 </td>
               </tr>
                       </tbody>
